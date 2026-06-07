@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Footbally_Domain.Entities.TeamEntity.Entity
 {
-    internal class Team
+    public class Team
     {
     }
 }
