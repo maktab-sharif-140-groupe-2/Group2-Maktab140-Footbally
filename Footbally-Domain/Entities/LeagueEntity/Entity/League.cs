@@ -4,9 +4,9 @@ using System;
 
 namespace Footbally_Domain.Entities.LeagueEntity.Entity;
 
-public class Leauge : BaseEntity
+public class League : BaseEntity
 {
-    public Leauge(string name, string country, LeaugeLevle levle)
+    public League(string name, string country, LeagueLevle levle)
     {
         Name = name;
         Country = country;
@@ -18,7 +18,7 @@ public class Leauge : BaseEntity
 
     public string Country { get; private set; }
 
-    public LeaugeLevle Levle { get; private set; }
+    public LeagueLevle Levle { get; private set; }
 
     protected override void Validate()
     {

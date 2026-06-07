@@ -1,5 +1,5 @@
 ﻿namespace Footbally_Domain.Entities.LeagueEntity.Data;
 
-public interface ILeaugeRepository
+public interface ILeagueRepository
 {
 }
