@@ -7,4 +7,16 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Entities\CommonEntity\Data\" />
+    <Folder Include="Entities\MatchEntity\Data\" />
+    <Folder Include="Entities\MatchEntity\Service\" />
+    <Folder Include="Entities\PlayerEntity\Data\" />
+    <Folder Include="Entities\PlayerEntity\Service\" />
+    <Folder Include="Entities\StandingEntity\Data\" />
+    <Folder Include="Entities\StandingEntity\Service\" />
+    <Folder Include="Entities\TeamEntity\Data\" />
+    <Folder Include="Entities\TeamEntity\Service\" />
+  </ItemGroup>
+
 </Project>
