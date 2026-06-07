@@ -12,8 +12,6 @@
     <Folder Include="Entities\PlayerEntity\Service\" />
     <Folder Include="Entities\StandingEntity\Data\" />
     <Folder Include="Entities\StandingEntity\Service\" />
-    <Folder Include="Entities\TeamEntity\Data\" />
-    <Folder Include="Entities\TeamEntity\Service\" />
   </ItemGroup>
 
 </Project>
