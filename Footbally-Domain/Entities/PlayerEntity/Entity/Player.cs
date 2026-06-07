@@ -1,5 +1,6 @@
 
 ﻿using Footbally_Domain.Entities.CommonEntity.Entity;
+using Footbally_Domain.Entities.PlayerEntity.Enums;
 using Footbally_Domain.Entities.TeamEntity.Entity;
 using System;
 using System.Collections.Generic;
@@ -25,7 +26,7 @@ namespace Footbally_Domain.Entities.PlayerEntity.Entity
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
         public string ShirtNumber { get; private set; }
-        public string Position { get; private set; }
+        public PositionEnum Position { get; private set; }
         public DateTime BirthDate { get; private set; }
         #endregion
         #region Navigation
@@ -44,15 +45,12 @@ namespace Footbally_Domain.Entities.PlayerEntity.Entity
             }
             if (ShirtNumber == null)
             {
-                throw new ArgumentNullException("Invalid LastName");
+                throw new ArgumentNullException("Invalid ShirtNumber");
             }
-            if (Position == null)
+           
+            if (BirthDate >DateTime.UtcNow)
             {
-                throw new ArgumentNullException("Invalid LastName");
-            }
-            if (BirthDate == null)
-            {
-                throw new ArgumentNullException("Invalid LastName");
+                throw new ArgumentNullException("Invalid BirthDate");
             }
 
         }
