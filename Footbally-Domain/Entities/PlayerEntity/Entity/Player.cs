@@ -12,7 +12,7 @@ namespace Footbally_Domain.Entities.PlayerEntity.Entity
 {
     public class Player : BaseEntity
     {
-        public Player(string firstName, string lastName, string shirtNumber, string position, DateTime birthDate, int teamId)
+        public Player(string firstName, string lastName, string shirtNumber, PositionEnum position, DateTime birthDate, int teamId)
         {
             FirstName = firstName;
             LastName = lastName;
