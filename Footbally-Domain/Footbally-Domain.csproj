@@ -8,8 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Entities\MatchEntity\Data\" />
-    <Folder Include="Entities\MatchEntity\Service\" />
     <Folder Include="Entities\PlayerEntity\Data\" />
     <Folder Include="Entities\PlayerEntity\Service\" />
     <Folder Include="Entities\StandingEntity\Data\" />
