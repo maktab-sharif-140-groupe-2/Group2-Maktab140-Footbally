@@ -19,6 +19,7 @@ namespace Footbally_Domain.Entities.PlayerEntity.Entity
             Position = position;
             BirthDate = birthDate;
             TeamId = teamId;
+            Validate();
         }
         #region Properties
         public string FirstName { get; private set; }
