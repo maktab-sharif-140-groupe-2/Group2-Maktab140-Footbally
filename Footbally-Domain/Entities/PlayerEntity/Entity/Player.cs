@@ -1,3 +1,4 @@
+
 ﻿using Footbally_Domain.Entities.CommonEntity.Entity;
 using Footbally_Domain.Entities.TeamEntity.Entity;
 using System;
@@ -20,35 +21,35 @@ namespace Footbally_Domain.Entities.PlayerEntity.Entity
             TeamId = teamId;
         }
         #region Properties
-        public string FirstName {  get;private set; }
-       public string LastName {  get; private set; }
-       public string ShirtNumber {  get; private set; }
-       public string Position {  get; private set; }
-       public DateTime BirthDate {  get; private set; }
+        public string FirstName { get; private set; }
+        public string LastName { get; private set; }
+        public string ShirtNumber { get; private set; }
+        public string Position { get; private set; }
+        public DateTime BirthDate { get; private set; }
         #endregion
         #region Navigation
         public Team Team { get; private set; }
-        public  int TeamId { get; private set; }
+        public int TeamId { get; private set; }
         #endregion
         protected override void Validate()
         {
-         if (FirstName == null)
+            if (FirstName == null)
             {
                 throw new ArgumentNullException("Invalid FirstName");
             }
-         if (LastName == null)
+            if (LastName == null)
             {
                 throw new ArgumentNullException("Invalid LastName");
             }
-         if (ShirtNumber == null)
+            if (ShirtNumber == null)
             {
                 throw new ArgumentNullException("Invalid LastName");
             }
-         if (Position == null)
+            if (Position == null)
             {
                 throw new ArgumentNullException("Invalid LastName");
             }
-         if (BirthDate == null)
+            if (BirthDate == null)
             {
                 throw new ArgumentNullException("Invalid LastName");
             }
