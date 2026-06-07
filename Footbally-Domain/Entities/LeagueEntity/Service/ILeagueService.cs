@@ -1,5 +1,5 @@
 ﻿
 namespace Footbally_Domain.Entities.LeagueEntity.Service;
-public interface ILeaugeService
+public interface ILeagueService
 {
 }

@@ -1,5 +1,5 @@
 ﻿namespace Footbally_Domain.Entities.LeagueEntity.Enums;
-public enum LeaugeLevle
+public enum LeagueLevle
 {
     Superior=1,
     FirstCategory,
