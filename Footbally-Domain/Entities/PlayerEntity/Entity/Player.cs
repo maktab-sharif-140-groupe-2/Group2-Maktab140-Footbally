@@ -37,7 +37,7 @@ namespace Footbally_Domain.Entities.PlayerEntity.Entity
         {
             if (FirstName == null)
             {
-                throw new ArgumentNullException("Invalid FirstName");
+                throw new ArgumentNullException("Invalid First Name");
             }
             if (LastName == null)
             {
