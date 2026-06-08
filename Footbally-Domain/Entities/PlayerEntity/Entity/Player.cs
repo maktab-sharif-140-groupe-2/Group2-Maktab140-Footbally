@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Footbally_Domain.Entities.PlayerEntity.Entity;
 
-namespace Footbally_Domain.Entities.PlayerEntity.Entity
+public class Player
 {
-    internal class Player
-    {
-    }
 }
