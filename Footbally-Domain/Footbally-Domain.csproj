@@ -9,7 +9,6 @@
 
   <ItemGroup>
     <Folder Include="Entities\PlayerEntity\Data\" />
-    <Folder Include="Entities\PlayerEntity\Service\" />
   </ItemGroup>
 
 </Project>
