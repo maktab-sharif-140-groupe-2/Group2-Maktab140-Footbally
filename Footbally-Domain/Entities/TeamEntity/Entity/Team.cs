@@ -10,6 +10,7 @@ public class Team : BaseEntity
         FoundedYear = foundedYear;
         City = city;
         CoachName = coachName;
+        Validate();
     }
 
     public int FoundedYear { get; private set; }
