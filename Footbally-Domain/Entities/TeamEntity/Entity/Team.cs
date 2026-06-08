@@ -5,10 +5,17 @@ namespace Footbally_Domain.Entities.TeamEntity.Entity;
 
 public class Team : BaseEntity
 {
+    public Team(int foundedYear, string city, string coachName)
+    {
+        FoundedYear = foundedYear;
+        City = city;
+        CoachName = coachName;
+    }
+
     public int FoundedYear { get; private set; }
     public string City { get; private set; }
     public string CoachName { get; private set; }
-    public Player Players { get; private set; } = new();
+    public List<Player> Players { get; private set; } = new();
 
     protected override void Validate()
     {
