@@ -6,16 +6,19 @@ namespace Footbally_Domain.Entities.TeamEntity.Entity;
 
 public class Team : BaseEntity
 {
-    public Team( string country, string coachName)
+    public Team(string country, string coachName, int groupNumber)
     {
         Country = country;
         CoachName = coachName;
+        GroupNumber = groupNumber;
         Validate();
     }
 
     public string Country { get; private set; }
 
     public string CoachName { get; private set; }
+
+    public int GroupNumber { get; private set; }
 
     public List<Player> Players { get; private set; } = new();
 
@@ -33,5 +36,8 @@ public class Team : BaseEntity
             throw new InvalidDataException("Team Country Charcters Can't be Less 3");
         if (CoachName.Length < 6)
             throw new InvalidDataException("Team CoachName Charcters Can't be Less 6");
+        if (GroupNumber < 1 || GroupNumber > 12)
+            throw new InvalidOperationException("the group number must higher than 1 and lower than 12");
+
     }
 }
