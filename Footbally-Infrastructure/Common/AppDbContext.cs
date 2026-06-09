@@ -9,22 +9,18 @@ namespace Footbally_Infrastructure.Common;
 
 public class AppDbContext : DbContext
 {
-    public DbSet<Player> Players { get; set; }
-    public DbSet<Match> Matchs { get; set; }
-    public DbSet<Standing> Standings { get; set; }
-    public DbSet<Team> Teams { get; set; }
-
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    public AppDbContext(DbContextOptions<AppDbContext> dbContextOptions) : base(dbContextOptions)
     {
-        optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=FootballyDb;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False;Command Timeout=30")
-
-
+        
     }
+
+    public DbSet<Player> Players => Set<Player>();
+    public DbSet<Match> Matchs => Set<Match>();
+    public DbSet<Standing> Standings => Set<Standing>();
+    public DbSet<Team> Teams => Set<Team>();
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
     }
-
-
-
 }
