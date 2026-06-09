@@ -38,7 +38,7 @@ public class Match : BaseEntity
     public int AwayTeamId { get; private set; }
     #endregion
 
-# region Naviration properties
+    # region Naviration properties
     public virtual Team HomeTeam { get; private set; }
 
     public virtual Team AwayTeam { get; private set; }
@@ -48,11 +48,11 @@ public class Match : BaseEntity
         if (MatchDate < DateTime.UtcNow)
             throw new InvalidOperationException("the match date cannot be in the past");
 
-        if (HomeGoals < 0)
-            throw new InvalidOperationException("the home goals cannot be negative");
+        if (HomeGoals < 0 || HomeGoals > 15)
+            throw new InvalidOperationException("the home goals cannot be negative or higher than 15");
 
-        if (AwayGoals < 0)
-            throw new InvalidOperationException("the away goals cannot be negative");
+        if (AwayGoals < 0 || AwayGoals > 15)
+            throw new InvalidOperationException("the away goals cannot be negative or higher than 15");
 
         if (HomeTeamId < 1)
             throw new InvalidOperationException("the home team id goals cannot be negative or 0");
