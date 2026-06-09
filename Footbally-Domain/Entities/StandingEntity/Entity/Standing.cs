@@ -1,5 +1,6 @@
 ﻿using Footbally_Domain.Entities.CommonEntity.Entity;
 using Footbally_Domain.Entities.TeamEntity.Entity;
+using System.ComponentModel.DataAnnotations;
 
 namespace Footbally_Domain.Entities.StandingEntity.Entity;
 
@@ -17,7 +18,7 @@ public class Standing : BaseEntity
         TeamId = teamId;
         Validate();
     }
-
+    
     public int Played { get; private set; }
 
     public int Won { get; private set; }
@@ -60,6 +61,7 @@ public class Standing : BaseEntity
         Lost++;
         GoalsFor += goalsFor;
         GoalsAgainst+=goalsAgainst;
+
         return this;
     }
 
@@ -68,21 +70,30 @@ public class Standing : BaseEntity
     protected override void Validate()
     {
         if (Played < 0)
-            throw new InvalidOperationException("the Played cannot be negative");
+            throw new InvalidOperationException("the Played can't be negative");
+        if (Played > 3)
+            throw new InvalidOperationException("the Played can't be Higher Than 3");
 
         if (Won < 0)
             throw new InvalidOperationException("the Won cannot be negative");
+        if (Won > 3)
+            throw new InvalidOperationException("the Won can't be Higher Than 3");
 
         if (Lost < 0)
             throw new InvalidOperationException("the Lost cannot be negative");
+        if (Lost > 3)
+            throw new InvalidOperationException("the Lost can't be Higher Than 3");
 
         if (Draw < 0)
             throw new InvalidOperationException("the Draw cannot be negative");
+        if (Draw > 3)
+            throw new InvalidOperationException("the Draw can't be Higher Than 3");
 
         if (GoalsFor < 0)
             throw new InvalidOperationException("the GoalsFor cannot be negative");
 
         if (GoalsAgainst < 0)
             throw new InvalidOperationException("the GoalsAgainst cannot be negative");
+
     }
 }

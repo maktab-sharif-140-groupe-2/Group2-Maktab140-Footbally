@@ -19,7 +19,8 @@ public class Team : BaseEntity
 
     public List<Player> Players { get; private set; } = new();
 
-    public List<Match> Matches { get; private set; } = new();
+    public List<Match> HomeMatches { get; private set; } = new();
+    public List<Match> AwayMatches { get; private set; } = new();
 
     protected override void Validate()
     {
