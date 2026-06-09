@@ -1,33 +1,31 @@
 ﻿using Footbally_Domain.Entities.CommonEntity.Entity;
+using Footbally_Domain.Entities.MatchEntity.Entity;
 using Footbally_Domain.Entities.PlayerEntity.Entity;
 
 namespace Footbally_Domain.Entities.TeamEntity.Entity;
 
 public class Team : BaseEntity
 {
-    public Team(int foundedYear, string city, string coachName)
+    public Team( string Country, string coachName)
     {
-        FoundedYear = foundedYear;
-        City = city;
         CoachName = coachName;
         Validate();
     }
 
-    public int FoundedYear { get; private set; }
-    public string City { get; private set; }
+    public string Country { get; private set; }
     public string CoachName { get; private set; }
     public List<Player> Players { get; private set; } = new();
+    public List<Match> Matches { get; private set; } = new();
 
     protected override void Validate()
     {
-        if (FoundedYear < 1857)
-            throw new InvalidDataException("The Oldest Team In World FoundedYear Is 1857");
-        if (string.IsNullOrWhiteSpace(City))
-            throw new ArgumentNullException("Team City Name Can't Be Null");
+       
+        if (string.IsNullOrWhiteSpace(Country))
+            throw new ArgumentNullException("Country Name Can't Be Null");
         if (string.IsNullOrWhiteSpace(CoachName))
-            throw new ArgumentNullException("Team City Name Can't Be Null");
-        if (City.Length < 2)
-            throw new InvalidDataException("Team City Charcters Can't be Less 2");
+            throw new ArgumentNullException("CoachName Name Can't Be Null");
+        if (CoachName.Length < 3)
+            throw new InvalidDataException("Team Country Charcters Can't be Less 3");
         if (CoachName.Length < 6)
             throw new InvalidDataException("Team CoachName Charcters Can't be Less 6");
     }

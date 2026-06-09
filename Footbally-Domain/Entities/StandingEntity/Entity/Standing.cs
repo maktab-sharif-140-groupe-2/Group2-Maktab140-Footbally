@@ -1,12 +1,11 @@
 ﻿using Footbally_Domain.Entities.CommonEntity.Entity;
-using Footbally_Domain.Entities.LeagueEntity.Entity;
 using Footbally_Domain.Entities.TeamEntity.Entity;
 
 namespace Footbally_Domain.Entities.StandingEntity.Entity;
 
 public class Standing : BaseEntity
 {
-    public Standing(int played, int won, int lost, int draw, int goalsFor, int goalsAgainst, int points, int leagueId, int teamId)
+    public Standing(int teamId, int played =0, int won=0, int lost=0, int draw=0, int goalsFor=0, int goalsAgainst=0, int points=0)
     {
         Played = played;
         Won = won;
@@ -15,9 +14,7 @@ public class Standing : BaseEntity
         GoalsFor = goalsFor;
         GoalsAgainst = goalsAgainst;
         Points = points;
-        LeagueId = leagueId;
         TeamId = teamId;
-
         Validate();
     }
 
@@ -35,15 +32,10 @@ public class Standing : BaseEntity
 
     public int Points { get; private set; }
 
-    // Foriegn Key
-    public int LeagueId { get; private set; }
-
+    #region Foreign Key
     public int TeamId { get; private set; }
+    #endregion
 
-    // Navigation Properties
-    public virtual Team Team { get; private set; }
-
-    public virtual League League { get; private set; }
 
     protected override void Validate()
     {

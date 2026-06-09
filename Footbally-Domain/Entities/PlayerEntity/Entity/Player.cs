@@ -2,24 +2,21 @@
 ﻿using Footbally_Domain.Entities.CommonEntity.Entity;
 using Footbally_Domain.Entities.PlayerEntity.Enums;
 using Footbally_Domain.Entities.TeamEntity.Entity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Footbally_Domain.Entities.PlayerEntity.Entity
 {
     public class Player : BaseEntity
     {
-        public Player(string firstName, string lastName, string shirtNumber, PositionEnum position, DateTime birthDate, int teamId)
+        public Player(string firstName, string lastName, string shirtNumber, PositionEnum position, int age, int teamId)
         {
-            FirstName = firstName;
-            LastName = lastName;
-            ShirtNumber = shirtNumber;
+            FirstName = firstName.Trim();
+            LastName = lastName.Trim();
+            ShirtNumber = shirtNumber.Trim();
             Position = position;
-            BirthDate = birthDate;
+            Age = age;
             TeamId = teamId;
+            Goals = 0;
+            Assist = 0;
             Validate();
         }
         #region Properties
@@ -27,32 +24,51 @@ namespace Footbally_Domain.Entities.PlayerEntity.Entity
         public string LastName { get; private set; }
         public string ShirtNumber { get; private set; }
         public PositionEnum Position { get; private set; }
-        public DateTime BirthDate { get; private set; }
+        public int Age { get; private set; }
+        public int Goals { get ; private set; }
+        public int Assist { get ; private set; }
+        #endregion
+
+        #region ForeginKey
+        public int TeamId { get; private set; }
         #endregion
         #region Navigation
         public Team Team { get; private set; }
-        public int TeamId { get; private set; }
         #endregion
         protected override void Validate()
         {
-            if (FirstName == null)
+            if (string.IsNullOrWhiteSpace(FirstName))
             {
                 throw new ArgumentNullException("Invalid First Name");
             }
-            if (LastName == null)
+            if (string.IsNullOrWhiteSpace(LastName))
             {
                 throw new ArgumentNullException("Invalid LastName");
             }
-            if (ShirtNumber == null)
+            if (string.IsNullOrWhiteSpace(ShirtNumber))
             {
                 throw new ArgumentNullException("Invalid ShirtNumber");
             }
-           
-            if (BirthDate >DateTime.UtcNow)
+            if (ShirtNumber.Length > 2)
             {
-                throw new ArgumentNullException("Invalid BirthDate");
+                throw new ArgumentNullException("ShirtNumber Charcters Can't be Higher 2");
+            }
+            if (Convert.ToInt32(ShirtNumber)<0)
+            {
+                throw new ArgumentNullException("ShirtNumber  Can't be Negative");
             }
 
+        }
+
+        public Player AddGoal()
+        {
+            Goals++;
+            return this;
+        }
+        public Player AddAssist()
+        {
+            Assist++;
+            return this;
         }
     }
 }
