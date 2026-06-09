@@ -5,7 +5,7 @@ namespace Footbally_Domain.Entities.StandingEntity.Entity;
 
 public class Standing : BaseEntity
 {
-    public Standing(int teamId, int played =0, int won=0, int lost=0, int draw=0, int goalsFor=0, int goalsAgainst=0, int points=0)
+    public Standing(int teamId, int played = 0, int won = 0, int lost = 0, int draw = 0, int goalsFor = 0, int goalsAgainst = 0, int points = 0)
     {
         Played = played;
         Won = won;
@@ -20,7 +20,7 @@ public class Standing : BaseEntity
 
     public int Played { get; private set; }
 
-    public int Won  { get; private set; }
+    public int Won { get; private set; }
 
     public int Lost { get; private set; }
 
