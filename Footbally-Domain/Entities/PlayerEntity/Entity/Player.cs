@@ -32,9 +32,11 @@ namespace Footbally_Domain.Entities.PlayerEntity.Entity
         #region ForeginKey
         public int TeamId { get; private set; }
         #endregion
+
         #region Navigation
         public Team Team { get; private set; }
         #endregion
+
         protected override void Validate()
         {
             if (string.IsNullOrWhiteSpace(FirstName))
@@ -65,6 +67,7 @@ namespace Footbally_Domain.Entities.PlayerEntity.Entity
             Goals++;
             return this;
         }
+
         public Player AddAssist()
         {
             Assist++;

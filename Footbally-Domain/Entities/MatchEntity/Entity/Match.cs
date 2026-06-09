@@ -27,6 +27,7 @@ public class Match : BaseEntity
     public int AwayGoals { get; private set; }
 
     public Status Status { get; private set; }
+
     public Stage Stage { get; private set; }
 
     #endregion

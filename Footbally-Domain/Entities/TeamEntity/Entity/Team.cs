@@ -14,8 +14,11 @@ public class Team : BaseEntity
     }
 
     public string Country { get; private set; }
+
     public string CoachName { get; private set; }
+
     public List<Player> Players { get; private set; } = new();
+
     public List<Match> Matches { get; private set; } = new();
 
     protected override void Validate()
