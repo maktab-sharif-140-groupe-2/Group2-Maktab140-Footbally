@@ -6,6 +6,9 @@ namespace Footbally_Domain.Entities.MatchEntity.Entity;
 
 public class Match : BaseEntity
 {
+    private Match()
+    {
+    }
     public Match(DateTime matchDate, int homeTeamId, int awayTeamId, int homeGoals, int awayGoals,Status status,Stage stage)
     {
         MatchDate = matchDate;

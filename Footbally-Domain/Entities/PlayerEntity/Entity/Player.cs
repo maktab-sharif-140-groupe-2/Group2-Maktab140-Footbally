@@ -7,6 +7,10 @@ namespace Footbally_Domain.Entities.PlayerEntity.Entity
 {
     public class Player : BaseEntity
     {
+        private Player()
+        {
+            
+        }
         public Player(string firstName, string lastName, string shirtNumber, PositionEnum position, int age, int teamId)
         {
             FirstName = firstName.Trim();

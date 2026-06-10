@@ -6,6 +6,10 @@ namespace Footbally_Domain.Entities.TeamEntity.Entity;
 
 public class Team : BaseEntity
 {
+    private Team()
+    {
+        
+    }
     public Team(string country, string coachName, int groupNumber)
     {
         Country = country;
