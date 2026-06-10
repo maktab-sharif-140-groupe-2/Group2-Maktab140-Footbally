@@ -36,6 +36,34 @@ public class Standing : BaseEntity
     public int TeamId { get; private set; }
     #endregion
 
+    public Standing SetWin(int goalsFor,int goalsAgainst)
+    {
+        Played++;
+        Points += 3;
+        Won++;
+        GoalsFor += goalsFor;
+        GoalsAgainst+=goalsAgainst;
+        return this;
+    }
+    public Standing SetDraw(int goalsFor,int goalsAgainst)
+    {
+        Played++;
+        Points += 1;
+        Draw++;
+        GoalsFor += goalsFor;
+        GoalsAgainst+=goalsAgainst;
+        return this;
+    }
+    public Standing SetLost(int goalsFor, int goalsAgainst)
+    { 
+        Played++;
+        Lost++;
+        GoalsFor += goalsFor;
+        GoalsAgainst+=goalsAgainst;
+        return this;
+    }
+
+
 
     protected override void Validate()
     {
