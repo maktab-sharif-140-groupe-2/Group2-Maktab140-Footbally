@@ -6,8 +6,9 @@ namespace Footbally_Domain.Entities.TeamEntity.Entity;
 
 public class Team : BaseEntity
 {
-    public Team( string Country, string coachName)
+    public Team( string country, string coachName)
     {
+        Country = country;
         CoachName = coachName;
         Validate();
     }
