@@ -1,6 +1,7 @@
 ﻿using Footbally_Domain.Entities.CommonEntity.Entity;
 using Footbally_Domain.Entities.MatchEntity.Entity;
 using Footbally_Domain.Entities.PlayerEntity.Entity;
+using Footbally_Domain.Entities.StandingEntity.Entity;
 
 namespace Footbally_Domain.Entities.TeamEntity.Entity;
 
@@ -25,7 +26,7 @@ public class Team : BaseEntity
     public int GroupNumber { get; private set; }
 
     public List<Player> Players { get; private set; } = new();
-
+    public Standing Standing { get; private set; }
     public List<Match> HomeMatches { get; private set; } = new();
     public List<Match> AwayMatches { get; private set; } = new();
 

@@ -1,4 +1,5 @@
-﻿using Footbally_Domain.Entities.TeamEntity.Entity;
+﻿using Footbally_Domain.Entities.StandingEntity.Entity;
+using Footbally_Domain.Entities.TeamEntity.Entity;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Footbally_Infrastructure.ModelConfiguration;
@@ -18,6 +19,11 @@ public class TeamModelBuilderConfiguration : BaseModelConfiguration<Team>
         builder.HasMany(x => x.Players)
             .WithOne(x => x.Team)
             .HasForeignKey(x => x.TeamId);
+
+        builder.HasOne(x => x.Standing)
+            .WithOne()
+            .HasForeignKey<Standing>(x => x.TeamId);
+
 
         builder.Property(x => x.CoachName)
             .HasMaxLength(80);
@@ -73,12 +79,11 @@ public class TeamModelBuilderConfiguration : BaseModelConfiguration<Team>
     new { Id = 42, Country = "DR Congo", CoachName = "Sebastien Desabre", GroupNumber = 11 },
     new { Id = 43, Country = "Cape Verde", CoachName = "Bubista", GroupNumber = 8 },
 
-    new { Id = 44, Country = "Argentina", CoachName = "Lionel Scaloni", GroupNumber = 10 },
     new { Id = 45, Country = "Uruguay", CoachName = "Marcelo Bielsa", GroupNumber = 8 },
     new { Id = 46, Country = "Colombia", CoachName = "Nestor Lorenzo", GroupNumber = 11 },
     new { Id = 47, Country = "Ecuador", CoachName = "Sebastian Beccacece", GroupNumber = 5 },
     new { Id = 48, Country = "Paraguay", CoachName = "Gustavo Alfaro", GroupNumber = 4 }
 );
-
+        builder.HasData(new { Id = 49, Country = "New Zealand", CoachName = "Darren Bazeley", GroupNumber = 7 });
     }
 }

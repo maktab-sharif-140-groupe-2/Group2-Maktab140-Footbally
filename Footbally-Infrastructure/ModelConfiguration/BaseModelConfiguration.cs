@@ -14,6 +14,9 @@ public abstract class BaseModelConfiguration<Tentity> : IEntityTypeConfiguration
 
         builder.HasQueryFilter(x => x.IsDeleted == false && x.DeletedAt == null);
 
+        builder.Property(x => x.CreatedAt)
+            .HasDefaultValueSql("GETDATE()");
+
         builder.Property(x => x.IsDeleted)
             .HasDefaultValue(false)
             .IsRequired(true);
