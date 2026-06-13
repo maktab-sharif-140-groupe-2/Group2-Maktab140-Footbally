@@ -1,6 +1,7 @@
 
 using Footbally_Domain.Entities.CommonEntity.Entity;
 using Footbally_Domain.Entities.PlayerEntity.Enums;
+using Footbally_Domain.Entities.PlayerPerformanceEntity.Entity;
 using Footbally_Domain.Entities.TeamEntity.Entity;
 
 namespace Footbally_Domain.Entities.PlayerEntity.Entity
@@ -19,8 +20,6 @@ namespace Footbally_Domain.Entities.PlayerEntity.Entity
             Position = position;
             Age = age;
             TeamId = teamId;
-            Goals = 0;
-            Assist = 0;
             Validate();
         }
         #region Properties
@@ -29,8 +28,6 @@ namespace Footbally_Domain.Entities.PlayerEntity.Entity
         public string ShirtNumber { get; private set; }
         public PositionEnum Position { get; private set; }
         public int Age { get; private set; }
-        public int Goals { get; private set; }
-        public int Assist { get; private set; }
         #endregion
 
         #region ForeginKey
@@ -39,6 +36,9 @@ namespace Footbally_Domain.Entities.PlayerEntity.Entity
 
         #region Navigation
         public Team Team { get; private set; }
+
+        public List<PlayerPerformance> Goals { get; private set; }
+        public List<PlayerPerformance> Assists { get; private set; }
         #endregion
 
         protected override void Validate()
@@ -69,25 +69,10 @@ namespace Footbally_Domain.Entities.PlayerEntity.Entity
 
             if (TeamId < 0)
                 throw new ArgumentOutOfRangeException("value cannot be negative");
-
-            if (Goals < 0)
-                throw new ArgumentOutOfRangeException("value cannot be negative");
-
-            if (Assist < 0)
-                throw new ArgumentOutOfRangeException("value cannot be negative");
+     
 
         }
 
-        public Player AddGoal()
-        {
-            Goals++;
-            return this;
-        }
 
-        public Player AddAssist()
-        {
-            Assist++;
-            return this;
-        }
     }
 }

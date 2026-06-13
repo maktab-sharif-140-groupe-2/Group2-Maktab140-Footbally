@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 
 using System.Text.RegularExpressions;
@@ -21,6 +22,11 @@ public class MatchModelBuilderConfiguration : BaseModelConfiguration<Footbally_D
             .IsRequired()
             .HasConversion<string>()
             .HasMaxLength(15);
+
+        builder.HasMany(x => x.PlayerPerformances)
+            .WithOne(x => x.Match)
+            .HasForeignKey(x => x.MatchId)
+            .OnDelete(DeleteBehavior.NoAction);
         
     }
 }

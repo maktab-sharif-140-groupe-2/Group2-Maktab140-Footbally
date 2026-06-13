@@ -1,7 +1,9 @@
 ﻿using Footbally_Domain.Entities.PlayerEntity.Entity;
 using Footbally_Domain.Entities.PlayerEntity.Enums;
+using Footbally_Domain.Entities.PlayerPerformanceEntity.Entity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System.Reflection.Emit;
 
 namespace Footbally_Infrastructure.ModelConfiguration;
 
@@ -30,13 +32,17 @@ public class PlayerModelBuilderConfiguration : BaseModelConfiguration<Player>
             .IsRequired()
             .HasDefaultValue(14);
 
-        builder.Property(m => m.Goals)
-            .IsRequired()
-            .HasDefaultValue(0);
+        builder.HasMany(m => m.Goals)
+            .WithOne(p => p.GoalPlayer)
+            .HasForeignKey(x => x.GoalPlayerId)
+            .OnDelete(DeleteBehavior.NoAction);
 
-        builder.Property(m => m.Assist)
-            .IsRequired()
-            .HasDefaultValue(0);
+        builder.HasMany(m => m.Assists)
+            .WithOne(p => p.AssistPlayer)
+            .HasForeignKey(x => x.AssistPlayerId)
+            .OnDelete(DeleteBehavior.NoAction);
+
+
 
         builder.HasData(
     new

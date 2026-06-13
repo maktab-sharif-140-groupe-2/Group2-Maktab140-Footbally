@@ -1,5 +1,6 @@
 ﻿using Footbally_Domain.Entities.CommonEntity.Entity;
 using Footbally_Domain.Entities.MatchEntity.Enums;
+using Footbally_Domain.Entities.PlayerPerformanceEntity.Entity;
 using Footbally_Domain.Entities.TeamEntity.Entity;
 
 namespace Footbally_Domain.Entities.MatchEntity.Entity;
@@ -45,6 +46,8 @@ public class Match : BaseEntity
     public virtual Team HomeTeam { get; private set; }
 
     public virtual Team AwayTeam { get; private set; }
+
+    public List<PlayerPerformance> PlayerPerformances { get; private set; }
     #endregion
     protected override void Validate()
     {

@@ -7,4 +7,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Entities\PlayerPerformanceEntity\Data\" />
+    <Folder Include="Entities\PlayerPerformanceEntity\Enum\" />
+    <Folder Include="Entities\UserEntity\Service\" />
+  </ItemGroup>
+
 </Project>
