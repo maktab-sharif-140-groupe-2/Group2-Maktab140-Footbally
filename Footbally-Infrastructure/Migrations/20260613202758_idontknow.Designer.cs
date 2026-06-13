@@ -4,6 +4,7 @@ using Footbally_Infrastructure.Common;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Footbally_Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260613202758_idontknow")]
+    partial class idontknow
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -11524,13 +11527,6 @@ namespace Footbally_Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = 44,
-                            CoachName = "Darren Bazeley",
-                            Country = "New Zealand",
-                            GroupNumber = 7
-                        },
-                        new
-                        {
                             Id = 45,
                             CoachName = "Marcelo Bielsa",
                             Country = "Uruguay",
@@ -11556,6 +11552,13 @@ namespace Footbally_Infrastructure.Migrations
                             CoachName = "Gustavo Alfaro",
                             Country = "Paraguay",
                             GroupNumber = 4
+                        },
+                        new
+                        {
+                            Id = 49,
+                            CoachName = "Darren Bazeley",
+                            Country = "New Zealand",
+                            GroupNumber = 7
                         });
                 });
 

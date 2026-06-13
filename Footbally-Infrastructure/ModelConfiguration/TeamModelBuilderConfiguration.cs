@@ -78,12 +78,12 @@ public class TeamModelBuilderConfiguration : BaseModelConfiguration<Team>
     new { Id = 41, Country = "Ivory Coast", CoachName = "Emerse Fae", GroupNumber = 5 },
     new { Id = 42, Country = "DR Congo", CoachName = "Sebastien Desabre", GroupNumber = 11 },
     new { Id = 43, Country = "Cape Verde", CoachName = "Bubista", GroupNumber = 8 },
-
+    new { Id = 44, Country = "New Zealand", CoachName = "Darren Bazeley", GroupNumber = 7 },
     new { Id = 45, Country = "Uruguay", CoachName = "Marcelo Bielsa", GroupNumber = 8 },
     new { Id = 46, Country = "Colombia", CoachName = "Nestor Lorenzo", GroupNumber = 11 },
     new { Id = 47, Country = "Ecuador", CoachName = "Sebastian Beccacece", GroupNumber = 5 },
     new { Id = 48, Country = "Paraguay", CoachName = "Gustavo Alfaro", GroupNumber = 4 }
 );
-        builder.HasData(new { Id = 49, Country = "New Zealand", CoachName = "Darren Bazeley", GroupNumber = 7 });
+
     }
 }
