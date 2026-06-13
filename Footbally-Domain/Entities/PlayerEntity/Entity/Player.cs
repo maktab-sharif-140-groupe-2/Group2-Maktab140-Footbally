@@ -1,24 +1,24 @@
 
-﻿using Footbally_Domain.Entities.CommonEntity.Entity;
+using Footbally_Domain.Entities.CommonEntity.Entity;
 using Footbally_Domain.Entities.PlayerEntity.Enums;
+using Footbally_Domain.Entities.PlayerPerformanceEntity.Entity;
 using Footbally_Domain.Entities.TeamEntity.Entity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Footbally_Domain.Entities.PlayerEntity.Entity
 {
     public class Player : BaseEntity
     {
-        public Player(string firstName, string lastName, string shirtNumber, string position, DateTime birthDate, int teamId)
+        private Player()
         {
-            FirstName = firstName;
-            LastName = lastName;
-            ShirtNumber = shirtNumber;
+            
+        }
+        public Player(string firstName, string lastName, string shirtNumber, PositionEnum position, int age, int teamId)
+        {
+            FirstName = firstName.Trim();
+            LastName = lastName.Trim();
+            ShirtNumber = shirtNumber.Trim();
             Position = position;
-            BirthDate = birthDate;
+            Age = age;
             TeamId = teamId;
             Validate();
         }
@@ -27,32 +27,52 @@ namespace Footbally_Domain.Entities.PlayerEntity.Entity
         public string LastName { get; private set; }
         public string ShirtNumber { get; private set; }
         public PositionEnum Position { get; private set; }
-        public DateTime BirthDate { get; private set; }
+        public int Age { get; private set; }
         #endregion
-        #region Navigation
-        public Team Team { get; private set; }
+
+        #region ForeginKey
         public int TeamId { get; private set; }
         #endregion
+
+        #region Navigation
+        public Team Team { get; private set; }
+
+        public List<PlayerPerformance> Goals { get; private set; }
+        public List<PlayerPerformance> Assists { get; private set; }
+        #endregion
+
         protected override void Validate()
         {
-            if (FirstName == null)
-            {
+            if (string.IsNullOrWhiteSpace(FirstName))
                 throw new ArgumentNullException("Invalid First Name");
-            }
-            if (LastName == null)
-            {
+
+            if (FirstName.Length < 0 || FirstName.Length > 50)
+                throw new InvalidOperationException("the firstName lenght must be higher than 0 and loweer than 50");
+
+            if (string.IsNullOrWhiteSpace(LastName))
                 throw new ArgumentNullException("Invalid LastName");
-            }
-            if (ShirtNumber == null)
-            {
+
+            if (LastName.Length < 0 || LastName.Length > 50)
+                throw new InvalidOperationException("the LastName lenght must be higher than 0 and loweer than 50");
+
+            if (string.IsNullOrWhiteSpace(ShirtNumber))
                 throw new ArgumentNullException("Invalid ShirtNumber");
-            }
-           
-            if (BirthDate >DateTime.UtcNow)
-            {
-                throw new ArgumentNullException("Invalid BirthDate");
-            }
+
+            if (ShirtNumber.Length > 2)
+                throw new ArgumentNullException("ShirtNumber Charcters Can't be Higher 2");
+
+            if (Convert.ToInt32(ShirtNumber) < 0)
+                throw new ArgumentNullException("ShirtNumber Can't be Negative");
+
+            if (Age < 0)
+                throw new ArgumentOutOfRangeException("value cannot be negative");
+
+            if (TeamId < 0)
+                throw new ArgumentOutOfRangeException("value cannot be negative");
+     
 
         }
+
+
     }
 }
