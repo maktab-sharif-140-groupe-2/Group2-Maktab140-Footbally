@@ -11611,13 +11611,13 @@ namespace Footbally_Infrastructure.Migrations
                     b.HasOne("Footbally_Domain.Entities.TeamEntity.Entity.Team", "AwayTeam")
                         .WithMany("AwayMatches")
                         .HasForeignKey("AwayTeamId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("Footbally_Domain.Entities.TeamEntity.Entity.Team", "HomeTeam")
                         .WithMany("HomeMatches")
                         .HasForeignKey("HomeTeamId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("AwayTeam");
@@ -11630,7 +11630,7 @@ namespace Footbally_Infrastructure.Migrations
                     b.HasOne("Footbally_Domain.Entities.TeamEntity.Entity.Team", "Team")
                         .WithMany("Players")
                         .HasForeignKey("TeamId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Team");
@@ -11668,7 +11668,7 @@ namespace Footbally_Infrastructure.Migrations
                     b.HasOne("Footbally_Domain.Entities.TeamEntity.Entity.Team", null)
                         .WithOne("Standing")
                         .HasForeignKey("Footbally_Domain.Entities.StandingEntity.Entity.Standing", "TeamId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });
 

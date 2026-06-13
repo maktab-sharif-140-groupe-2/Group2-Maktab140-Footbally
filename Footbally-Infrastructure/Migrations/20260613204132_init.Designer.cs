@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Footbally_Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260610111724_kh")]
-    partial class kh
+    [Migration("20260613204132_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -96,11 +96,6 @@ namespace Footbally_Infrastructure.Migrations
                         .HasColumnType("int")
                         .HasDefaultValue(14);
 
-                    b.Property<int>("Assist")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(0);
-
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
@@ -113,11 +108,6 @@ namespace Footbally_Infrastructure.Migrations
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
-
-                    b.Property<int>("Goals")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(0);
 
                     b.Property<bool>("IsDeleted")
                         .ValueGeneratedOnAdd()
@@ -158,9 +148,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 1,
                             Age = 33,
-                            Assist = 0,
                             FirstName = "Emiliano",
-                            Goals = 0,
                             LastName = "Martinez",
                             Position = "GoalKeeper",
                             ShirtNumber = "23",
@@ -170,9 +158,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 2,
                             Age = 34,
-                            Assist = 0,
                             FirstName = "Geronimo",
-                            Goals = 0,
                             LastName = "Rulli",
                             Position = "GoalKeeper",
                             ShirtNumber = "12",
@@ -182,9 +168,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 3,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Juan",
-                            Goals = 0,
                             LastName = "Musso",
                             Position = "GoalKeeper",
                             ShirtNumber = "1",
@@ -194,9 +178,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 4,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Cristian",
-                            Goals = 0,
                             LastName = "Romero",
                             Position = "CenterBack",
                             ShirtNumber = "13",
@@ -206,9 +188,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 5,
                             Age = 38,
-                            Assist = 0,
                             FirstName = "Nicolas",
-                            Goals = 0,
                             LastName = "Otamendi",
                             Position = "CenterBack",
                             ShirtNumber = "19",
@@ -218,9 +198,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 6,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Lisandro",
-                            Goals = 0,
                             LastName = "Martinez",
                             Position = "CenterBack",
                             ShirtNumber = "25",
@@ -230,9 +208,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 7,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Facundo",
-                            Goals = 0,
                             LastName = "Medina",
                             Position = "LeftBack",
                             ShirtNumber = "6",
@@ -242,9 +218,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 8,
                             Age = 33,
-                            Assist = 0,
                             FirstName = "Nicolas",
-                            Goals = 0,
                             LastName = "Tagliafico",
                             Position = "LeftBack",
                             ShirtNumber = "3",
@@ -254,9 +228,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 9,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Gonzalo",
-                            Goals = 0,
                             LastName = "Montiel",
                             Position = "RightBAck",
                             ShirtNumber = "4",
@@ -266,9 +238,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 10,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Nahuel",
-                            Goals = 0,
                             LastName = "Molina",
                             Position = "RightBAck",
                             ShirtNumber = "16",
@@ -278,9 +248,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 11,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Rodrigo",
-                            Goals = 0,
                             LastName = "De Paul",
                             Position = "CenterMidfilder",
                             ShirtNumber = "7",
@@ -290,9 +258,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 12,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Enzo",
-                            Goals = 0,
                             LastName = "Fernandez",
                             Position = "CenterMidfilder",
                             ShirtNumber = "8",
@@ -302,9 +268,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 13,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Alexis",
-                            Goals = 0,
                             LastName = "Mac Allister",
                             Position = "CenterMidfilder",
                             ShirtNumber = "20",
@@ -314,9 +278,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 14,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Leandro",
-                            Goals = 0,
                             LastName = "Paredes",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "5",
@@ -326,9 +288,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 15,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Giovani",
-                            Goals = 0,
                             LastName = "Lo Celso",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "18",
@@ -338,9 +298,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 16,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Exequiel",
-                            Goals = 0,
                             LastName = "Palacios",
                             Position = "CenterMidfilder",
                             ShirtNumber = "14",
@@ -350,9 +308,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 17,
                             Age = 22,
-                            Assist = 0,
                             FirstName = "Valentin",
-                            Goals = 0,
                             LastName = "Barco",
                             Position = "LeftWinger",
                             ShirtNumber = "21",
@@ -362,9 +318,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 18,
                             Age = 39,
-                            Assist = 0,
                             FirstName = "Lionel",
-                            Goals = 0,
                             LastName = "Messi",
                             Position = "RightWinger",
                             ShirtNumber = "10",
@@ -374,9 +328,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 19,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Julian",
-                            Goals = 0,
                             LastName = "Alvarez",
                             Position = "CenterForward",
                             ShirtNumber = "9",
@@ -386,9 +338,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 20,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Lautaro",
-                            Goals = 0,
                             LastName = "Martinez",
                             Position = "CenterForward",
                             ShirtNumber = "22",
@@ -398,9 +348,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 21,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Thiago",
-                            Goals = 0,
                             LastName = "Almada",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "11",
@@ -410,9 +358,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 22,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Nico",
-                            Goals = 0,
                             LastName = "Gonzalez",
                             Position = "LeftWinger",
                             ShirtNumber = "15",
@@ -422,9 +368,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 23,
                             Age = 21,
-                            Assist = 0,
                             FirstName = "Nico",
-                            Goals = 0,
                             LastName = "Paz",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "17",
@@ -434,9 +378,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 24,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Giuliano",
-                            Goals = 0,
                             LastName = "Simeone",
                             Position = "RightWinger",
                             ShirtNumber = "24",
@@ -446,9 +388,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 25,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Jose Manuel",
-                            Goals = 0,
                             LastName = "Lopez",
                             Position = "CenterForward",
                             ShirtNumber = "26",
@@ -458,9 +398,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 26,
                             Age = 33,
-                            Assist = 0,
                             FirstName = "Alisson",
-                            Goals = 0,
                             LastName = "Becker",
                             Position = "GoalKeeper",
                             ShirtNumber = "1",
@@ -470,9 +408,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 27,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Ederson",
-                            Goals = 0,
                             LastName = "Moraes",
                             Position = "GoalKeeper",
                             ShirtNumber = "23",
@@ -482,9 +418,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 28,
                             Age = 38,
-                            Assist = 0,
                             FirstName = "Weverton",
-                            Goals = 0,
                             LastName = "Pereira",
                             Position = "GoalKeeper",
                             ShirtNumber = "12",
@@ -494,9 +428,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 29,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Marcos",
-                            Goals = 0,
                             LastName = "Correa",
                             Position = "CenterBack",
                             ShirtNumber = "4",
@@ -506,9 +438,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 30,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Gabriel",
-                            Goals = 0,
                             LastName = "Magalhaes",
                             Position = "CenterBack",
                             ShirtNumber = "3",
@@ -518,9 +448,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 31,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Gleison",
-                            Goals = 0,
                             LastName = "Bremer",
                             Position = "CenterBack",
                             ShirtNumber = "14",
@@ -530,9 +458,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 32,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Roger",
-                            Goals = 0,
                             LastName = "Ibanez",
                             Position = "CenterBack",
                             ShirtNumber = "15",
@@ -542,9 +468,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 33,
                             Age = 35,
-                            Assist = 0,
                             FirstName = "Alex",
-                            Goals = 0,
                             LastName = "Sandro",
                             Position = "LeftBack",
                             ShirtNumber = "6",
@@ -554,9 +478,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 34,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Douglas",
-                            Goals = 0,
                             LastName = "Santos",
                             Position = "LeftBack",
                             ShirtNumber = "16",
@@ -566,9 +488,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 35,
                             Age = 34,
-                            Assist = 0,
                             FirstName = "Danilo",
-                            Goals = 0,
                             LastName = "Luiz",
                             Position = "RightBAck",
                             ShirtNumber = "2",
@@ -578,9 +498,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 36,
                             Age = 22,
-                            Assist = 0,
                             FirstName = "Wesley",
-                            Goals = 0,
                             LastName = "Franca",
                             Position = "RightBAck",
                             ShirtNumber = "13",
@@ -590,9 +508,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 37,
                             Age = 34,
-                            Assist = 0,
                             FirstName = "Casemiro",
-                            Goals = 0,
                             LastName = "Santos",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "5",
@@ -602,9 +518,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 38,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Bruno",
-                            Goals = 0,
                             LastName = "Guimaraes",
                             Position = "CenterMidfilder",
                             ShirtNumber = "8",
@@ -614,9 +528,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 39,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Fabinho",
-                            Goals = 0,
                             LastName = "Tavares",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "15",
@@ -626,9 +538,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 40,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Lucas",
-                            Goals = 0,
                             LastName = "Paqueta",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "10",
@@ -638,9 +548,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 41,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Danilo",
-                            Goals = 0,
                             LastName = "Santos",
                             Position = "CenterMidfilder",
                             ShirtNumber = "17",
@@ -650,9 +558,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 42,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Vinicius",
-                            Goals = 0,
                             LastName = "Junior",
                             Position = "LeftWinger",
                             ShirtNumber = "7",
@@ -662,9 +568,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 43,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Raphinha",
-                            Goals = 0,
                             LastName = "Belloli",
                             Position = "RightWinger",
                             ShirtNumber = "11",
@@ -674,9 +578,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 44,
                             Age = 34,
-                            Assist = 0,
                             FirstName = "Neymar",
-                            Goals = 0,
                             LastName = "Junior",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "10",
@@ -686,9 +588,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 45,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Gabriel",
-                            Goals = 0,
                             LastName = "Martinelli",
                             Position = "LeftWinger",
                             ShirtNumber = "20",
@@ -698,9 +598,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 46,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Matheus",
-                            Goals = 0,
                             LastName = "Cunha",
                             Position = "CenterForward",
                             ShirtNumber = "21",
@@ -710,9 +608,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 47,
                             Age = 19,
-                            Assist = 0,
                             FirstName = "Endrick",
-                            Goals = 0,
                             LastName = "Felipe",
                             Position = "CenterForward",
                             ShirtNumber = "9",
@@ -722,9 +618,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 48,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Igor",
-                            Goals = 0,
                             LastName = "Thiago",
                             Position = "CenterForward",
                             ShirtNumber = "19",
@@ -734,9 +628,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 49,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Luiz",
-                            Goals = 0,
                             LastName = "Henrique",
                             Position = "RightWinger",
                             ShirtNumber = "22",
@@ -746,9 +638,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 50,
                             Age = 19,
-                            Assist = 0,
                             FirstName = "Rayan",
-                            Goals = 0,
                             LastName = "Vitor",
                             Position = "RightWinger",
                             ShirtNumber = "24",
@@ -758,9 +648,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 51,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Jordan",
-                            Goals = 0,
                             LastName = "Pickford",
                             Position = "GoalKeeper",
                             ShirtNumber = "1",
@@ -770,9 +658,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 52,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Dean",
-                            Goals = 0,
                             LastName = "Henderson",
                             Position = "GoalKeeper",
                             ShirtNumber = "13",
@@ -782,9 +668,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 53,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "James",
-                            Goals = 0,
                             LastName = "Trafford",
                             Position = "GoalKeeper",
                             ShirtNumber = "23",
@@ -794,9 +678,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 54,
                             Age = 34,
-                            Assist = 0,
                             FirstName = "Dan",
-                            Goals = 0,
                             LastName = "Burn",
                             Position = "CenterBack",
                             ShirtNumber = "14",
@@ -806,9 +688,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 55,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Marc",
-                            Goals = 0,
                             LastName = "Guehi",
                             Position = "CenterBack",
                             ShirtNumber = "6",
@@ -818,9 +698,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 56,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Reece",
-                            Goals = 0,
                             LastName = "James",
                             Position = "RightBAck",
                             ShirtNumber = "2",
@@ -830,9 +708,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 57,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Ezri",
-                            Goals = 0,
                             LastName = "Konsa",
                             Position = "CenterBack",
                             ShirtNumber = "5",
@@ -842,9 +718,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 58,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Tino",
-                            Goals = 0,
                             LastName = "Livramento",
                             Position = "RightBAck",
                             ShirtNumber = "21",
@@ -854,9 +728,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 59,
                             Age = 21,
-                            Assist = 0,
                             FirstName = "Nico",
-                            Goals = 0,
                             LastName = "OReilly",
                             Position = "LeftBack",
                             ShirtNumber = "3",
@@ -866,9 +738,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 60,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Jarell",
-                            Goals = 0,
                             LastName = "Quansah",
                             Position = "CenterBack",
                             ShirtNumber = "15",
@@ -878,9 +748,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 61,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Djed",
-                            Goals = 0,
                             LastName = "Spence",
                             Position = "RightBAck",
                             ShirtNumber = "12",
@@ -890,9 +758,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 62,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "John",
-                            Goals = 0,
                             LastName = "Stones",
                             Position = "CenterBack",
                             ShirtNumber = "4",
@@ -902,9 +768,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 63,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Elliot",
-                            Goals = 0,
                             LastName = "Anderson",
                             Position = "CenterMidfilder",
                             ShirtNumber = "16",
@@ -914,9 +778,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 64,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Jude",
-                            Goals = 0,
                             LastName = "Bellingham",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "10",
@@ -926,9 +788,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 65,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Eberechi",
-                            Goals = 0,
                             LastName = "Eze",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "18",
@@ -938,9 +798,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 66,
                             Age = 36,
-                            Assist = 0,
                             FirstName = "Jordan",
-                            Goals = 0,
                             LastName = "Henderson",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "8",
@@ -950,9 +808,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 67,
                             Age = 21,
-                            Assist = 0,
                             FirstName = "Kobbie",
-                            Goals = 0,
                             LastName = "Mainoo",
                             Position = "CenterMidfilder",
                             ShirtNumber = "26",
@@ -962,9 +818,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 68,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Declan",
-                            Goals = 0,
                             LastName = "Rice",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "7",
@@ -974,9 +828,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 69,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Morgan",
-                            Goals = 0,
                             LastName = "Rogers",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "17",
@@ -986,9 +838,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 70,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Anthony",
-                            Goals = 0,
                             LastName = "Gordon",
                             Position = "LeftWinger",
                             ShirtNumber = "11",
@@ -998,9 +848,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 71,
                             Age = 33,
-                            Assist = 0,
                             FirstName = "Harry",
-                            Goals = 0,
                             LastName = "Kane",
                             Position = "CenterForward",
                             ShirtNumber = "9",
@@ -1010,9 +858,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 72,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Noni",
-                            Goals = 0,
                             LastName = "Madueke",
                             Position = "RightWinger",
                             ShirtNumber = "20",
@@ -1022,9 +868,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 73,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Marcus",
-                            Goals = 0,
                             LastName = "Rashford",
                             Position = "LeftWinger",
                             ShirtNumber = "19",
@@ -1034,9 +878,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 74,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Bukayo",
-                            Goals = 0,
                             LastName = "Saka",
                             Position = "RightWinger",
                             ShirtNumber = "25",
@@ -1046,9 +888,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 75,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Ivan",
-                            Goals = 0,
                             LastName = "Toney",
                             Position = "CenterForward",
                             ShirtNumber = "22",
@@ -1058,9 +898,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 76,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Ollie",
-                            Goals = 0,
                             LastName = "Watkins",
                             Position = "CenterForward",
                             ShirtNumber = "24",
@@ -1070,9 +908,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 77,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Mike",
-                            Goals = 0,
                             LastName = "Maignan",
                             Position = "GoalKeeper",
                             ShirtNumber = "1",
@@ -1082,9 +918,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 78,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Brice",
-                            Goals = 0,
                             LastName = "Samba",
                             Position = "GoalKeeper",
                             ShirtNumber = "16",
@@ -1094,9 +928,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 79,
                             Age = 21,
-                            Assist = 0,
                             FirstName = "Robin",
-                            Goals = 0,
                             LastName = "Risser",
                             Position = "GoalKeeper",
                             ShirtNumber = "23",
@@ -1106,9 +938,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 80,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Malo",
-                            Goals = 0,
                             LastName = "Gusto",
                             Position = "RightBAck",
                             ShirtNumber = "2",
@@ -1118,9 +948,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 81,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Jules",
-                            Goals = 0,
                             LastName = "Kounde",
                             Position = "RightBAck",
                             ShirtNumber = "5",
@@ -1130,9 +958,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 82,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Lucas",
-                            Goals = 0,
                             LastName = "Digne",
                             Position = "LeftBack",
                             ShirtNumber = "3",
@@ -1142,9 +968,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 83,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Theo",
-                            Goals = 0,
                             LastName = "Hernandez",
                             Position = "LeftBack",
                             ShirtNumber = "22",
@@ -1154,9 +978,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 84,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Lucas",
-                            Goals = 0,
                             LastName = "Hernandez",
                             Position = "LeftBack",
                             ShirtNumber = "21",
@@ -1166,9 +988,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 85,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "William",
-                            Goals = 0,
                             LastName = "Saliba",
                             Position = "CenterBack",
                             ShirtNumber = "17",
@@ -1178,9 +998,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 86,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Dayot",
-                            Goals = 0,
                             LastName = "Upamecano",
                             Position = "CenterBack",
                             ShirtNumber = "4",
@@ -1190,9 +1008,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 87,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Ibrahima",
-                            Goals = 0,
                             LastName = "Konate",
                             Position = "CenterBack",
                             ShirtNumber = "15",
@@ -1202,9 +1018,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 88,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Maxence",
-                            Goals = 0,
                             LastName = "Lacroix",
                             Position = "CenterBack",
                             ShirtNumber = "24",
@@ -1214,9 +1028,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 89,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Aurelien",
-                            Goals = 0,
                             LastName = "Tchouameni",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "8",
@@ -1226,9 +1038,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 90,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Adrien",
-                            Goals = 0,
                             LastName = "Rabiot",
                             Position = "CenterMidfilder",
                             ShirtNumber = "14",
@@ -1238,9 +1048,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 91,
                             Age = 35,
-                            Assist = 0,
                             FirstName = "NGolo",
-                            Goals = 0,
                             LastName = "Kante",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "13",
@@ -1250,9 +1058,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 92,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Manu",
-                            Goals = 0,
                             LastName = "Kone",
                             Position = "CenterMidfilder",
                             ShirtNumber = "6",
@@ -1262,9 +1068,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 93,
                             Age = 20,
-                            Assist = 0,
                             FirstName = "Warren",
-                            Goals = 0,
                             LastName = "Zaire-Emery",
                             Position = "CenterMidfilder",
                             ShirtNumber = "18",
@@ -1274,9 +1078,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 94,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Kylian",
-                            Goals = 0,
                             LastName = "Mbappe",
                             Position = "CenterForward",
                             ShirtNumber = "10",
@@ -1286,9 +1088,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 95,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Ousmane",
-                            Goals = 0,
                             LastName = "Dembele",
                             Position = "RightWinger",
                             ShirtNumber = "7",
@@ -1298,9 +1098,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 96,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Michael",
-                            Goals = 0,
                             LastName = "Olise",
                             Position = "RightWinger",
                             ShirtNumber = "11",
@@ -1310,9 +1108,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 97,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Bradley",
-                            Goals = 0,
                             LastName = "Barcola",
                             Position = "LeftWinger",
                             ShirtNumber = "20",
@@ -1322,9 +1118,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 98,
                             Age = 21,
-                            Assist = 0,
                             FirstName = "Desire",
-                            Goals = 0,
                             LastName = "Doue",
                             Position = "LeftWinger",
                             ShirtNumber = "12",
@@ -1334,9 +1128,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 99,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Rayan",
-                            Goals = 0,
                             LastName = "Cherki",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "19",
@@ -1346,9 +1138,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 100,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Maghnes",
-                            Goals = 0,
                             LastName = "Akliouche",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "25",
@@ -1358,9 +1148,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 101,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Marcus",
-                            Goals = 0,
                             LastName = "Thuram",
                             Position = "CenterForward",
                             ShirtNumber = "9",
@@ -1370,9 +1158,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 102,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Jean-Philippe",
-                            Goals = 0,
                             LastName = "Mateta",
                             Position = "CenterForward",
                             ShirtNumber = "26",
@@ -1382,9 +1168,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 103,
                             Age = 40,
-                            Assist = 0,
                             FirstName = "Manuel",
-                            Goals = 0,
                             LastName = "Neuer",
                             Position = "GoalKeeper",
                             ShirtNumber = "1",
@@ -1394,9 +1178,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 104,
                             Age = 35,
-                            Assist = 0,
                             FirstName = "Oliver",
-                            Goals = 0,
                             LastName = "Baumann",
                             Position = "GoalKeeper",
                             ShirtNumber = "12",
@@ -1406,9 +1188,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 105,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Alexander",
-                            Goals = 0,
                             LastName = "Nubel",
                             Position = "GoalKeeper",
                             ShirtNumber = "23",
@@ -1418,9 +1198,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 106,
                             Age = 33,
-                            Assist = 0,
                             FirstName = "Antonio",
-                            Goals = 0,
                             LastName = "Rudiger",
                             Position = "CenterBack",
                             ShirtNumber = "2",
@@ -1430,9 +1208,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 107,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Jonathan",
-                            Goals = 0,
                             LastName = "Tah",
                             Position = "CenterBack",
                             ShirtNumber = "4",
@@ -1442,9 +1218,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 108,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Nico",
-                            Goals = 0,
                             LastName = "Schlotterbeck",
                             Position = "CenterBack",
                             ShirtNumber = "15",
@@ -1454,9 +1228,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 109,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Waldemar",
-                            Goals = 0,
                             LastName = "Anton",
                             Position = "CenterBack",
                             ShirtNumber = "3",
@@ -1466,9 +1238,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 110,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Malick",
-                            Goals = 0,
                             LastName = "Thiaw",
                             Position = "CenterBack",
                             ShirtNumber = "16",
@@ -1478,9 +1248,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 111,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Joshua",
-                            Goals = 0,
                             LastName = "Kimmich",
                             Position = "RightBAck",
                             ShirtNumber = "6",
@@ -1490,9 +1258,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 112,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "David",
-                            Goals = 0,
                             LastName = "Raum",
                             Position = "LeftBack",
                             ShirtNumber = "18",
@@ -1502,9 +1268,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 113,
                             Age = 22,
-                            Assist = 0,
                             FirstName = "Nathaniel",
-                            Goals = 0,
                             LastName = "Brown",
                             Position = "LeftBack",
                             ShirtNumber = "20",
@@ -1514,9 +1278,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 114,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Leon",
-                            Goals = 0,
                             LastName = "Goretzka",
                             Position = "CenterMidfilder",
                             ShirtNumber = "8",
@@ -1526,9 +1288,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 115,
                             Age = 22,
-                            Assist = 0,
                             FirstName = "Aleksandar",
-                            Goals = 0,
                             LastName = "Pavlovic",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "5",
@@ -1538,9 +1298,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 116,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Angelo",
-                            Goals = 0,
                             LastName = "Stiller",
                             Position = "CenterMidfilder",
                             ShirtNumber = "17",
@@ -1550,9 +1308,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 117,
                             Age = 34,
-                            Assist = 0,
                             FirstName = "Pascal",
-                            Goals = 0,
                             LastName = "Gross",
                             Position = "CenterMidfilder",
                             ShirtNumber = "19",
@@ -1562,9 +1318,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 118,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Nadiem",
-                            Goals = 0,
                             LastName = "Amiri",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "14",
@@ -1574,9 +1328,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 119,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Felix",
-                            Goals = 0,
                             LastName = "Nmecha",
                             Position = "CenterMidfilder",
                             ShirtNumber = "13",
@@ -1586,9 +1338,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 120,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Jamal",
-                            Goals = 0,
                             LastName = "Musiala",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "10",
@@ -1598,9 +1348,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 121,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Florian",
-                            Goals = 0,
                             LastName = "Wirtz",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "7",
@@ -1610,9 +1358,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 122,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Jamie",
-                            Goals = 0,
                             LastName = "Leweling",
                             Position = "RightWinger",
                             ShirtNumber = "9",
@@ -1622,9 +1368,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 123,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Leroy",
-                            Goals = 0,
                             LastName = "Sane",
                             Position = "LeftWinger",
                             ShirtNumber = "11",
@@ -1634,9 +1378,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 124,
                             Age = 18,
-                            Assist = 0,
                             FirstName = "Lennart",
-                            Goals = 0,
                             LastName = "Karl",
                             Position = "RightWinger",
                             ShirtNumber = "24",
@@ -1646,9 +1388,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 125,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Kai",
-                            Goals = 0,
                             LastName = "Havertz",
                             Position = "CenterForward",
                             ShirtNumber = "22",
@@ -1658,9 +1398,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 126,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Deniz",
-                            Goals = 0,
                             LastName = "Undav",
                             Position = "CenterForward",
                             ShirtNumber = "26",
@@ -1670,9 +1408,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 127,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Nick",
-                            Goals = 0,
                             LastName = "Woltemade",
                             Position = "CenterForward",
                             ShirtNumber = "25",
@@ -1682,9 +1418,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 128,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Maximilian",
-                            Goals = 0,
                             LastName = "Beier",
                             Position = "CenterForward",
                             ShirtNumber = "21",
@@ -1694,9 +1428,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 129,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Unai",
-                            Goals = 0,
                             LastName = "Simon",
                             Position = "GoalKeeper",
                             ShirtNumber = "1",
@@ -1706,9 +1438,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 130,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "David",
-                            Goals = 0,
                             LastName = "Raya",
                             Position = "GoalKeeper",
                             ShirtNumber = "13",
@@ -1718,9 +1448,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 131,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Joan",
-                            Goals = 0,
                             LastName = "Garcia",
                             Position = "GoalKeeper",
                             ShirtNumber = "23",
@@ -1730,9 +1458,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 132,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Pedro",
-                            Goals = 0,
                             LastName = "Porro",
                             Position = "RightBAck",
                             ShirtNumber = "2",
@@ -1742,9 +1468,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 133,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Marcos",
-                            Goals = 0,
                             LastName = "Llorente",
                             Position = "RightBAck",
                             ShirtNumber = "14",
@@ -1754,9 +1478,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 134,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Aymeric",
-                            Goals = 0,
                             LastName = "Laporte",
                             Position = "CenterBack",
                             ShirtNumber = "4",
@@ -1766,9 +1488,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 135,
                             Age = 19,
-                            Assist = 0,
                             FirstName = "Pau",
-                            Goals = 0,
                             LastName = "Cubarsi",
                             Position = "CenterBack",
                             ShirtNumber = "5",
@@ -1778,9 +1498,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 136,
                             Age = 22,
-                            Assist = 0,
                             FirstName = "Marc",
-                            Goals = 0,
                             LastName = "Pubill",
                             Position = "RightBAck",
                             ShirtNumber = "15",
@@ -1790,9 +1508,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 137,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Eric",
-                            Goals = 0,
                             LastName = "Garcia",
                             Position = "CenterBack",
                             ShirtNumber = "3",
@@ -1802,9 +1518,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 138,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Marc",
-                            Goals = 0,
                             LastName = "Cucurella",
                             Position = "LeftBack",
                             ShirtNumber = "24",
@@ -1814,9 +1528,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 139,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Alex",
-                            Goals = 0,
                             LastName = "Grimaldo",
                             Position = "LeftBack",
                             ShirtNumber = "18",
@@ -1826,9 +1538,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 140,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Rodri",
-                            Goals = 0,
                             LastName = "Hernandez",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "6",
@@ -1838,9 +1548,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 141,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Martin",
-                            Goals = 0,
                             LastName = "Zubimendi",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "16",
@@ -1850,9 +1558,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 142,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Pedri",
-                            Goals = 0,
                             LastName = "Gonzalez",
                             Position = "CenterMidfilder",
                             ShirtNumber = "8",
@@ -1862,9 +1568,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 143,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Fabian",
-                            Goals = 0,
                             LastName = "Ruiz",
                             Position = "CenterMidfilder",
                             ShirtNumber = "20",
@@ -1874,9 +1578,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 144,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Mikel",
-                            Goals = 0,
                             LastName = "Merino",
                             Position = "CenterMidfilder",
                             ShirtNumber = "5",
@@ -1886,9 +1588,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 145,
                             Age = 21,
-                            Assist = 0,
                             FirstName = "Pablo",
-                            Goals = 0,
                             LastName = "Gavi",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "9",
@@ -1898,9 +1598,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 146,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Alex",
-                            Goals = 0,
                             LastName = "Baena",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "17",
@@ -1910,9 +1608,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 147,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Mikel",
-                            Goals = 0,
                             LastName = "Oyarzabal",
                             Position = "CenterForward",
                             ShirtNumber = "21",
@@ -1922,9 +1618,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 148,
                             Age = 18,
-                            Assist = 0,
                             FirstName = "Lamine",
-                            Goals = 0,
                             LastName = "Yamal",
                             Position = "RightWinger",
                             ShirtNumber = "19",
@@ -1934,9 +1628,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 149,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Ferran",
-                            Goals = 0,
                             LastName = "Torres",
                             Position = "CenterForward",
                             ShirtNumber = "11",
@@ -1946,9 +1638,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 150,
                             Age = 33,
-                            Assist = 0,
                             FirstName = "Borja",
-                            Goals = 0,
                             LastName = "Iglesias",
                             Position = "CenterForward",
                             ShirtNumber = "22",
@@ -1958,9 +1648,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 151,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Dani",
-                            Goals = 0,
                             LastName = "Olmo",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "10",
@@ -1970,9 +1658,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 152,
                             Age = 22,
-                            Assist = 0,
                             FirstName = "Victor",
-                            Goals = 0,
                             LastName = "Munoz",
                             Position = "LeftWinger",
                             ShirtNumber = "25",
@@ -1982,9 +1668,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 153,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Nico",
-                            Goals = 0,
                             LastName = "Williams",
                             Position = "LeftWinger",
                             ShirtNumber = "17",
@@ -1994,9 +1678,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 154,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Yeremy",
-                            Goals = 0,
                             LastName = "Pino",
                             Position = "RightWinger",
                             ShirtNumber = "7",
@@ -2006,9 +1688,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 155,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Diogo",
-                            Goals = 0,
                             LastName = "Costa",
                             Position = "GoalKeeper",
                             ShirtNumber = "1",
@@ -2018,9 +1698,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 156,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Rui",
-                            Goals = 0,
                             LastName = "Silva",
                             Position = "GoalKeeper",
                             ShirtNumber = "12",
@@ -2030,9 +1708,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 157,
                             Age = 33,
-                            Assist = 0,
                             FirstName = "Jose",
-                            Goals = 0,
                             LastName = "Sa",
                             Position = "GoalKeeper",
                             ShirtNumber = "22",
@@ -2042,9 +1718,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 158,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Diogo",
-                            Goals = 0,
                             LastName = "Dalot",
                             Position = "RightBAck",
                             ShirtNumber = "2",
@@ -2054,9 +1728,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 159,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Joao",
-                            Goals = 0,
                             LastName = "Cancelo",
                             Position = "RightBAck",
                             ShirtNumber = "20",
@@ -2066,9 +1738,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 160,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Nuno",
-                            Goals = 0,
                             LastName = "Mendes",
                             Position = "LeftBack",
                             ShirtNumber = "19",
@@ -2078,9 +1748,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 161,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Ruben",
-                            Goals = 0,
                             LastName = "Dias",
                             Position = "CenterBack",
                             ShirtNumber = "4",
@@ -2090,9 +1758,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 162,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Goncalo",
-                            Goals = 0,
                             LastName = "Inacio",
                             Position = "CenterBack",
                             ShirtNumber = "15",
@@ -2102,9 +1768,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 163,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Tomas",
-                            Goals = 0,
                             LastName = "Araujo",
                             Position = "CenterBack",
                             ShirtNumber = "3",
@@ -2114,9 +1778,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 164,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Renato",
-                            Goals = 0,
                             LastName = "Veiga",
                             Position = "CenterBack",
                             ShirtNumber = "5",
@@ -2126,9 +1788,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 165,
                             Age = 33,
-                            Assist = 0,
                             FirstName = "Nelson",
-                            Goals = 0,
                             LastName = "Semedo",
                             Position = "RightBAck",
                             ShirtNumber = "16",
@@ -2138,9 +1798,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 166,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Bruno",
-                            Goals = 0,
                             LastName = "Fernandes",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "8",
@@ -2150,9 +1808,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 167,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Bernardo",
-                            Goals = 0,
                             LastName = "Silva",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "10",
@@ -2162,9 +1818,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 168,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Vitinha",
-                            Goals = 0,
                             LastName = "Ferreira",
                             Position = "CenterMidfilder",
                             ShirtNumber = "23",
@@ -2174,9 +1828,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 169,
                             Age = 22,
-                            Assist = 0,
                             FirstName = "Joao",
-                            Goals = 0,
                             LastName = "Neves",
                             Position = "CenterMidfilder",
                             ShirtNumber = "14",
@@ -2186,9 +1838,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 170,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Ruben",
-                            Goals = 0,
                             LastName = "Neves",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "18",
@@ -2198,9 +1848,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 171,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Joao",
-                            Goals = 0,
                             LastName = "Palhinha",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "6",
@@ -2210,9 +1858,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 172,
                             Age = 41,
-                            Assist = 0,
                             FirstName = "Cristiano",
-                            Goals = 0,
                             LastName = "Ronaldo",
                             Position = "CenterForward",
                             ShirtNumber = "7",
@@ -2222,9 +1868,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 173,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Rafael",
-                            Goals = 0,
                             LastName = "Leao",
                             Position = "LeftWinger",
                             ShirtNumber = "17",
@@ -2234,9 +1878,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 174,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Pedro",
-                            Goals = 0,
                             LastName = "Neto",
                             Position = "RightWinger",
                             ShirtNumber = "11",
@@ -2246,9 +1888,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 175,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Francisco",
-                            Goals = 0,
                             LastName = "Conceicao",
                             Position = "RightWinger",
                             ShirtNumber = "21",
@@ -2258,9 +1898,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 176,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Joao",
-                            Goals = 0,
                             LastName = "Felix",
                             Position = "CenterForward",
                             ShirtNumber = "9",
@@ -2270,9 +1908,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 177,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Goncalo",
-                            Goals = 0,
                             LastName = "Ramos",
                             Position = "CenterForward",
                             ShirtNumber = "13",
@@ -2282,9 +1918,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 178,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Francisco",
-                            Goals = 0,
                             LastName = "Trincao",
                             Position = "LeftWinger",
                             ShirtNumber = "24",
@@ -2294,9 +1928,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 179,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Goncalo",
-                            Goals = 0,
                             LastName = "Guedes",
                             Position = "LeftWinger",
                             ShirtNumber = "25",
@@ -2306,9 +1938,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 180,
                             Age = 34,
-                            Assist = 0,
                             FirstName = "Thibaut",
-                            Goals = 0,
                             LastName = "Courtois",
                             Position = "GoalKeeper",
                             ShirtNumber = "1",
@@ -2318,9 +1948,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 181,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Senne",
-                            Goals = 0,
                             LastName = "Lammens",
                             Position = "GoalKeeper",
                             ShirtNumber = "12",
@@ -2330,9 +1958,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 182,
                             Age = 20,
-                            Assist = 0,
                             FirstName = "Mike",
-                            Goals = 0,
                             LastName = "Penders",
                             Position = "GoalKeeper",
                             ShirtNumber = "13",
@@ -2342,9 +1968,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 183,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Timothy",
-                            Goals = 0,
                             LastName = "Castagne",
                             Position = "RightBAck",
                             ShirtNumber = "21",
@@ -2354,9 +1978,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 184,
                             Age = 35,
-                            Assist = 0,
                             FirstName = "Thomas",
-                            Goals = 0,
                             LastName = "Meunier",
                             Position = "RightBAck",
                             ShirtNumber = "15",
@@ -2366,9 +1988,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 185,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Arthur",
-                            Goals = 0,
                             LastName = "Theate",
                             Position = "LeftBack",
                             ShirtNumber = "3",
@@ -2378,9 +1998,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 186,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Maxim",
-                            Goals = 0,
                             LastName = "De Cuyper",
                             Position = "LeftBack",
                             ShirtNumber = "5",
@@ -2390,9 +2008,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 187,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Wout",
-                            Goals = 0,
                             LastName = "Faes",
                             Position = "CenterBack",
                             ShirtNumber = "4",
@@ -2402,9 +2018,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 188,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Zeno",
-                            Goals = 0,
                             LastName = "Debast",
                             Position = "CenterBack",
                             ShirtNumber = "2",
@@ -2414,9 +2028,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 189,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Koni",
-                            Goals = 0,
                             LastName = "De Winter",
                             Position = "CenterBack",
                             ShirtNumber = "14",
@@ -2426,9 +2038,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 190,
                             Age = 33,
-                            Assist = 0,
                             FirstName = "Brandon",
-                            Goals = 0,
                             LastName = "Mechele",
                             Position = "CenterBack",
                             ShirtNumber = "18",
@@ -2438,9 +2048,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 191,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Youri",
-                            Goals = 0,
                             LastName = "Tielemans",
                             Position = "CenterMidfilder",
                             ShirtNumber = "8",
@@ -2450,9 +2058,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 192,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Amadou",
-                            Goals = 0,
                             LastName = "Onana",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "24",
@@ -2462,9 +2068,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 193,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Orel",
-                            Goals = 0,
                             LastName = "Mangala",
                             Position = "CenterMidfilder",
                             ShirtNumber = "7",
@@ -2474,9 +2078,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 194,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Nicolas",
-                            Goals = 0,
                             LastName = "Raskin",
                             Position = "CenterMidfilder",
                             ShirtNumber = "6",
@@ -2486,9 +2088,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 195,
                             Age = 35,
-                            Assist = 0,
                             FirstName = "Kevin",
-                            Goals = 0,
                             LastName = "De Bruyne",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "10",
@@ -2498,9 +2098,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 196,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Jeremy",
-                            Goals = 0,
                             LastName = "Doku",
                             Position = "LeftWinger",
                             ShirtNumber = "22",
@@ -2510,9 +2108,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 197,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Leandro",
-                            Goals = 0,
                             LastName = "Trossard",
                             Position = "LeftWinger",
                             ShirtNumber = "11",
@@ -2522,9 +2118,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 198,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Johan",
-                            Goals = 0,
                             LastName = "Bakayoko",
                             Position = "RightWinger",
                             ShirtNumber = "19",
@@ -2534,9 +2128,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 199,
                             Age = 21,
-                            Assist = 0,
                             FirstName = "Malick",
-                            Goals = 0,
                             LastName = "Fofana",
                             Position = "RightWinger",
                             ShirtNumber = "17",
@@ -2546,9 +2138,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 200,
                             Age = 33,
-                            Assist = 0,
                             FirstName = "Romelu",
-                            Goals = 0,
                             LastName = "Lukaku",
                             Position = "CenterForward",
                             ShirtNumber = "9",
@@ -2558,9 +2148,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 201,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Lois",
-                            Goals = 0,
                             LastName = "Openda",
                             Position = "CenterForward",
                             ShirtNumber = "20",
@@ -2570,9 +2158,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 202,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Charles",
-                            Goals = 0,
                             LastName = "De Ketelaere",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "16",
@@ -2582,9 +2168,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 203,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Dodi",
-                            Goals = 0,
                             LastName = "Lukebakio",
                             Position = "RightWinger",
                             ShirtNumber = "25",
@@ -2594,9 +2178,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 204,
                             Age = 33,
-                            Assist = 0,
                             FirstName = "Michy",
-                            Goals = 0,
                             LastName = "Batshuayi",
                             Position = "CenterForward",
                             ShirtNumber = "23",
@@ -2606,9 +2188,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 205,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Bart",
-                            Goals = 0,
                             LastName = "Verbruggen",
                             Position = "GoalKeeper",
                             ShirtNumber = "1",
@@ -2618,9 +2198,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 206,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Mark",
-                            Goals = 0,
                             LastName = "Flekken",
                             Position = "GoalKeeper",
                             ShirtNumber = "13",
@@ -2630,9 +2208,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 207,
                             Age = 22,
-                            Assist = 0,
                             FirstName = "Robin",
-                            Goals = 0,
                             LastName = "Roefs",
                             Position = "GoalKeeper",
                             ShirtNumber = "23",
@@ -2642,9 +2218,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 208,
                             Age = 34,
-                            Assist = 0,
                             FirstName = "Virgil",
-                            Goals = 0,
                             LastName = "van Dijk",
                             Position = "CenterBack",
                             ShirtNumber = "4",
@@ -2654,9 +2228,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 209,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Nathan",
-                            Goals = 0,
                             LastName = "Ake",
                             Position = "CenterBack",
                             ShirtNumber = "5",
@@ -2666,9 +2238,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 210,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Micky",
-                            Goals = 0,
                             LastName = "van de Ven",
                             Position = "CenterBack",
                             ShirtNumber = "15",
@@ -2678,9 +2248,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 211,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Jan Paul",
-                            Goals = 0,
                             LastName = "van Hecke",
                             Position = "CenterBack",
                             ShirtNumber = "3",
@@ -2690,9 +2258,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 212,
                             Age = 20,
-                            Assist = 0,
                             FirstName = "Jorrel",
-                            Goals = 0,
                             LastName = "Hato",
                             Position = "LeftBack",
                             ShirtNumber = "2",
@@ -2702,9 +2268,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 213,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Jurriën",
-                            Goals = 0,
                             LastName = "Timber",
                             Position = "RightBAck",
                             ShirtNumber = "12",
@@ -2714,9 +2278,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 214,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Denzel",
-                            Goals = 0,
                             LastName = "Dumfries",
                             Position = "RightBAck",
                             ShirtNumber = "22",
@@ -2726,9 +2288,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 215,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Frenkie",
-                            Goals = 0,
                             LastName = "de Jong",
                             Position = "CenterMidfilder",
                             ShirtNumber = "21",
@@ -2738,9 +2298,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 216,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Ryan",
-                            Goals = 0,
                             LastName = "Gravenberch",
                             Position = "CenterMidfilder",
                             ShirtNumber = "8",
@@ -2750,9 +2308,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 217,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Tijjani",
-                            Goals = 0,
                             LastName = "Reijnders",
                             Position = "CenterMidfilder",
                             ShirtNumber = "14",
@@ -2762,9 +2318,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 218,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Teun",
-                            Goals = 0,
                             LastName = "Koopmeiners",
                             Position = "CenterMidfilder",
                             ShirtNumber = "6",
@@ -2774,9 +2328,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 219,
                             Age = 35,
-                            Assist = 0,
                             FirstName = "Marten",
-                            Goals = 0,
                             LastName = "de Roon",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "18",
@@ -2786,9 +2338,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 220,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Quinten",
-                            Goals = 0,
                             LastName = "Timber",
                             Position = "CenterMidfilder",
                             ShirtNumber = "20",
@@ -2798,9 +2348,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 221,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Guus",
-                            Goals = 0,
                             LastName = "Til",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "16",
@@ -2810,9 +2358,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 222,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Mats",
-                            Goals = 0,
                             LastName = "Wieffer",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "17",
@@ -2822,9 +2368,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 223,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Memphis",
-                            Goals = 0,
                             LastName = "Depay",
                             Position = "CenterForward",
                             ShirtNumber = "10",
@@ -2834,9 +2378,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 224,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Cody",
-                            Goals = 0,
                             LastName = "Gakpo",
                             Position = "LeftWinger",
                             ShirtNumber = "11",
@@ -2846,9 +2388,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 225,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Donyell",
-                            Goals = 0,
                             LastName = "Malen",
                             Position = "RightWinger",
                             ShirtNumber = "7",
@@ -2858,9 +2398,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 226,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Justin",
-                            Goals = 0,
                             LastName = "Kluivert",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "19",
@@ -2870,9 +2408,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 227,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Noa",
-                            Goals = 0,
                             LastName = "Lang",
                             Position = "LeftWinger",
                             ShirtNumber = "9",
@@ -2882,9 +2418,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 228,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Brian",
-                            Goals = 0,
                             LastName = "Brobbey",
                             Position = "CenterForward",
                             ShirtNumber = "24",
@@ -2894,9 +2428,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 229,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Crysencio",
-                            Goals = 0,
                             LastName = "Summerville",
                             Position = "RightWinger",
                             ShirtNumber = "25",
@@ -2906,9 +2438,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 230,
                             Age = 33,
-                            Assist = 0,
                             FirstName = "Wout",
-                            Goals = 0,
                             LastName = "Weghorst",
                             Position = "CenterForward",
                             ShirtNumber = "26",
@@ -2918,9 +2448,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 231,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Dominik",
-                            Goals = 0,
                             LastName = "Livakovic",
                             Position = "GoalKeeper",
                             ShirtNumber = "1",
@@ -2930,9 +2458,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 232,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Ivor",
-                            Goals = 0,
                             LastName = "Pandur",
                             Position = "GoalKeeper",
                             ShirtNumber = "12",
@@ -2942,9 +2468,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 233,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Dominik",
-                            Goals = 0,
                             LastName = "Kotarski",
                             Position = "GoalKeeper",
                             ShirtNumber = "23",
@@ -2954,9 +2478,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 234,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Josip",
-                            Goals = 0,
                             LastName = "Stanisic",
                             Position = "RightBAck",
                             ShirtNumber = "2",
@@ -2966,9 +2488,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 235,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Marin",
-                            Goals = 0,
                             LastName = "Pongracic",
                             Position = "CenterBack",
                             ShirtNumber = "3",
@@ -2978,9 +2498,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 236,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Josko",
-                            Goals = 0,
                             LastName = "Gvardiol",
                             Position = "CenterBack",
                             ShirtNumber = "4",
@@ -2990,9 +2508,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 237,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Duje",
-                            Goals = 0,
                             LastName = "Caleta-Car",
                             Position = "CenterBack",
                             ShirtNumber = "5",
@@ -3002,9 +2518,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 238,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Josip",
-                            Goals = 0,
                             LastName = "Sutalo",
                             Position = "CenterBack",
                             ShirtNumber = "6",
@@ -3014,9 +2528,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 239,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Martin",
-                            Goals = 0,
                             LastName = "Erlic",
                             Position = "CenterBack",
                             ShirtNumber = "25",
@@ -3026,9 +2538,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 240,
                             Age = 19,
-                            Assist = 0,
                             FirstName = "Luka",
-                            Goals = 0,
                             LastName = "Vuskovic",
                             Position = "CenterBack",
                             ShirtNumber = "22",
@@ -3038,9 +2548,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 241,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Nikola",
-                            Goals = 0,
                             LastName = "Moro",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "7",
@@ -3050,9 +2558,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 242,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Mateo",
-                            Goals = 0,
                             LastName = "Kovacic",
                             Position = "CenterMidfilder",
                             ShirtNumber = "8",
@@ -3062,9 +2568,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 243,
                             Age = 40,
-                            Assist = 0,
                             FirstName = "Luka",
-                            Goals = 0,
                             LastName = "Modric",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "10",
@@ -3074,9 +2578,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 244,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Nikola",
-                            Goals = 0,
                             LastName = "Vlasic",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "13",
@@ -3086,9 +2588,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 245,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Mario",
-                            Goals = 0,
                             LastName = "Pasalic",
                             Position = "CenterMidfilder",
                             ShirtNumber = "15",
@@ -3098,9 +2598,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 246,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Martin",
-                            Goals = 0,
                             LastName = "Baturina",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "16",
@@ -3110,9 +2608,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 247,
                             Age = 22,
-                            Assist = 0,
                             FirstName = "Petar",
-                            Goals = 0,
                             LastName = "Sucic",
                             Position = "CenterMidfilder",
                             ShirtNumber = "17",
@@ -3122,9 +2618,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 248,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Kristijan",
-                            Goals = 0,
                             LastName = "Jakic",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "18",
@@ -3134,9 +2628,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 249,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Toni",
-                            Goals = 0,
                             LastName = "Fruk",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "19",
@@ -3146,9 +2638,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 250,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Luka",
-                            Goals = 0,
                             LastName = "Sucic",
                             Position = "CenterMidfilder",
                             ShirtNumber = "21",
@@ -3158,9 +2648,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 251,
                             Age = 35,
-                            Assist = 0,
                             FirstName = "Andrej",
-                            Goals = 0,
                             LastName = "Kramaric",
                             Position = "CenterForward",
                             ShirtNumber = "9",
@@ -3170,9 +2658,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 252,
                             Age = 35,
-                            Assist = 0,
                             FirstName = "Ante",
-                            Goals = 0,
                             LastName = "Budimir",
                             Position = "CenterForward",
                             ShirtNumber = "11",
@@ -3182,9 +2668,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 253,
                             Age = 37,
-                            Assist = 0,
                             FirstName = "Ivan",
-                            Goals = 0,
                             LastName = "Perisic",
                             Position = "LeftWinger",
                             ShirtNumber = "14",
@@ -3194,9 +2678,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 254,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Igor",
-                            Goals = 0,
                             LastName = "Matanovic",
                             Position = "CenterForward",
                             ShirtNumber = "20",
@@ -3206,9 +2688,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 255,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Marco",
-                            Goals = 0,
                             LastName = "Pasalic",
                             Position = "RightWinger",
                             ShirtNumber = "24",
@@ -3218,9 +2698,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 256,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Petar",
-                            Goals = 0,
                             LastName = "Musa",
                             Position = "CenterForward",
                             ShirtNumber = "26",
@@ -3230,9 +2708,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 257,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Gregor",
-                            Goals = 0,
                             LastName = "Kobel",
                             Position = "GoalKeeper",
                             ShirtNumber = "1",
@@ -3242,9 +2718,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 258,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Marvin",
-                            Goals = 0,
                             LastName = "Keller",
                             Position = "GoalKeeper",
                             ShirtNumber = "12",
@@ -3254,9 +2728,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 259,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Yvon",
-                            Goals = 0,
                             LastName = "Mvogo",
                             Position = "GoalKeeper",
                             ShirtNumber = "21",
@@ -3266,9 +2738,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 260,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Manuel",
-                            Goals = 0,
                             LastName = "Akanji",
                             Position = "CenterBack",
                             ShirtNumber = "5",
@@ -3278,9 +2748,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 261,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Nico",
-                            Goals = 0,
                             LastName = "Elvedi",
                             Position = "CenterBack",
                             ShirtNumber = "4",
@@ -3290,9 +2758,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 262,
                             Age = 34,
-                            Assist = 0,
                             FirstName = "Ricardo",
-                            Goals = 0,
                             LastName = "Rodriguez",
                             Position = "LeftBack",
                             ShirtNumber = "13",
@@ -3302,9 +2768,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 263,
                             Age = 33,
-                            Assist = 0,
                             FirstName = "Silvan",
-                            Goals = 0,
                             LastName = "Widmer",
                             Position = "RightBAck",
                             ShirtNumber = "3",
@@ -3314,9 +2778,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 264,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Miro",
-                            Goals = 0,
                             LastName = "Muheim",
                             Position = "LeftBack",
                             ShirtNumber = "17",
@@ -3326,9 +2788,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 265,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Aurele",
-                            Goals = 0,
                             LastName = "Amenda",
                             Position = "CenterBack",
                             ShirtNumber = "15",
@@ -3338,9 +2798,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 266,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Eray",
-                            Goals = 0,
                             LastName = "Comert",
                             Position = "CenterBack",
                             ShirtNumber = "18",
@@ -3350,9 +2808,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 267,
                             Age = 22,
-                            Assist = 0,
                             FirstName = "Luca",
-                            Goals = 0,
                             LastName = "Jaquez",
                             Position = "CenterBack",
                             ShirtNumber = "22",
@@ -3362,9 +2818,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 268,
                             Age = 34,
-                            Assist = 0,
                             FirstName = "Granit",
-                            Goals = 0,
                             LastName = "Xhaka",
                             Position = "CenterMidfilder",
                             ShirtNumber = "10",
@@ -3374,9 +2828,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 269,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Denis",
-                            Goals = 0,
                             LastName = "Zakaria",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "6",
@@ -3386,9 +2838,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 270,
                             Age = 34,
-                            Assist = 0,
                             FirstName = "Remo",
-                            Goals = 0,
                             LastName = "Freuler",
                             Position = "CenterMidfilder",
                             ShirtNumber = "8",
@@ -3398,9 +2848,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 271,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Djibril",
-                            Goals = 0,
                             LastName = "Sow",
                             Position = "CenterMidfilder",
                             ShirtNumber = "20",
@@ -3410,9 +2858,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 272,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Ardon",
-                            Goals = 0,
                             LastName = "Jashari",
                             Position = "CenterMidfilder",
                             ShirtNumber = "14",
@@ -3422,9 +2868,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 273,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Fabian",
-                            Goals = 0,
                             LastName = "Rieder",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "11",
@@ -3434,9 +2878,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 274,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Michel",
-                            Goals = 0,
                             LastName = "Aebischer",
                             Position = "CenterMidfilder",
                             ShirtNumber = "16",
@@ -3446,9 +2888,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 275,
                             Age = 33,
-                            Assist = 0,
                             FirstName = "Christian",
-                            Goals = 0,
                             LastName = "Fassnacht",
                             Position = "RightWinger",
                             ShirtNumber = "19",
@@ -3458,9 +2898,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 276,
                             Age = 20,
-                            Assist = 0,
                             FirstName = "Johan",
-                            Goals = 0,
                             LastName = "Manzambi",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "24",
@@ -3470,9 +2908,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 277,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Breel",
-                            Goals = 0,
                             LastName = "Embolo",
                             Position = "CenterForward",
                             ShirtNumber = "7",
@@ -3482,9 +2918,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 278,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Zeki",
-                            Goals = 0,
                             LastName = "Amdouni",
                             Position = "CenterForward",
                             ShirtNumber = "9",
@@ -3494,9 +2928,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 279,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Dan",
-                            Goals = 0,
                             LastName = "Ndoye",
                             Position = "RightWinger",
                             ShirtNumber = "23",
@@ -3506,9 +2938,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 280,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Noah",
-                            Goals = 0,
                             LastName = "Okafor",
                             Position = "LeftWinger",
                             ShirtNumber = "25",
@@ -3518,9 +2948,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 281,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Ruben",
-                            Goals = 0,
                             LastName = "Vargas",
                             Position = "LeftWinger",
                             ShirtNumber = "17",
@@ -3530,9 +2958,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 282,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Cedric",
-                            Goals = 0,
                             LastName = "Itten",
                             Position = "CenterForward",
                             ShirtNumber = "26",
@@ -3542,9 +2968,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 283,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Alexander",
-                            Goals = 0,
                             LastName = "Schlager",
                             Position = "GoalKeeper",
                             ShirtNumber = "1",
@@ -3554,9 +2978,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 284,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Patrick",
-                            Goals = 0,
                             LastName = "Pentz",
                             Position = "GoalKeeper",
                             ShirtNumber = "13",
@@ -3566,9 +2988,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 285,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Florian",
-                            Goals = 0,
                             LastName = "Wiegele",
                             Position = "GoalKeeper",
                             ShirtNumber = "23",
@@ -3578,9 +2998,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 286,
                             Age = 34,
-                            Assist = 0,
                             FirstName = "David",
-                            Goals = 0,
                             LastName = "Alaba",
                             Position = "CenterBack",
                             ShirtNumber = "4",
@@ -3590,9 +3008,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 287,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Kevin",
-                            Goals = 0,
                             LastName = "Danso",
                             Position = "CenterBack",
                             ShirtNumber = "3",
@@ -3602,9 +3018,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 288,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Philipp",
-                            Goals = 0,
                             LastName = "Lienhart",
                             Position = "CenterBack",
                             ShirtNumber = "15",
@@ -3614,9 +3028,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 289,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Marco",
-                            Goals = 0,
                             LastName = "Friedl",
                             Position = "CenterBack",
                             ShirtNumber = "5",
@@ -3626,9 +3038,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 290,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "David",
-                            Goals = 0,
                             LastName = "Affengruber",
                             Position = "CenterBack",
                             ShirtNumber = "22",
@@ -3638,9 +3048,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 291,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Michael",
-                            Goals = 0,
                             LastName = "Svoboda",
                             Position = "CenterBack",
                             ShirtNumber = "21",
@@ -3650,9 +3058,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 292,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Stefan",
-                            Goals = 0,
                             LastName = "Posch",
                             Position = "RightBAck",
                             ShirtNumber = "2",
@@ -3662,9 +3068,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 293,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Phillipp",
-                            Goals = 0,
                             LastName = "Mwene",
                             Position = "LeftBack",
                             ShirtNumber = "16",
@@ -3674,9 +3078,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 294,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Alexander",
-                            Goals = 0,
                             LastName = "Prass",
                             Position = "LeftBack",
                             ShirtNumber = "17",
@@ -3686,9 +3088,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 295,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Konrad",
-                            Goals = 0,
                             LastName = "Laimer",
                             Position = "CenterMidfilder",
                             ShirtNumber = "20",
@@ -3698,9 +3098,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 296,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Marcel",
-                            Goals = 0,
                             LastName = "Sabitzer",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "9",
@@ -3710,9 +3108,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 297,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Nicolas",
-                            Goals = 0,
                             LastName = "Seiwald",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "6",
@@ -3722,9 +3118,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 298,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Xaver",
-                            Goals = 0,
                             LastName = "Schlager",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "8",
@@ -3734,9 +3128,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 299,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Romano",
-                            Goals = 0,
                             LastName = "Schmid",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "18",
@@ -3746,9 +3138,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 300,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Patrick",
-                            Goals = 0,
                             LastName = "Wimmer",
                             Position = "RightWinger",
                             ShirtNumber = "11",
@@ -3758,9 +3148,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 301,
                             Age = 20,
-                            Assist = 0,
                             FirstName = "Paul",
-                            Goals = 0,
                             LastName = "Wanner",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "14",
@@ -3770,9 +3158,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 302,
                             Age = 22,
-                            Assist = 0,
                             FirstName = "Carney",
-                            Goals = 0,
                             LastName = "Chukwuemeka",
                             Position = "CenterMidfilder",
                             ShirtNumber = "19",
@@ -3782,9 +3168,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 303,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Florian",
-                            Goals = 0,
                             LastName = "Grillitsch",
                             Position = "CenterMidfilder",
                             ShirtNumber = "7",
@@ -3794,9 +3178,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 304,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Alessandro",
-                            Goals = 0,
                             LastName = "Schopf",
                             Position = "CenterMidfilder",
                             ShirtNumber = "24",
@@ -3806,9 +3188,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 305,
                             Age = 37,
-                            Assist = 0,
                             FirstName = "Marko",
-                            Goals = 0,
                             LastName = "Arnautovic",
                             Position = "CenterForward",
                             ShirtNumber = "10",
@@ -3818,9 +3198,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 306,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Michael",
-                            Goals = 0,
                             LastName = "Gregoritsch",
                             Position = "CenterForward",
                             ShirtNumber = "25",
@@ -3830,9 +3208,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 307,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Sasa",
-                            Goals = 0,
                             LastName = "Kalajdzic",
                             Position = "CenterForward",
                             ShirtNumber = "26",
@@ -3842,9 +3218,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 308,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Viktor",
-                            Goals = 0,
                             LastName = "Johansson",
                             Position = "GoalKeeper",
                             ShirtNumber = "1",
@@ -3854,9 +3228,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 309,
                             Age = 37,
-                            Assist = 0,
                             FirstName = "Kristoffer",
-                            Goals = 0,
                             LastName = "Nordfeldt",
                             Position = "GoalKeeper",
                             ShirtNumber = "12",
@@ -3866,9 +3238,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 310,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Jacob",
-                            Goals = 0,
                             LastName = "Zetterstrom",
                             Position = "GoalKeeper",
                             ShirtNumber = "23",
@@ -3878,9 +3248,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 311,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Victor",
-                            Goals = 0,
                             LastName = "Lindelof",
                             Position = "CenterBack",
                             ShirtNumber = "4",
@@ -3890,9 +3258,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 312,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Isak",
-                            Goals = 0,
                             LastName = "Hien",
                             Position = "CenterBack",
                             ShirtNumber = "3",
@@ -3902,9 +3268,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 313,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Carl",
-                            Goals = 0,
                             LastName = "Starfelt",
                             Position = "CenterBack",
                             ShirtNumber = "5",
@@ -3914,9 +3278,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 314,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Hjalmar",
-                            Goals = 0,
                             LastName = "Ekdal",
                             Position = "CenterBack",
                             ShirtNumber = "2",
@@ -3926,9 +3288,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 315,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Gabriel",
-                            Goals = 0,
                             LastName = "Gudmundsson",
                             Position = "LeftBack",
                             ShirtNumber = "13",
@@ -3938,9 +3298,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 316,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Daniel",
-                            Goals = 0,
                             LastName = "Svensson",
                             Position = "LeftBack",
                             ShirtNumber = "14",
@@ -3950,9 +3308,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 317,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Gustaf",
-                            Goals = 0,
                             LastName = "Lagerbielke",
                             Position = "CenterBack",
                             ShirtNumber = "15",
@@ -3962,9 +3318,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 318,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Eric",
-                            Goals = 0,
                             LastName = "Smith",
                             Position = "CenterBack",
                             ShirtNumber = "6",
@@ -3974,9 +3328,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 319,
                             Age = 20,
-                            Assist = 0,
                             FirstName = "Lucas",
-                            Goals = 0,
                             LastName = "Bergvall",
                             Position = "CenterMidfilder",
                             ShirtNumber = "8",
@@ -3986,9 +3338,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 320,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Yasin",
-                            Goals = 0,
                             LastName = "Ayari",
                             Position = "CenterMidfilder",
                             ShirtNumber = "16",
@@ -3998,9 +3348,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 321,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Mattias",
-                            Goals = 0,
                             LastName = "Svanberg",
                             Position = "CenterMidfilder",
                             ShirtNumber = "17",
@@ -4010,9 +3358,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 322,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Jesper",
-                            Goals = 0,
                             LastName = "Karlstrom",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "18",
@@ -4022,9 +3368,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 323,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Besfort",
-                            Goals = 0,
                             LastName = "Zeneli",
                             Position = "CenterMidfilder",
                             ShirtNumber = "20",
@@ -4034,9 +3378,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 324,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Benjamin",
-                            Goals = 0,
                             LastName = "Nygren",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "10",
@@ -4046,9 +3388,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 325,
                             Age = 33,
-                            Assist = 0,
                             FirstName = "Ken",
-                            Goals = 0,
                             LastName = "Sema",
                             Position = "LeftWinger",
                             ShirtNumber = "11",
@@ -4058,9 +3398,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 326,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Alexander",
-                            Goals = 0,
                             LastName = "Isak",
                             Position = "CenterForward",
                             ShirtNumber = "9",
@@ -4070,9 +3408,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 327,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Viktor",
-                            Goals = 0,
                             LastName = "Gyokeres",
                             Position = "CenterForward",
                             ShirtNumber = "19",
@@ -4082,9 +3418,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 328,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Anthony",
-                            Goals = 0,
                             LastName = "Elanga",
                             Position = "RightWinger",
                             ShirtNumber = "7",
@@ -4094,9 +3428,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 329,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Taha",
-                            Goals = 0,
                             LastName = "Ali",
                             Position = "RightWinger",
                             ShirtNumber = "21",
@@ -4106,9 +3438,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 330,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Alexander",
-                            Goals = 0,
                             LastName = "Bernhardsson",
                             Position = "LeftWinger",
                             ShirtNumber = "22",
@@ -4118,9 +3448,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 331,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Gustaf",
-                            Goals = 0,
                             LastName = "Nilsson",
                             Position = "CenterForward",
                             ShirtNumber = "24",
@@ -4130,9 +3458,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 332,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Elliot",
-                            Goals = 0,
                             LastName = "Stroud",
                             Position = "LeftWinger",
                             ShirtNumber = "25",
@@ -4142,9 +3468,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 333,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Emil",
-                            Goals = 0,
                             LastName = "Holm",
                             Position = "RightBAck",
                             ShirtNumber = "26",
@@ -4154,9 +3478,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 334,
                             Age = 35,
-                            Assist = 0,
                             FirstName = "Orjan",
-                            Goals = 0,
                             LastName = "Nyland",
                             Position = "GoalKeeper",
                             ShirtNumber = "1",
@@ -4166,9 +3488,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 335,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Egil",
-                            Goals = 0,
                             LastName = "Selvik",
                             Position = "GoalKeeper",
                             ShirtNumber = "12",
@@ -4178,9 +3498,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 336,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Sander",
-                            Goals = 0,
                             LastName = "Tangvik",
                             Position = "GoalKeeper",
                             ShirtNumber = "23",
@@ -4190,9 +3508,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 337,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Kristoffer",
-                            Goals = 0,
                             LastName = "Ajer",
                             Position = "CenterBack",
                             ShirtNumber = "3",
@@ -4202,9 +3518,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 338,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Leo",
-                            Goals = 0,
                             LastName = "Ostigard",
                             Position = "CenterBack",
                             ShirtNumber = "4",
@@ -4214,9 +3528,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 339,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Julian",
-                            Goals = 0,
                             LastName = "Ryerson",
                             Position = "RightBAck",
                             ShirtNumber = "2",
@@ -4226,9 +3538,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 340,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Marcus",
-                            Goals = 0,
                             LastName = "Pedersen",
                             Position = "RightBAck",
                             ShirtNumber = "14",
@@ -4238,9 +3548,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 341,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Fredrik",
-                            Goals = 0,
                             LastName = "Bjorkan",
                             Position = "LeftBack",
                             ShirtNumber = "5",
@@ -4250,9 +3558,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 342,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "David",
-                            Goals = 0,
                             LastName = "Wolfe",
                             Position = "LeftBack",
                             ShirtNumber = "13",
@@ -4262,9 +3568,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 343,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Torbjorn",
-                            Goals = 0,
                             LastName = "Heggem",
                             Position = "CenterBack",
                             ShirtNumber = "15",
@@ -4274,9 +3578,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 344,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Sondre",
-                            Goals = 0,
                             LastName = "Langas",
                             Position = "CenterBack",
                             ShirtNumber = "16",
@@ -4286,9 +3588,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 345,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Henrik",
-                            Goals = 0,
                             LastName = "Falchener",
                             Position = "CenterBack",
                             ShirtNumber = "22",
@@ -4298,9 +3598,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 346,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Martin",
-                            Goals = 0,
                             LastName = "Odegaard",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "10",
@@ -4310,9 +3608,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 347,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Sander",
-                            Goals = 0,
                             LastName = "Berge",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "8",
@@ -4322,9 +3618,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 348,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Patrick",
-                            Goals = 0,
                             LastName = "Berg",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "6",
@@ -4334,9 +3628,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 349,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Fredrik",
-                            Goals = 0,
                             LastName = "Aursnes",
                             Position = "CenterMidfilder",
                             ShirtNumber = "18",
@@ -4346,9 +3638,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 350,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Kristian",
-                            Goals = 0,
                             LastName = "Thorstvedt",
                             Position = "CenterMidfilder",
                             ShirtNumber = "20",
@@ -4358,9 +3648,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 351,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Morten",
-                            Goals = 0,
                             LastName = "Thorsby",
                             Position = "CenterMidfilder",
                             ShirtNumber = "19",
@@ -4370,9 +3658,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 352,
                             Age = 22,
-                            Assist = 0,
                             FirstName = "Oscar",
-                            Goals = 0,
                             LastName = "Bobb",
                             Position = "RightWinger",
                             ShirtNumber = "11",
@@ -4382,9 +3668,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 353,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Thelo",
-                            Goals = 0,
                             LastName = "Aasgaard",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "21",
@@ -4394,9 +3678,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 354,
                             Age = 22,
-                            Assist = 0,
                             FirstName = "Andreas",
-                            Goals = 0,
                             LastName = "Schjelderup",
                             Position = "LeftWinger",
                             ShirtNumber = "17",
@@ -4406,9 +3688,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 355,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Jens",
-                            Goals = 0,
                             LastName = "Hauge",
                             Position = "LeftWinger",
                             ShirtNumber = "7",
@@ -4418,9 +3698,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 356,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Erling",
-                            Goals = 0,
                             LastName = "Haaland",
                             Position = "CenterForward",
                             ShirtNumber = "9",
@@ -4430,9 +3708,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 357,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Alexander",
-                            Goals = 0,
                             LastName = "Sorloth",
                             Position = "CenterForward",
                             ShirtNumber = "18",
@@ -4442,9 +3718,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 358,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Jorgen",
-                            Goals = 0,
                             LastName = "Strand Larsen",
                             Position = "CenterForward",
                             ShirtNumber = "24",
@@ -4454,9 +3728,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 359,
                             Age = 21,
-                            Assist = 0,
                             FirstName = "Antonio",
-                            Goals = 0,
                             LastName = "Nusa",
                             Position = "LeftWinger",
                             ShirtNumber = "14",
@@ -4466,9 +3738,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 360,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Angus",
-                            Goals = 0,
                             LastName = "Gunn",
                             Position = "GoalKeeper",
                             ShirtNumber = "1",
@@ -4478,9 +3748,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 361,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Liam",
-                            Goals = 0,
                             LastName = "Kelly",
                             Position = "GoalKeeper",
                             ShirtNumber = "12",
@@ -4490,9 +3758,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 362,
                             Age = 43,
-                            Assist = 0,
                             FirstName = "Craig",
-                            Goals = 0,
                             LastName = "Gordon",
                             Position = "GoalKeeper",
                             ShirtNumber = "21",
@@ -4502,9 +3768,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 363,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Aaron",
-                            Goals = 0,
                             LastName = "Hickey",
                             Position = "RightBAck",
                             ShirtNumber = "2",
@@ -4514,9 +3778,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 364,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Andy",
-                            Goals = 0,
                             LastName = "Robertson",
                             Position = "LeftBack",
                             ShirtNumber = "3",
@@ -4526,9 +3788,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 365,
                             Age = 34,
-                            Assist = 0,
                             FirstName = "Grant",
-                            Goals = 0,
                             LastName = "Hanley",
                             Position = "CenterBack",
                             ShirtNumber = "5",
@@ -4538,9 +3798,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 366,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Kieran",
-                            Goals = 0,
                             LastName = "Tierney",
                             Position = "LeftBack",
                             ShirtNumber = "6",
@@ -4550,9 +3808,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 367,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Jack",
-                            Goals = 0,
                             LastName = "Hendry",
                             Position = "CenterBack",
                             ShirtNumber = "13",
@@ -4562,9 +3818,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 368,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "John",
-                            Goals = 0,
                             LastName = "Souttar",
                             Position = "CenterBack",
                             ShirtNumber = "15",
@@ -4574,9 +3828,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 369,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Dominic",
-                            Goals = 0,
                             LastName = "Hyam",
                             Position = "CenterBack",
                             ShirtNumber = "16",
@@ -4586,9 +3838,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 370,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Nathan",
-                            Goals = 0,
                             LastName = "Patterson",
                             Position = "RightBAck",
                             ShirtNumber = "22",
@@ -4598,9 +3848,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 371,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Anthony",
-                            Goals = 0,
                             LastName = "Ralston",
                             Position = "RightBAck",
                             ShirtNumber = "24",
@@ -4610,9 +3858,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 372,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Scott",
-                            Goals = 0,
                             LastName = "McKenna",
                             Position = "CenterBack",
                             ShirtNumber = "26",
@@ -4622,9 +3868,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 373,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Scott",
-                            Goals = 0,
                             LastName = "McTominay",
                             Position = "CenterMidfilder",
                             ShirtNumber = "4",
@@ -4634,9 +3878,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 374,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "John",
-                            Goals = 0,
                             LastName = "McGinn",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "7",
@@ -4646,9 +3888,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 375,
                             Age = 19,
-                            Assist = 0,
                             FirstName = "Tyler",
-                            Goals = 0,
                             LastName = "Fletcher",
                             Position = "CenterMidfilder",
                             ShirtNumber = "8",
@@ -4658,9 +3898,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 376,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Ryan",
-                            Goals = 0,
                             LastName = "Christie",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "11",
@@ -4670,9 +3908,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 377,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Lewis",
-                            Goals = 0,
                             LastName = "Ferguson",
                             Position = "CenterMidfilder",
                             ShirtNumber = "19",
@@ -4682,9 +3918,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 378,
                             Age = 34,
-                            Assist = 0,
                             FirstName = "Kenny",
-                            Goals = 0,
                             LastName = "McLean",
                             Position = "CenterMidfilder",
                             ShirtNumber = "23",
@@ -4694,9 +3928,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 379,
                             Age = 20,
-                            Assist = 0,
                             FirstName = "Ben",
-                            Goals = 0,
                             LastName = "Doak",
                             Position = "RightWinger",
                             ShirtNumber = "17",
@@ -4706,9 +3938,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 380,
                             Age = 19,
-                            Assist = 0,
                             FirstName = "Findlay",
-                            Goals = 0,
                             LastName = "Curtis",
                             Position = "LeftWinger",
                             ShirtNumber = "25",
@@ -4718,9 +3948,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 381,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Lyndon",
-                            Goals = 0,
                             LastName = "Dykes",
                             Position = "CenterForward",
                             ShirtNumber = "9",
@@ -4730,9 +3958,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 382,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Che",
-                            Goals = 0,
                             LastName = "Adams",
                             Position = "CenterForward",
                             ShirtNumber = "10",
@@ -4742,9 +3968,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 383,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Ross",
-                            Goals = 0,
                             LastName = "Stewart",
                             Position = "CenterForward",
                             ShirtNumber = "14",
@@ -4754,9 +3978,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 384,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "George",
-                            Goals = 0,
                             LastName = "Hirst",
                             Position = "CenterForward",
                             ShirtNumber = "18",
@@ -4766,9 +3988,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 385,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Lawrence",
-                            Goals = 0,
                             LastName = "Shankland",
                             Position = "CenterForward",
                             ShirtNumber = "20",
@@ -4778,9 +3998,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 386,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Nikola",
-                            Goals = 0,
                             LastName = "Vasilj",
                             Position = "GoalKeeper",
                             ShirtNumber = "1",
@@ -4790,9 +4008,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 387,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Kenan",
-                            Goals = 0,
                             LastName = "Piric",
                             Position = "GoalKeeper",
                             ShirtNumber = "12",
@@ -4802,9 +4018,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 388,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Osman",
-                            Goals = 0,
                             LastName = "Hadzikic",
                             Position = "GoalKeeper",
                             ShirtNumber = "23",
@@ -4814,9 +4028,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 389,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Amar",
-                            Goals = 0,
                             LastName = "Dedic",
                             Position = "RightBAck",
                             ShirtNumber = "2",
@@ -4826,9 +4038,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 390,
                             Age = 33,
-                            Assist = 0,
                             FirstName = "Sead",
-                            Goals = 0,
                             LastName = "Kolasinac",
                             Position = "LeftBack",
                             ShirtNumber = "5",
@@ -4838,9 +4048,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 391,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Adrian",
-                            Goals = 0,
                             LastName = "Leon Barisic",
                             Position = "CenterBack",
                             ShirtNumber = "3",
@@ -4850,9 +4058,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 392,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Anel",
-                            Goals = 0,
                             LastName = "Ahmedhodzic",
                             Position = "CenterBack",
                             ShirtNumber = "4",
@@ -4862,9 +4068,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 393,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Dennis",
-                            Goals = 0,
                             LastName = "Hadzikadunic",
                             Position = "CenterBack",
                             ShirtNumber = "15",
@@ -4874,9 +4078,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 394,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Tarik",
-                            Goals = 0,
                             LastName = "Muharemovic",
                             Position = "CenterBack",
                             ShirtNumber = "16",
@@ -4886,9 +4088,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 395,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Eldar",
-                            Goals = 0,
                             LastName = "Civic",
                             Position = "LeftBack",
                             ShirtNumber = "18",
@@ -4898,9 +4098,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 396,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Nihad",
-                            Goals = 0,
                             LastName = "Mujakic",
                             Position = "CenterBack",
                             ShirtNumber = "22",
@@ -4910,9 +4108,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 397,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Benjamin",
-                            Goals = 0,
                             LastName = "Tahirovic",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "6",
@@ -4922,9 +4118,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 398,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Amir",
-                            Goals = 0,
                             LastName = "Hadziahmetovic",
                             Position = "CenterMidfilder",
                             ShirtNumber = "8",
@@ -4934,9 +4128,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 399,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Ivan",
-                            Goals = 0,
                             LastName = "Basic",
                             Position = "CenterMidfilder",
                             ShirtNumber = "10",
@@ -4946,9 +4138,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 400,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Armin",
-                            Goals = 0,
                             LastName = "Gigovic",
                             Position = "CenterMidfilder",
                             ShirtNumber = "14",
@@ -4958,9 +4148,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 401,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Dario",
-                            Goals = 0,
                             LastName = "Saric",
                             Position = "CenterMidfilder",
                             ShirtNumber = "17",
@@ -4970,9 +4158,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 402,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Haris",
-                            Goals = 0,
                             LastName = "Hajradinovic",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "20",
@@ -4982,9 +4168,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 403,
                             Age = 21,
-                            Assist = 0,
                             FirstName = "Esmir",
-                            Goals = 0,
                             LastName = "Bajraktarevic",
                             Position = "RightWinger",
                             ShirtNumber = "7",
@@ -4994,9 +4178,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 404,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Ermedin",
-                            Goals = 0,
                             LastName = "Demirovic",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "11",
@@ -5006,9 +4188,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 405,
                             Age = 40,
-                            Assist = 0,
                             FirstName = "Edin",
-                            Goals = 0,
                             LastName = "Dzeko",
                             Position = "CenterForward",
                             ShirtNumber = "9",
@@ -5018,9 +4198,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 406,
                             Age = 22,
-                            Assist = 0,
                             FirstName = "Samed",
-                            Goals = 0,
                             LastName = "Bazdar",
                             Position = "CenterForward",
                             ShirtNumber = "19",
@@ -5030,9 +4208,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 407,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Luka",
-                            Goals = 0,
                             LastName = "Kulenovic",
                             Position = "CenterForward",
                             ShirtNumber = "21",
@@ -5042,9 +4218,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 408,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Armin",
-                            Goals = 0,
                             LastName = "Tabakovic",
                             Position = "CenterForward",
                             ShirtNumber = "24",
@@ -5054,9 +4228,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 409,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Nail",
-                            Goals = 0,
                             LastName = "Omerovic",
                             Position = "LeftWinger",
                             ShirtNumber = "25",
@@ -5066,9 +4238,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 410,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Dzenis",
-                            Goals = 0,
                             LastName = "Burnic",
                             Position = "CenterMidfilder",
                             ShirtNumber = "26",
@@ -5078,9 +4248,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 412,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Lukas",
-                            Goals = 0,
                             LastName = "Hornicek",
                             Position = "GoalKeeper",
                             ShirtNumber = "1",
@@ -5090,9 +4258,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 413,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Matej",
-                            Goals = 0,
                             LastName = "Kovar",
                             Position = "GoalKeeper",
                             ShirtNumber = "12",
@@ -5102,9 +4268,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 414,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Jindrich",
-                            Goals = 0,
                             LastName = "Stanek",
                             Position = "GoalKeeper",
                             ShirtNumber = "23",
@@ -5114,9 +4278,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 415,
                             Age = 33,
-                            Assist = 0,
                             FirstName = "Vladimir",
-                            Goals = 0,
                             LastName = "Coufal",
                             Position = "RightBAck",
                             ShirtNumber = "2",
@@ -5126,9 +4288,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 416,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "David",
-                            Goals = 0,
                             LastName = "Doudera",
                             Position = "RightBAck",
                             ShirtNumber = "3",
@@ -5138,9 +4298,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 417,
                             Age = 33,
-                            Assist = 0,
                             FirstName = "Tomas",
-                            Goals = 0,
                             LastName = "Holes",
                             Position = "CenterBack",
                             ShirtNumber = "4",
@@ -5150,9 +4308,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 418,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Robin",
-                            Goals = 0,
                             LastName = "Hranac",
                             Position = "CenterBack",
                             ShirtNumber = "5",
@@ -5162,9 +4318,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 419,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Stepan",
-                            Goals = 0,
                             LastName = "Chaloupek",
                             Position = "CenterBack",
                             ShirtNumber = "6",
@@ -5174,9 +4328,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 420,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "David",
-                            Goals = 0,
                             LastName = "Jurasek",
                             Position = "LeftBack",
                             ShirtNumber = "13",
@@ -5186,9 +4338,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 421,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Ladislav",
-                            Goals = 0,
                             LastName = "Krejci",
                             Position = "CenterBack",
                             ShirtNumber = "7",
@@ -5198,9 +4348,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 422,
                             Age = 33,
-                            Assist = 0,
                             FirstName = "Jaroslav",
-                            Goals = 0,
                             LastName = "Zeleny",
                             Position = "LeftBack",
                             ShirtNumber = "18",
@@ -5210,9 +4358,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 423,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "David",
-                            Goals = 0,
                             LastName = "Zima",
                             Position = "CenterBack",
                             ShirtNumber = "15",
@@ -5222,9 +4368,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 424,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Lukas",
-                            Goals = 0,
                             LastName = "Cerv",
                             Position = "CenterMidfilder",
                             ShirtNumber = "8",
@@ -5234,9 +4378,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 425,
                             Age = 35,
-                            Assist = 0,
                             FirstName = "Vladimir",
-                            Goals = 0,
                             LastName = "Darida",
                             Position = "CenterMidfilder",
                             ShirtNumber = "10",
@@ -5246,9 +4388,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 426,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Lukas",
-                            Goals = 0,
                             LastName = "Provod",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "14",
@@ -5258,9 +4398,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 427,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Michal",
-                            Goals = 0,
                             LastName = "Sadilek",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "22",
@@ -5270,9 +4408,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 428,
                             Age = 17,
-                            Assist = 0,
                             FirstName = "Hugo",
-                            Goals = 0,
                             LastName = "Sochurek",
                             Position = "CenterMidfilder",
                             ShirtNumber = "24",
@@ -5282,9 +4418,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 429,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Alexandr",
-                            Goals = 0,
                             LastName = "Sojka",
                             Position = "CenterMidfilder",
                             ShirtNumber = "16",
@@ -5294,9 +4428,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 430,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Tomas",
-                            Goals = 0,
                             LastName = "Soucek",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "21",
@@ -5306,9 +4438,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 431,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Pavel",
-                            Goals = 0,
                             LastName = "Sulc",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "11",
@@ -5318,9 +4448,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 432,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Denis",
-                            Goals = 0,
                             LastName = "Visinsky",
                             Position = "RightWinger",
                             ShirtNumber = "19",
@@ -5330,9 +4458,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 433,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Adam",
-                            Goals = 0,
                             LastName = "Hlozek",
                             Position = "CenterForward",
                             ShirtNumber = "9",
@@ -5342,9 +4468,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 434,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Tomas",
-                            Goals = 0,
                             LastName = "Chory",
                             Position = "CenterForward",
                             ShirtNumber = "20",
@@ -5354,9 +4478,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 435,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Mojmir",
-                            Goals = 0,
                             LastName = "Chytil",
                             Position = "CenterForward",
                             ShirtNumber = "17",
@@ -5366,9 +4488,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 436,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Jan",
-                            Goals = 0,
                             LastName = "Kuchta",
                             Position = "CenterForward",
                             ShirtNumber = "25",
@@ -5378,9 +4498,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 437,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Patrik",
-                            Goals = 0,
                             LastName = "Schick",
                             Position = "CenterForward",
                             ShirtNumber = "10",
@@ -5390,9 +4508,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 438,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Altay",
-                            Goals = 0,
                             LastName = "Bayindir",
                             Position = "GoalKeeper",
                             ShirtNumber = "12",
@@ -5402,9 +4518,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 439,
                             Age = 37,
-                            Assist = 0,
                             FirstName = "Mert",
-                            Goals = 0,
                             LastName = "Gunok",
                             Position = "GoalKeeper",
                             ShirtNumber = "1",
@@ -5414,9 +4528,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 440,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Ugurcan",
-                            Goals = 0,
                             LastName = "Cakir",
                             Position = "GoalKeeper",
                             ShirtNumber = "23",
@@ -5426,9 +4538,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 441,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Abdulkerim",
-                            Goals = 0,
                             LastName = "Bardakci",
                             Position = "CenterBack",
                             ShirtNumber = "14",
@@ -5438,9 +4548,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 442,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Caglar",
-                            Goals = 0,
                             LastName = "Soyuncu",
                             Position = "CenterBack",
                             ShirtNumber = "4",
@@ -5450,9 +4558,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 443,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Eren",
-                            Goals = 0,
                             LastName = "Elmali",
                             Position = "LeftBack",
                             ShirtNumber = "13",
@@ -5462,9 +4568,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 444,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Ferdi",
-                            Goals = 0,
                             LastName = "Kadioglu",
                             Position = "LeftBack",
                             ShirtNumber = "20",
@@ -5474,9 +4578,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 445,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Merih",
-                            Goals = 0,
                             LastName = "Demiral",
                             Position = "CenterBack",
                             ShirtNumber = "3",
@@ -5486,9 +4588,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 446,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Mert",
-                            Goals = 0,
                             LastName = "Muldur",
                             Position = "RightBAck",
                             ShirtNumber = "18",
@@ -5498,9 +4598,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 447,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Ozan",
-                            Goals = 0,
                             LastName = "Kabak",
                             Position = "CenterBack",
                             ShirtNumber = "15",
@@ -5510,9 +4608,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 448,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Samet",
-                            Goals = 0,
                             LastName = "Akaydin",
                             Position = "CenterBack",
                             ShirtNumber = "25",
@@ -5522,9 +4618,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 449,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Zeki",
-                            Goals = 0,
                             LastName = "Celik",
                             Position = "RightBAck",
                             ShirtNumber = "2",
@@ -5534,9 +4628,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 450,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Hakan",
-                            Goals = 0,
                             LastName = "Calhanoglu",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "10",
@@ -5546,9 +4638,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 451,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Ismail",
-                            Goals = 0,
                             LastName = "Yuksek",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "16",
@@ -5558,9 +4648,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 452,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Kaan",
-                            Goals = 0,
                             LastName = "Ayhan",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "22",
@@ -5570,9 +4658,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 453,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Orkun",
-                            Goals = 0,
                             LastName = "Kokcu",
                             Position = "CenterMidfilder",
                             ShirtNumber = "8",
@@ -5582,9 +4668,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 454,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Salih",
-                            Goals = 0,
                             LastName = "Ozcan",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "6",
@@ -5594,9 +4678,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 455,
                             Age = 21,
-                            Assist = 0,
                             FirstName = "Arda",
-                            Goals = 0,
                             LastName = "Guler",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "7",
@@ -5606,9 +4688,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 456,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Irfan Can",
-                            Goals = 0,
                             LastName = "Kahveci",
                             Position = "RightWinger",
                             ShirtNumber = "17",
@@ -5618,9 +4698,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 457,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Oguz",
-                            Goals = 0,
                             LastName = "Aydin",
                             Position = "RightWinger",
                             ShirtNumber = "24",
@@ -5630,9 +4708,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 458,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Yunus",
-                            Goals = 0,
                             LastName = "Akgun",
                             Position = "RightWinger",
                             ShirtNumber = "19",
@@ -5642,9 +4718,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 459,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Baris Alper",
-                            Goals = 0,
                             LastName = "Yilmaz",
                             Position = "CenterForward",
                             ShirtNumber = "21",
@@ -5654,9 +4728,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 460,
                             Age = 20,
-                            Assist = 0,
                             FirstName = "Can",
-                            Goals = 0,
                             LastName = "Uzun",
                             Position = "CenterForward",
                             ShirtNumber = "26",
@@ -5666,9 +4738,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 461,
                             Age = 22,
-                            Assist = 0,
                             FirstName = "Deniz",
-                            Goals = 0,
                             LastName = "Gul",
                             Position = "CenterForward",
                             ShirtNumber = "9",
@@ -5678,9 +4748,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 462,
                             Age = 21,
-                            Assist = 0,
                             FirstName = "Kenan",
-                            Goals = 0,
                             LastName = "Yildiz",
                             Position = "LeftWinger",
                             ShirtNumber = "11",
@@ -5690,9 +4758,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 463,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Kerem",
-                            Goals = 0,
                             LastName = "Akturkoglu",
                             Position = "LeftWinger",
                             ShirtNumber = "10",
@@ -5702,9 +4768,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 464,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Carlos",
-                            Goals = 0,
                             LastName = "Acevedo",
                             Position = "GoalKeeper",
                             ShirtNumber = "12",
@@ -5714,9 +4778,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 465,
                             Age = 40,
-                            Assist = 0,
                             FirstName = "Guillermo",
-                            Goals = 0,
                             LastName = "Ochoa",
                             Position = "GoalKeeper",
                             ShirtNumber = "13",
@@ -5726,9 +4788,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 466,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Raul",
-                            Goals = 0,
                             LastName = "Rangel",
                             Position = "GoalKeeper",
                             ShirtNumber = "1",
@@ -5738,9 +4798,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 467,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Edson",
-                            Goals = 0,
                             LastName = "Alvarez",
                             Position = "CenterBack",
                             ShirtNumber = "4",
@@ -5750,9 +4808,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 468,
                             Age = 21,
-                            Assist = 0,
                             FirstName = "Mateo",
-                            Goals = 0,
                             LastName = "Chavez",
                             Position = "LeftBack",
                             ShirtNumber = "20",
@@ -5762,9 +4818,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 469,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Jesus",
-                            Goals = 0,
                             LastName = "Gallardo",
                             Position = "LeftBack",
                             ShirtNumber = "23",
@@ -5774,9 +4828,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 470,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Cesar",
-                            Goals = 0,
                             LastName = "Montes",
                             Position = "CenterBack",
                             ShirtNumber = "3",
@@ -5786,9 +4838,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 471,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Israel",
-                            Goals = 0,
                             LastName = "Reyes",
                             Position = "RightBAck",
                             ShirtNumber = "15",
@@ -5798,9 +4848,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 472,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Jorge",
-                            Goals = 0,
                             LastName = "Sanchez",
                             Position = "RightBAck",
                             ShirtNumber = "2",
@@ -5810,9 +4858,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 473,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Johan",
-                            Goals = 0,
                             LastName = "Vasquez",
                             Position = "CenterBack",
                             ShirtNumber = "5",
@@ -5822,9 +4868,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 474,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Luis",
-                            Goals = 0,
                             LastName = "Chavez",
                             Position = "CenterMidfilder",
                             ShirtNumber = "24",
@@ -5834,9 +4878,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 475,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Alvaro",
-                            Goals = 0,
                             LastName = "Fidalgo",
                             Position = "CenterMidfilder",
                             ShirtNumber = "8",
@@ -5846,9 +4888,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 476,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Brian",
-                            Goals = 0,
                             LastName = "Gutierrez",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "26",
@@ -5858,9 +4898,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 477,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Erik",
-                            Goals = 0,
                             LastName = "Lira",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "6",
@@ -5870,9 +4908,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 478,
                             Age = 17,
-                            Assist = 0,
                             FirstName = "Gilberto",
-                            Goals = 0,
                             LastName = "Mora",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "19",
@@ -5882,9 +4918,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 479,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Luis",
-                            Goals = 0,
                             LastName = "Romo",
                             Position = "CenterMidfilder",
                             ShirtNumber = "7",
@@ -5894,9 +4928,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 480,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Orbelin",
-                            Goals = 0,
                             LastName = "Pineda",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "17",
@@ -5906,9 +4938,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 481,
                             Age = 20,
-                            Assist = 0,
                             FirstName = "Obed",
-                            Goals = 0,
                             LastName = "Vargas",
                             Position = "CenterMidfilder",
                             ShirtNumber = "18",
@@ -5918,9 +4948,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 482,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Roberto",
-                            Goals = 0,
                             LastName = "Alvarado",
                             Position = "RightWinger",
                             ShirtNumber = "25",
@@ -5930,9 +4958,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 483,
                             Age = 22,
-                            Assist = 0,
                             FirstName = "Armando",
-                            Goals = 0,
                             LastName = "Gonzalez",
                             Position = "CenterForward",
                             ShirtNumber = "14",
@@ -5942,9 +4968,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 484,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Cesar",
-                            Goals = 0,
                             LastName = "Huerta",
                             Position = "LeftWinger",
                             ShirtNumber = "21",
@@ -5954,9 +4978,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 485,
                             Age = 35,
-                            Assist = 0,
                             FirstName = "Raul",
-                            Goals = 0,
                             LastName = "Jimenez",
                             Position = "CenterForward",
                             ShirtNumber = "9",
@@ -5966,9 +4988,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 486,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Guillermo",
-                            Goals = 0,
                             LastName = "Martinez",
                             Position = "CenterForward",
                             ShirtNumber = "22",
@@ -5978,9 +4998,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 487,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Julian",
-                            Goals = 0,
                             LastName = "Quinones",
                             Position = "LeftWinger",
                             ShirtNumber = "16",
@@ -5990,9 +5008,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 488,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Santiago",
-                            Goals = 0,
                             LastName = "Gimenez",
                             Position = "CenterForward",
                             ShirtNumber = "11",
@@ -6002,9 +5018,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 489,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Alexis",
-                            Goals = 0,
                             LastName = "Vega",
                             Position = "LeftWinger",
                             ShirtNumber = "10",
@@ -6014,9 +5028,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 490,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Maxime",
-                            Goals = 0,
                             LastName = "Crepeau",
                             Position = "GoalKeeper",
                             ShirtNumber = "16",
@@ -6026,9 +5038,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 491,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Dayne",
-                            Goals = 0,
                             LastName = "St. Clair",
                             Position = "GoalKeeper",
                             ShirtNumber = "1",
@@ -6038,9 +5048,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 492,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Owen",
-                            Goals = 0,
                             LastName = "Goodman",
                             Position = "GoalKeeper",
                             ShirtNumber = "12",
@@ -6050,9 +5058,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 493,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Alphonso",
-                            Goals = 0,
                             LastName = "Davies",
                             Position = "LeftBack",
                             ShirtNumber = "19",
@@ -6062,9 +5068,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 494,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Alistair",
-                            Goals = 0,
                             LastName = "Johnston",
                             Position = "RightBAck",
                             ShirtNumber = "2",
@@ -6074,9 +5078,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 495,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Derek",
-                            Goals = 0,
                             LastName = "Cornelius",
                             Position = "CenterBack",
                             ShirtNumber = "5",
@@ -6086,9 +5088,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 496,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Moise",
-                            Goals = 0,
                             LastName = "Bombito",
                             Position = "CenterBack",
                             ShirtNumber = "4",
@@ -6098,9 +5098,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 497,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Richie",
-                            Goals = 0,
                             LastName = "Laryea",
                             Position = "LeftBack",
                             ShirtNumber = "3",
@@ -6110,9 +5108,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 498,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Alfie",
-                            Goals = 0,
                             LastName = "Jones",
                             Position = "CenterBack",
                             ShirtNumber = "15",
@@ -6122,9 +5118,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 499,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Joel",
-                            Goals = 0,
                             LastName = "Waterman",
                             Position = "CenterBack",
                             ShirtNumber = "6",
@@ -6134,9 +5128,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 500,
                             Age = 19,
-                            Assist = 0,
                             FirstName = "Luc",
-                            Goals = 0,
                             LastName = "De Fougerolles",
                             Position = "CenterBack",
                             ShirtNumber = "13",
@@ -6146,9 +5138,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 501,
                             Age = 21,
-                            Assist = 0,
                             FirstName = "Niko",
-                            Goals = 0,
                             LastName = "Sigur",
                             Position = "RightBAck",
                             ShirtNumber = "14",
@@ -6158,9 +5148,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 502,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Stephen",
-                            Goals = 0,
                             LastName = "Eustaquio",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "7",
@@ -6170,9 +5158,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 503,
                             Age = 22,
-                            Assist = 0,
                             FirstName = "Ismael",
-                            Goals = 0,
                             LastName = "Kone",
                             Position = "CenterMidfilder",
                             ShirtNumber = "8",
@@ -6182,9 +5168,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 504,
                             Age = 33,
-                            Assist = 0,
                             FirstName = "Jonathan",
-                            Goals = 0,
                             LastName = "Osorio",
                             Position = "CenterMidfilder",
                             ShirtNumber = "21",
@@ -6194,9 +5178,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 505,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Tajon",
-                            Goals = 0,
                             LastName = "Buchanan",
                             Position = "RightWinger",
                             ShirtNumber = "11",
@@ -6206,9 +5188,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 506,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Mathieu",
-                            Goals = 0,
                             LastName = "Choiniere",
                             Position = "CenterMidfilder",
                             ShirtNumber = "17",
@@ -6218,9 +5198,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 507,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Ali",
-                            Goals = 0,
                             LastName = "Ahmed",
                             Position = "LeftWinger",
                             ShirtNumber = "18",
@@ -6230,9 +5208,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 508,
                             Age = 20,
-                            Assist = 0,
                             FirstName = "Nathan",
-                            Goals = 0,
                             LastName = "Saliba",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "22",
@@ -6242,9 +5218,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 509,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Liam",
-                            Goals = 0,
                             LastName = "Millar",
                             Position = "LeftWinger",
                             ShirtNumber = "20",
@@ -6254,9 +5228,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 510,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Jonathan",
-                            Goals = 0,
                             LastName = "David",
                             Position = "CenterForward",
                             ShirtNumber = "10",
@@ -6266,9 +5238,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 511,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Cyle",
-                            Goals = 0,
                             LastName = "Larin",
                             Position = "CenterForward",
                             ShirtNumber = "9",
@@ -6278,9 +5248,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 512,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Jacob",
-                            Goals = 0,
                             LastName = "Shaffelburg",
                             Position = "LeftWinger",
                             ShirtNumber = "14",
@@ -6290,9 +5258,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 513,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Promise",
-                            Goals = 0,
                             LastName = "David",
                             Position = "CenterForward",
                             ShirtNumber = "23",
@@ -6302,9 +5268,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 514,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Tani",
-                            Goals = 0,
                             LastName = "Oluwaseyi",
                             Position = "CenterForward",
                             ShirtNumber = "24",
@@ -6314,9 +5278,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 515,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Matt",
-                            Goals = 0,
                             LastName = "Turner",
                             Position = "GoalKeeper",
                             ShirtNumber = "1",
@@ -6326,9 +5288,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 516,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Ethan",
-                            Goals = 0,
                             LastName = "Horvath",
                             Position = "GoalKeeper",
                             ShirtNumber = "12",
@@ -6338,9 +5298,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 517,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Chris",
-                            Goals = 0,
                             LastName = "Brady",
                             Position = "GoalKeeper",
                             ShirtNumber = "23",
@@ -6350,9 +5308,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 518,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Sergino",
-                            Goals = 0,
                             LastName = "Dest",
                             Position = "RightBAck",
                             ShirtNumber = "2",
@@ -6362,9 +5318,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 519,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Antonee",
-                            Goals = 0,
                             LastName = "Robinson",
                             Position = "LeftBack",
                             ShirtNumber = "3",
@@ -6374,9 +5328,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 520,
                             Age = 37,
-                            Assist = 0,
                             FirstName = "Tim",
-                            Goals = 0,
                             LastName = "Ream",
                             Position = "CenterBack",
                             ShirtNumber = "13",
@@ -6386,9 +5338,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 521,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Chris",
-                            Goals = 0,
                             LastName = "Richards",
                             Position = "CenterBack",
                             ShirtNumber = "4",
@@ -6398,9 +5348,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 522,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Miles",
-                            Goals = 0,
                             LastName = "Robinson",
                             Position = "CenterBack",
                             ShirtNumber = "5",
@@ -6410,9 +5358,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 523,
                             Age = 22,
-                            Assist = 0,
                             FirstName = "Joe",
-                            Goals = 0,
                             LastName = "Scally",
                             Position = "RightBAck",
                             ShirtNumber = "18",
@@ -6422,9 +5368,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 524,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Cameron",
-                            Goals = 0,
                             LastName = "Carter-Vickers",
                             Position = "CenterBack",
                             ShirtNumber = "6",
@@ -6434,9 +5378,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 525,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Tyler",
-                            Goals = 0,
                             LastName = "Adams",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "8",
@@ -6446,9 +5388,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 526,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Weston",
-                            Goals = 0,
                             LastName = "McKennie",
                             Position = "CenterMidfilder",
                             ShirtNumber = "7",
@@ -6458,9 +5398,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 527,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Yunus",
-                            Goals = 0,
                             LastName = "Musah",
                             Position = "CenterMidfilder",
                             ShirtNumber = "11",
@@ -6470,9 +5408,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 528,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Giovanni",
-                            Goals = 0,
                             LastName = "Reyna",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "10",
@@ -6482,9 +5418,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 529,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Luca",
-                            Goals = 0,
                             LastName = "de la Torre",
                             Position = "CenterMidfilder",
                             ShirtNumber = "14",
@@ -6494,9 +5428,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 530,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Brenden",
-                            Goals = 0,
                             LastName = "Aaronson",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "19",
@@ -6506,9 +5438,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 531,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Malik",
-                            Goals = 0,
                             LastName = "Tillman",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "17",
@@ -6518,9 +5448,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 532,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Johnny",
-                            Goals = 0,
                             LastName = "Cardoso",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "15",
@@ -6530,9 +5458,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 533,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Christian",
-                            Goals = 0,
                             LastName = "Pulisic",
                             Position = "LeftWinger",
                             ShirtNumber = "10",
@@ -6542,9 +5468,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 534,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Timothy",
-                            Goals = 0,
                             LastName = "Weah",
                             Position = "RightWinger",
                             ShirtNumber = "21",
@@ -6554,9 +5478,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 535,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Folarin",
-                            Goals = 0,
                             LastName = "Balogun",
                             Position = "CenterForward",
                             ShirtNumber = "9",
@@ -6566,9 +5488,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 536,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Ricardo",
-                            Goals = 0,
                             LastName = "Pepi",
                             Position = "CenterForward",
                             ShirtNumber = "20",
@@ -6578,9 +5498,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 537,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Josh",
-                            Goals = 0,
                             LastName = "Sargent",
                             Position = "CenterForward",
                             ShirtNumber = "11",
@@ -6590,9 +5508,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 538,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Haji",
-                            Goals = 0,
                             LastName = "Wright",
                             Position = "CenterForward",
                             ShirtNumber = "16",
@@ -6602,9 +5518,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 539,
                             Age = 34,
-                            Assist = 0,
                             FirstName = "Luis",
-                            Goals = 0,
                             LastName = "Mejía",
                             Position = "GoalKeeper",
                             ShirtNumber = "1",
@@ -6614,9 +5528,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 540,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Orlando",
-                            Goals = 0,
                             LastName = "Mosquera",
                             Position = "GoalKeeper",
                             ShirtNumber = "12",
@@ -6626,9 +5538,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 541,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Cesar",
-                            Goals = 0,
                             LastName = "Samudio",
                             Position = "GoalKeeper",
                             ShirtNumber = "23",
@@ -6638,9 +5548,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 542,
                             Age = 33,
-                            Assist = 0,
                             FirstName = "Eric",
-                            Goals = 0,
                             LastName = "Davis",
                             Position = "LeftBack",
                             ShirtNumber = "15",
@@ -6650,9 +5558,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 543,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Michael",
-                            Goals = 0,
                             LastName = "Murillo",
                             Position = "RightBAck",
                             ShirtNumber = "2",
@@ -6662,9 +5568,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 544,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Fidel",
-                            Goals = 0,
                             LastName = "Escobar",
                             Position = "CenterBack",
                             ShirtNumber = "4",
@@ -6674,9 +5578,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 545,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Jose",
-                            Goals = 0,
                             LastName = "Cordoba",
                             Position = "CenterBack",
                             ShirtNumber = "3",
@@ -6686,9 +5588,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 546,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Cesar",
-                            Goals = 0,
                             LastName = "Blackman",
                             Position = "RightBAck",
                             ShirtNumber = "6",
@@ -6698,9 +5598,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 547,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Andres",
-                            Goals = 0,
                             LastName = "Andrade",
                             Position = "LeftBack",
                             ShirtNumber = "13",
@@ -6710,9 +5608,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 548,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Edgardo",
-                            Goals = 0,
                             LastName = "Farina",
                             Position = "CenterBack",
                             ShirtNumber = "5",
@@ -6722,9 +5618,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 549,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Jiovany",
-                            Goals = 0,
                             LastName = "Ramos",
                             Position = "RightBAck",
                             ShirtNumber = "14",
@@ -6734,9 +5628,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 550,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Jorge",
-                            Goals = 0,
                             LastName = "Gutiérrez",
                             Position = "CenterBack",
                             ShirtNumber = "16",
@@ -6746,9 +5638,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 551,
                             Age = 35,
-                            Assist = 0,
                             FirstName = "Anibal",
-                            Goals = 0,
                             LastName = "Godoy",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "20",
@@ -6758,9 +5648,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 552,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Adalberto",
-                            Goals = 0,
                             LastName = "Carrasquilla",
                             Position = "CenterMidfilder",
                             ShirtNumber = "8",
@@ -6770,9 +5658,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 553,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Jose Luis",
-                            Goals = 0,
                             LastName = "Rodriguez",
                             Position = "RightWinger",
                             ShirtNumber = "7",
@@ -6782,9 +5668,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 554,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Yoel",
-                            Goals = 0,
                             LastName = "Barcenas",
                             Position = "LeftWinger",
                             ShirtNumber = "11",
@@ -6794,9 +5678,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 555,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Cesar",
-                            Goals = 0,
                             LastName = "Yanis",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "19",
@@ -6806,9 +5688,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 556,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Cristian",
-                            Goals = 0,
                             LastName = "Martinez",
                             Position = "CenterMidfilder",
                             ShirtNumber = "17",
@@ -6818,9 +5698,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 557,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Carlos",
-                            Goals = 0,
                             LastName = "Harvey",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "18",
@@ -6830,9 +5708,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 558,
                             Age = 37,
-                            Assist = 0,
                             FirstName = "Alberto",
-                            Goals = 0,
                             LastName = "Quintero",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "10",
@@ -6842,9 +5718,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 559,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Ismael",
-                            Goals = 0,
                             LastName = "Diaz",
                             Position = "CenterForward",
                             ShirtNumber = "9",
@@ -6854,9 +5728,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 560,
                             Age = 33,
-                            Assist = 0,
                             FirstName = "Cecilio",
-                            Goals = 0,
                             LastName = "Waterman",
                             Position = "CenterForward",
                             ShirtNumber = "21",
@@ -6866,9 +5738,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 561,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Jose",
-                            Goals = 0,
                             LastName = "Fajardo",
                             Position = "CenterForward",
                             ShirtNumber = "22",
@@ -6878,9 +5748,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 562,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Tomás",
-                            Goals = 0,
                             LastName = "Rodriguez",
                             Position = "CenterForward",
                             ShirtNumber = "24",
@@ -6890,9 +5758,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 563,
                             Age = 37,
-                            Assist = 0,
                             FirstName = "Eloy",
-                            Goals = 0,
                             LastName = "Room",
                             Position = "GoalKeeper",
                             ShirtNumber = "1",
@@ -6902,9 +5768,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 564,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Tyrick",
-                            Goals = 0,
                             LastName = "Bodak",
                             Position = "GoalKeeper",
                             ShirtNumber = "25",
@@ -6914,9 +5778,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 565,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Trevor",
-                            Goals = 0,
                             LastName = "Doornbusch",
                             Position = "GoalKeeper",
                             ShirtNumber = "26",
@@ -6926,9 +5788,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 566,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Shurandy",
-                            Goals = 0,
                             LastName = "Sambo",
                             Position = "RightBAck",
                             ShirtNumber = "2",
@@ -6938,9 +5798,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 567,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Jurien",
-                            Goals = 0,
                             LastName = "Gaari",
                             Position = "RightBAck",
                             ShirtNumber = "3",
@@ -6950,9 +5808,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 568,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Roshon",
-                            Goals = 0,
                             LastName = "Van Eijma",
                             Position = "CenterBack",
                             ShirtNumber = "4",
@@ -6962,9 +5818,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 569,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Sherel",
-                            Goals = 0,
                             LastName = "Floranus",
                             Position = "LeftBack",
                             ShirtNumber = "5",
@@ -6974,9 +5828,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 570,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Joshua",
-                            Goals = 0,
                             LastName = "Brenet",
                             Position = "RightBAck",
                             ShirtNumber = "20",
@@ -6986,9 +5838,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 571,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Riechedly",
-                            Goals = 0,
                             LastName = "Bazoer",
                             Position = "CenterBack",
                             ShirtNumber = "23",
@@ -6998,9 +5848,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 572,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Armando",
-                            Goals = 0,
                             LastName = "Obispo",
                             Position = "CenterBack",
                             ShirtNumber = "18",
@@ -7010,9 +5858,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 573,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Deveron",
-                            Goals = 0,
                             LastName = "Fonville",
                             Position = "CenterBack",
                             ShirtNumber = "24",
@@ -7022,9 +5868,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 574,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Juninho",
-                            Goals = 0,
                             LastName = "Bacuna",
                             Position = "CenterMidfilder",
                             ShirtNumber = "7",
@@ -7034,9 +5878,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 575,
                             Age = 34,
-                            Assist = 0,
                             FirstName = "Leandro",
-                            Goals = 0,
                             LastName = "Bacuna",
                             Position = "CenterMidfilder",
                             ShirtNumber = "10",
@@ -7046,9 +5888,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 576,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Godfried",
-                            Goals = 0,
                             LastName = "Roemeratoe",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "6",
@@ -7058,9 +5898,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 577,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Kevin",
-                            Goals = 0,
                             LastName = "Felida",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "22",
@@ -7070,9 +5908,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 578,
                             Age = 22,
-                            Assist = 0,
                             FirstName = "Livano",
-                            Goals = 0,
                             LastName = "Comenencia",
                             Position = "CenterMidfilder",
                             ShirtNumber = "8",
@@ -7082,9 +5918,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 579,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Tyrese",
-                            Goals = 0,
                             LastName = "Noslin",
                             Position = "RightWinger",
                             ShirtNumber = "13",
@@ -7094,9 +5928,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 580,
                             Age = 22,
-                            Assist = 0,
                             FirstName = "Arjany",
-                            Goals = 0,
                             LastName = "Martha",
                             Position = "RightWinger",
                             ShirtNumber = "15",
@@ -7106,9 +5938,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 581,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Jurgen",
-                            Goals = 0,
                             LastName = "Locadia",
                             Position = "CenterForward",
                             ShirtNumber = "9",
@@ -7118,9 +5948,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 582,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Jeremy",
-                            Goals = 0,
                             LastName = "Antonisse",
                             Position = "LeftWinger",
                             ShirtNumber = "11",
@@ -7130,9 +5958,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 583,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Sontje",
-                            Goals = 0,
                             LastName = "Hansen",
                             Position = "RightWinger",
                             ShirtNumber = "12",
@@ -7142,9 +5968,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 584,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Kenji",
-                            Goals = 0,
                             LastName = "Gorre",
                             Position = "LeftWinger",
                             ShirtNumber = "14",
@@ -7154,9 +5978,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 585,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Jearl",
-                            Goals = 0,
                             LastName = "Margaritha",
                             Position = "LeftWinger",
                             ShirtNumber = "16",
@@ -7166,9 +5988,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 586,
                             Age = 33,
-                            Assist = 0,
                             FirstName = "Brandley",
-                            Goals = 0,
                             LastName = "Kuwas",
                             Position = "RightWinger",
                             ShirtNumber = "17",
@@ -7178,9 +5998,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 587,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Gervane",
-                            Goals = 0,
                             LastName = "Kastaneer",
                             Position = "CenterForward",
                             ShirtNumber = "19",
@@ -7190,9 +6008,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 588,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Tahith",
-                            Goals = 0,
                             LastName = "Chong",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "21",
@@ -7202,9 +6018,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 589,
                             Age = 38,
-                            Assist = 0,
                             FirstName = "Johny",
-                            Goals = 0,
                             LastName = "Placide",
                             Position = "GoalKeeper",
                             ShirtNumber = "1",
@@ -7214,9 +6028,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 590,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Alexandre",
-                            Goals = 0,
                             LastName = "Pierre",
                             Position = "GoalKeeper",
                             ShirtNumber = "12",
@@ -7226,9 +6038,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 591,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Josue",
-                            Goals = 0,
                             LastName = "Duverger",
                             Position = "GoalKeeper",
                             ShirtNumber = "23",
@@ -7238,9 +6048,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 592,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Carlens",
-                            Goals = 0,
                             LastName = "Arcus",
                             Position = "RightBAck",
                             ShirtNumber = "2",
@@ -7250,9 +6058,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 593,
                             Age = 35,
-                            Assist = 0,
                             FirstName = "Ricardo",
-                            Goals = 0,
                             LastName = "Ade",
                             Position = "CenterBack",
                             ShirtNumber = "4",
@@ -7262,9 +6068,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 594,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Jean-Kevin",
-                            Goals = 0,
                             LastName = "Duverne",
                             Position = "CenterBack",
                             ShirtNumber = "5",
@@ -7274,9 +6078,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 595,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Hannes",
-                            Goals = 0,
                             LastName = "Delcroix",
                             Position = "CenterBack",
                             ShirtNumber = "3",
@@ -7286,9 +6088,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 596,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Martin",
-                            Goals = 0,
                             LastName = "Experience",
                             Position = "LeftBack",
                             ShirtNumber = "13",
@@ -7298,9 +6098,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 597,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Duke",
-                            Goals = 0,
                             LastName = "Lacroix",
                             Position = "LeftBack",
                             ShirtNumber = "14",
@@ -7310,9 +6108,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 598,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Wilguens",
-                            Goals = 0,
                             LastName = "Paugain",
                             Position = "CenterBack",
                             ShirtNumber = "15",
@@ -7322,9 +6118,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 599,
                             Age = 22,
-                            Assist = 0,
                             FirstName = "Keeto",
-                            Goals = 0,
                             LastName = "Thermoncy",
                             Position = "CenterBack",
                             ShirtNumber = "16",
@@ -7334,9 +6128,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 600,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Jean-Ricner",
-                            Goals = 0,
                             LastName = "Bellegarde",
                             Position = "CenterMidfilder",
                             ShirtNumber = "6",
@@ -7346,9 +6138,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 601,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Danley",
-                            Goals = 0,
                             LastName = "Jean Jacques",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "8",
@@ -7358,9 +6148,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 602,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Leverton",
-                            Goals = 0,
                             LastName = "Pierre",
                             Position = "CenterMidfilder",
                             ShirtNumber = "10",
@@ -7370,9 +6158,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 603,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Carl Fred",
-                            Goals = 0,
                             LastName = "Sainte",
                             Position = "CenterMidfilder",
                             ShirtNumber = "17",
@@ -7382,9 +6168,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 604,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Woodensky",
-                            Goals = 0,
                             LastName = "Pierre",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "18",
@@ -7394,9 +6178,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 605,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Dominique",
-                            Goals = 0,
                             LastName = "Simon",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "20",
@@ -7406,9 +6188,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 606,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Duckens",
-                            Goals = 0,
                             LastName = "Nazon",
                             Position = "CenterForward",
                             ShirtNumber = "9",
@@ -7418,9 +6198,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 607,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Frantzdy",
-                            Goals = 0,
                             LastName = "Pierrot",
                             Position = "CenterForward",
                             ShirtNumber = "11",
@@ -7430,9 +6208,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 608,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Wilson",
-                            Goals = 0,
                             LastName = "Isidor",
                             Position = "CenterForward",
                             ShirtNumber = "7",
@@ -7442,9 +6218,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 609,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Josue",
-                            Goals = 0,
                             LastName = "Casimir",
                             Position = "RightWinger",
                             ShirtNumber = "19",
@@ -7454,9 +6228,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 610,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Louicius",
-                            Goals = 0,
                             LastName = "Deedson",
                             Position = "LeftWinger",
                             ShirtNumber = "21",
@@ -7466,9 +6238,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 611,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Derrick",
-                            Goals = 0,
                             LastName = "Etienne Jr",
                             Position = "RightWinger",
                             ShirtNumber = "22",
@@ -7478,9 +6248,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 612,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Yassin",
-                            Goals = 0,
                             LastName = "Fortune",
                             Position = "LeftWinger",
                             ShirtNumber = "24",
@@ -7490,9 +6258,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 613,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Lenny",
-                            Goals = 0,
                             LastName = "Joseph",
                             Position = "CenterForward",
                             ShirtNumber = "25",
@@ -7502,9 +6268,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 614,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Ruben",
-                            Goals = 0,
                             LastName = "Providence",
                             Position = "LeftWinger",
                             ShirtNumber = "26",
@@ -7514,9 +6278,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 615,
                             Age = 23,
-                            Assist = 0,
                             FirstName = "Zion",
-                            Goals = 0,
                             LastName = "Suzuki",
                             Position = "GoalKeeper",
                             ShirtNumber = "1",
@@ -7526,9 +6288,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 616,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Kosei",
-                            Goals = 0,
                             LastName = "Tani",
                             Position = "GoalKeeper",
                             ShirtNumber = "12",
@@ -7538,9 +6298,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 617,
                             Age = 33,
-                            Assist = 0,
                             FirstName = "Daniel",
-                            Goals = 0,
                             LastName = "Schmidt",
                             Position = "GoalKeeper",
                             ShirtNumber = "23",
@@ -7550,9 +6308,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 618,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Takehiro",
-                            Goals = 0,
                             LastName = "Tomiyasu",
                             Position = "CenterBack",
                             ShirtNumber = "2",
@@ -7562,9 +6318,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 619,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Ko",
-                            Goals = 0,
                             LastName = "Itakura",
                             Position = "CenterBack",
                             ShirtNumber = "4",
@@ -7574,9 +6328,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 620,
                             Age = 36,
-                            Assist = 0,
                             FirstName = "Maya",
-                            Goals = 0,
                             LastName = "Yoshida",
                             Position = "CenterBack",
                             ShirtNumber = "3",
@@ -7586,9 +6338,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 621,
                             Age = 35,
-                            Assist = 0,
                             FirstName = "Hiroki",
-                            Goals = 0,
                             LastName = "Sakai",
                             Position = "RightBAck",
                             ShirtNumber = "5",
@@ -7598,9 +6348,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 622,
                             Age = 25,
-                            Assist = 0,
                             FirstName = "Yukinari",
-                            Goals = 0,
                             LastName = "Sugawara",
                             Position = "RightBAck",
                             ShirtNumber = "6",
@@ -7610,9 +6358,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 623,
                             Age = 39,
-                            Assist = 0,
                             FirstName = "Yuto",
-                            Goals = 0,
                             LastName = "Nagatomo",
                             Position = "LeftBack",
                             ShirtNumber = "16",
@@ -7622,9 +6368,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 624,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Ayumu",
-                            Goals = 0,
                             LastName = "Seko",
                             Position = "CenterBack",
                             ShirtNumber = "15",
@@ -7634,9 +6378,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 625,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Wataru",
-                            Goals = 0,
                             LastName = "Endo",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "8",
@@ -7646,9 +6388,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 626,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Hidemasa",
-                            Goals = 0,
                             LastName = "Morita",
                             Position = "CenterMidfilder",
                             ShirtNumber = "15",
@@ -7658,9 +6398,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 627,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Daichi",
-                            Goals = 0,
                             LastName = "Kamada",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "10",
@@ -7670,9 +6408,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 628,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Ao",
-                            Goals = 0,
                             LastName = "Tanaka",
                             Position = "CenterMidfilder",
                             ShirtNumber = "17",
@@ -7682,9 +6418,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 629,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Takumi",
-                            Goals = 0,
                             LastName = "Minamino",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "11",
@@ -7694,9 +6428,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 630,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Kaoru",
-                            Goals = 0,
                             LastName = "Mitoma",
                             Position = "LeftWinger",
                             ShirtNumber = "20",
@@ -7706,9 +6438,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 631,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Junya",
-                            Goals = 0,
                             LastName = "Ito",
                             Position = "RightWinger",
                             ShirtNumber = "14",
@@ -7718,9 +6448,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 632,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Yuki",
-                            Goals = 0,
                             LastName = "Soma",
                             Position = "LeftWinger",
                             ShirtNumber = "19",
@@ -7730,9 +6458,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 633,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Ayase",
-                            Goals = 0,
                             LastName = "Ueda",
                             Position = "CenterForward",
                             ShirtNumber = "9",
@@ -7742,9 +6468,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 634,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Daizen",
-                            Goals = 0,
                             LastName = "Maeda",
                             Position = "CenterForward",
                             ShirtNumber = "18",
@@ -7754,9 +6478,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 635,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Shuto",
-                            Goals = 0,
                             LastName = "Machino",
                             Position = "CenterForward",
                             ShirtNumber = "21",
@@ -7766,9 +6488,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 636,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Kyogo",
-                            Goals = 0,
                             LastName = "Furuhashi",
                             Position = "CenterForward",
                             ShirtNumber = "13",
@@ -7778,9 +6498,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 637,
                             Age = 33,
-                            Assist = 0,
                             FirstName = "Jo",
-                            Goals = 0,
                             LastName = "Hyeon-woo",
                             Position = "GoalKeeper",
                             ShirtNumber = "1",
@@ -7790,9 +6508,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 638,
                             Age = 34,
-                            Assist = 0,
                             FirstName = "Kim",
-                            Goals = 0,
                             LastName = "Seung-gyu",
                             Position = "GoalKeeper",
                             ShirtNumber = "21",
@@ -7802,9 +6518,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 639,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Lee",
-                            Goals = 0,
                             LastName = "Chang-geun",
                             Position = "GoalKeeper",
                             ShirtNumber = "12",
@@ -7814,9 +6528,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 640,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Kim",
-                            Goals = 0,
                             LastName = "Min-jae",
                             Position = "CenterBack",
                             ShirtNumber = "4",
@@ -7826,9 +6538,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 641,
                             Age = 35,
-                            Assist = 0,
                             FirstName = "Kim",
-                            Goals = 0,
                             LastName = "Young-gwon",
                             Position = "CenterBack",
                             ShirtNumber = "19",
@@ -7838,9 +6548,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 642,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Jung",
-                            Goals = 0,
                             LastName = "Seung-hyun",
                             Position = "CenterBack",
                             ShirtNumber = "15",
@@ -7850,9 +6558,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 643,
                             Age = 33,
-                            Assist = 0,
                             FirstName = "Kim",
-                            Goals = 0,
                             LastName = "Jin-su",
                             Position = "LeftBack",
                             ShirtNumber = "3",
@@ -7862,9 +6568,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 644,
                             Age = 33,
-                            Assist = 0,
                             FirstName = "Lee",
-                            Goals = 0,
                             LastName = "Ki-je",
                             Position = "LeftBack",
                             ShirtNumber = "2",
@@ -7874,9 +6578,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 645,
                             Age = 35,
-                            Assist = 0,
                             FirstName = "Kim",
-                            Goals = 0,
                             LastName = "Tae-hwan",
                             Position = "RightBAck",
                             ShirtNumber = "23",
@@ -7886,9 +6588,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 646,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Seol",
-                            Goals = 0,
                             LastName = "Young-woo",
                             Position = "RightBAck",
                             ShirtNumber = "22",
@@ -7898,9 +6598,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 647,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Lee",
-                            Goals = 0,
                             LastName = "Kang-in",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "10",
@@ -7910,9 +6608,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 648,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Hwang",
-                            Goals = 0,
                             LastName = "In-beom",
                             Position = "DefendCenterMidfilder",
                             ShirtNumber = "6",
@@ -7922,9 +6618,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 649,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Paik",
-                            Goals = 0,
                             LastName = "Seung-ho",
                             Position = "CenterMidfilder",
                             ShirtNumber = "8",
@@ -7934,9 +6628,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 650,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Jeong",
-                            Goals = 0,
                             LastName = "Woo-yeong",
                             Position = "CenterMidfilder",
                             ShirtNumber = "14",
@@ -7946,9 +6638,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 651,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Hong",
-                            Goals = 0,
                             LastName = "Hyun-seok",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "17",
@@ -7958,9 +6648,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 652,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Lee",
-                            Goals = 0,
                             LastName = "Jae-sung",
                             Position = "CenterMidfilder",
                             ShirtNumber = "7",
@@ -7970,9 +6658,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 653,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Hwang",
-                            Goals = 0,
                             LastName = "Hee-chan",
                             Position = "LeftWinger",
                             ShirtNumber = "11",
@@ -7982,9 +6668,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 654,
                             Age = 24,
-                            Assist = 0,
                             FirstName = "Kim",
-                            Goals = 0,
                             LastName = "Jin-kyu",
                             Position = "RightWinger",
                             ShirtNumber = "18",
@@ -7994,9 +6678,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 655,
                             Age = 33,
-                            Assist = 0,
                             FirstName = "Son",
-                            Goals = 0,
                             LastName = "Heung-min",
                             Position = "LeftWinger",
                             ShirtNumber = "7",
@@ -8006,9 +6688,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 656,
                             Age = 27,
-                            Assist = 0,
                             FirstName = "Cho",
-                            Goals = 0,
                             LastName = "Gue-sung",
                             Position = "CenterForward",
                             ShirtNumber = "9",
@@ -8018,9 +6698,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 657,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Hwang",
-                            Goals = 0,
                             LastName = "Ui-jo",
                             Position = "CenterForward",
                             ShirtNumber = "16",
@@ -8030,9 +6708,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 658,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Oh",
-                            Goals = 0,
                             LastName = "Se-hun",
                             Position = "CenterForward",
                             ShirtNumber = "20",
@@ -8042,9 +6718,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 659,
                             Age = 33,
-                            Assist = 0,
                             FirstName = "Alireza",
-                            Goals = 0,
                             LastName = "Beiranvand",
                             Position = "GoalKeeper",
                             ShirtNumber = "1",
@@ -8054,9 +6728,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 660,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Seyed Hossein",
-                            Goals = 0,
                             LastName = "Hosseini",
                             Position = "GoalKeeper",
                             ShirtNumber = "22",
@@ -8066,9 +6738,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 661,
                             Age = 29,
-                            Assist = 0,
                             FirstName = "Payam",
-                            Goals = 0,
                             LastName = "Niazmand",
                             Position = "GoalKeeper",
                             ShirtNumber = "12",
@@ -8078,9 +6748,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 662,
                             Age = 33,
-                            Assist = 0,
                             FirstName = "Morteza",
-                            Goals = 0,
                             LastName = "Pouraliganji",
                             Position = "CenterBack",
                             ShirtNumber = "8",
@@ -8090,9 +6758,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 663,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Hossein",
-                            Goals = 0,
                             LastName = "Kanaani",
                             Position = "CenterBack",
                             ShirtNumber = "4",
@@ -8102,9 +6768,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 664,
                             Age = 35,
-                            Assist = 0,
                             FirstName = "Shoja",
-                            Goals = 0,
                             LastName = "Khalilzadeh",
                             Position = "CenterBack",
                             ShirtNumber = "5",
@@ -8114,9 +6778,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 665,
                             Age = 34,
-                            Assist = 0,
                             FirstName = "Ramin",
-                            Goals = 0,
                             LastName = "Rezaeian",
                             Position = "RightBAck",
                             ShirtNumber = "2",
@@ -8126,9 +6788,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 666,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Milad",
-                            Goals = 0,
                             LastName = "Mohammadi",
                             Position = "LeftBack",
                             ShirtNumber = "3",
@@ -8138,9 +6798,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 667,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Saeid",
-                            Goals = 0,
                             LastName = "Moharrami",
                             Position = "RightBAck",
                             ShirtNumber = "19",
@@ -8150,9 +6808,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 668,
                             Age = 35,
-                            Assist = 0,
                             FirstName = "Ehsan",
-                            Goals = 0,
                             LastName = "Hajsafi",
                             Position = "CenterMidfilder",
                             ShirtNumber = "10",
@@ -8162,9 +6818,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 669,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Saman",
-                            Goals = 0,
                             LastName = "Ghoddos",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "14",
@@ -8174,9 +6828,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 670,
                             Age = 31,
-                            Assist = 0,
                             FirstName = "Alireza",
-                            Goals = 0,
                             LastName = "Jahanbakhsh",
                             Position = "RightWinger",
                             ShirtNumber = "7",
@@ -8186,9 +6838,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 671,
                             Age = 33,
-                            Assist = 0,
                             FirstName = "Mehdi",
-                            Goals = 0,
                             LastName = "Taremi",
                             Position = "CenterForward",
                             ShirtNumber = "9",
@@ -8198,9 +6848,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 672,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Sardar",
-                            Goals = 0,
                             LastName = "Azmoun",
                             Position = "CenterForward",
                             ShirtNumber = "20",
@@ -8210,9 +6858,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 673,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Mehdi",
-                            Goals = 0,
                             LastName = "Ghayedi",
                             Position = "LeftWinger",
                             ShirtNumber = "11",
@@ -8222,9 +6868,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 674,
                             Age = 26,
-                            Assist = 0,
                             FirstName = "Mohammad",
-                            Goals = 0,
                             LastName = "Mohebi",
                             Position = "RightWinger",
                             ShirtNumber = "17",
@@ -8234,9 +6878,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 675,
                             Age = 28,
-                            Assist = 0,
                             FirstName = "Ali",
-                            Goals = 0,
                             LastName = "Gholizadeh",
                             Position = "AttackingMidfilder",
                             ShirtNumber = "18",
@@ -8246,9 +6888,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 676,
                             Age = 32,
-                            Assist = 0,
                             FirstName = "Kaveh",
-                            Goals = 0,
                             LastName = "Rezaei",
                             Position = "CenterForward",
                             ShirtNumber = "16",
@@ -8258,9 +6898,7 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 677,
                             Age = 30,
-                            Assist = 0,
                             FirstName = "Shahriar",
-                            Goals = 0,
                             LastName = "Moghanlou",
                             Position = "CenterForward",
                             ShirtNumber = "21",
@@ -8270,14 +6908,4218 @@ namespace Footbally_Infrastructure.Migrations
                         {
                             Id = 678,
                             Age = 22,
-                            Assist = 0,
                             FirstName = "Amirhossein",
-                            Goals = 0,
                             LastName = "Hossein-Zadeh",
                             Position = "LeftWinger",
                             ShirtNumber = "23",
                             TeamId = 27
+                        },
+                        new
+                        {
+                            Id = 679,
+                            Age = 34,
+                            FirstName = "Mathew",
+                            LastName = "Ryan",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "1",
+                            TeamId = 28
+                        },
+                        new
+                        {
+                            Id = 680,
+                            Age = 24,
+                            FirstName = "Joe",
+                            LastName = "Gauci",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "12",
+                            TeamId = 28
+                        },
+                        new
+                        {
+                            Id = 681,
+                            Age = 29,
+                            FirstName = "Paul",
+                            LastName = "Izzo",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "23",
+                            TeamId = 28
+                        },
+                        new
+                        {
+                            Id = 682,
+                            Age = 33,
+                            FirstName = "Aziz",
+                            LastName = "Behich",
+                            Position = "LeftBack",
+                            ShirtNumber = "16",
+                            TeamId = 28
+                        },
+                        new
+                        {
+                            Id = 683,
+                            Age = 26,
+                            FirstName = "Nathaniel",
+                            LastName = "Atkinson",
+                            Position = "RightBAck",
+                            ShirtNumber = "3",
+                            TeamId = 28
+                        },
+                        new
+                        {
+                            Id = 684,
+                            Age = 26,
+                            FirstName = "Kye",
+                            LastName = "Rowles",
+                            Position = "CenterBack",
+                            ShirtNumber = "4",
+                            TeamId = 28
+                        },
+                        new
+                        {
+                            Id = 685,
+                            Age = 27,
+                            FirstName = "Harry",
+                            LastName = "Souttar",
+                            Position = "CenterBack",
+                            ShirtNumber = "5",
+                            TeamId = 28
+                        },
+                        new
+                        {
+                            Id = 686,
+                            Age = 24,
+                            FirstName = "Joel",
+                            LastName = "King",
+                            Position = "LeftBack",
+                            ShirtNumber = "2",
+                            TeamId = 28
+                        },
+                        new
+                        {
+                            Id = 687,
+                            Age = 30,
+                            FirstName = "Milos",
+                            LastName = "Degenek",
+                            Position = "CenterBack",
+                            ShirtNumber = "22",
+                            TeamId = 28
+                        },
+                        new
+                        {
+                            Id = 688,
+                            Age = 27,
+                            FirstName = "Thomas",
+                            LastName = "Deng",
+                            Position = "RightBAck",
+                            ShirtNumber = "6",
+                            TeamId = 28
+                        },
+                        new
+                        {
+                            Id = 689,
+                            Age = 34,
+                            FirstName = "Aaron",
+                            LastName = "Mooy",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "10",
+                            TeamId = 28
+                        },
+                        new
+                        {
+                            Id = 690,
+                            Age = 32,
+                            FirstName = "Jackson",
+                            LastName = "Irvine",
+                            Position = "DefendCenterMidfilder",
+                            ShirtNumber = "13",
+                            TeamId = 28
+                        },
+                        new
+                        {
+                            Id = 691,
+                            Age = 29,
+                            FirstName = "Ajdin",
+                            LastName = "Hrustic",
+                            Position = "AttackingMidfilder",
+                            ShirtNumber = "17",
+                            TeamId = 28
+                        },
+                        new
+                        {
+                            Id = 692,
+                            Age = 27,
+                            FirstName = "Keanu",
+                            LastName = "Baccus",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "8",
+                            TeamId = 28
+                        },
+                        new
+                        {
+                            Id = 693,
+                            Age = 25,
+                            FirstName = "Connor",
+                            LastName = "Metcalfe",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "14",
+                            TeamId = 28
+                        },
+                        new
+                        {
+                            Id = 694,
+                            Age = 27,
+                            FirstName = "Cameron",
+                            LastName = "Devlin",
+                            Position = "DefendCenterMidfilder",
+                            ShirtNumber = "15",
+                            TeamId = 28
+                        },
+                        new
+                        {
+                            Id = 695,
+                            Age = 27,
+                            FirstName = "Riley",
+                            LastName = "McGree",
+                            Position = "AttackingMidfilder",
+                            ShirtNumber = "7",
+                            TeamId = 28
+                        },
+                        new
+                        {
+                            Id = 696,
+                            Age = 34,
+                            FirstName = "Mathew",
+                            LastName = "Leckie",
+                            Position = "RightWinger",
+                            ShirtNumber = "9",
+                            TeamId = 28
+                        },
+                        new
+                        {
+                            Id = 697,
+                            Age = 33,
+                            FirstName = "Craig",
+                            LastName = "Goodwin",
+                            Position = "LeftWinger",
+                            ShirtNumber = "11",
+                            TeamId = 28
+                        },
+                        new
+                        {
+                            Id = 698,
+                            Age = 31,
+                            FirstName = "Jamie",
+                            LastName = "Maclaren",
+                            Position = "CenterForward",
+                            ShirtNumber = "20",
+                            TeamId = 28
+                        },
+                        new
+                        {
+                            Id = 699,
+                            Age = 29,
+                            FirstName = "Brandon",
+                            LastName = "Borrello",
+                            Position = "CenterForward",
+                            ShirtNumber = "18",
+                            TeamId = 28
+                        },
+                        new
+                        {
+                            Id = 700,
+                            Age = 23,
+                            FirstName = "Marco",
+                            LastName = "Tilio",
+                            Position = "LeftWinger",
+                            ShirtNumber = "21",
+                            TeamId = 28
+                        },
+                        new
+                        {
+                            Id = 701,
+                            Age = 33,
+                            FirstName = "Mohammed",
+                            LastName = "Al-Owais",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "21",
+                            TeamId = 29
+                        },
+                        new
+                        {
+                            Id = 702,
+                            Age = 24,
+                            FirstName = "Nawaf",
+                            LastName = "Al-Aqidi",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "1",
+                            TeamId = 29
+                        },
+                        new
+                        {
+                            Id = 703,
+                            Age = 28,
+                            FirstName = "Raghed",
+                            LastName = "Al-Najjar",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "22",
+                            TeamId = 29
+                        },
+                        new
+                        {
+                            Id = 704,
+                            Age = 30,
+                            FirstName = "Sultan",
+                            LastName = "Al-Ghannam",
+                            Position = "RightBAck",
+                            ShirtNumber = "2",
+                            TeamId = 29
+                        },
+                        new
+                        {
+                            Id = 705,
+                            Age = 33,
+                            FirstName = "Yasser",
+                            LastName = "Al-Shahrani",
+                            Position = "LeftBack",
+                            ShirtNumber = "13",
+                            TeamId = 29
+                        },
+                        new
+                        {
+                            Id = 706,
+                            Age = 27,
+                            FirstName = "Abdulelah",
+                            LastName = "Al-Amri",
+                            Position = "CenterBack",
+                            ShirtNumber = "4",
+                            TeamId = 29
+                        },
+                        new
+                        {
+                            Id = 707,
+                            Age = 26,
+                            FirstName = "Hassan",
+                            LastName = "Tambakti",
+                            Position = "CenterBack",
+                            ShirtNumber = "5",
+                            TeamId = 29
+                        },
+                        new
+                        {
+                            Id = 708,
+                            Age = 35,
+                            FirstName = "Ali",
+                            LastName = "Al-Bulaihi",
+                            Position = "CenterBack",
+                            ShirtNumber = "17",
+                            TeamId = 29
+                        },
+                        new
+                        {
+                            Id = 709,
+                            Age = 31,
+                            FirstName = "Mohammed",
+                            LastName = "Al-Breik",
+                            Position = "RightBAck",
+                            ShirtNumber = "6",
+                            TeamId = 29
+                        },
+                        new
+                        {
+                            Id = 710,
+                            Age = 35,
+                            FirstName = "Salman",
+                            LastName = "Al-Faraj",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "7",
+                            TeamId = 29
+                        },
+                        new
+                        {
+                            Id = 711,
+                            Age = 31,
+                            FirstName = "Abdullah",
+                            LastName = "Otayf",
+                            Position = "DefendCenterMidfilder",
+                            ShirtNumber = "14",
+                            TeamId = 29
+                        },
+                        new
+                        {
+                            Id = 712,
+                            Age = 31,
+                            FirstName = "Mohamed",
+                            LastName = "Kanno",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "8",
+                            TeamId = 29
+                        },
+                        new
+                        {
+                            Id = 713,
+                            Age = 26,
+                            FirstName = "Nasser",
+                            LastName = "Al-Dawsari",
+                            Position = "LeftWinger",
+                            ShirtNumber = "16",
+                            TeamId = 29
+                        },
+                        new
+                        {
+                            Id = 714,
+                            Age = 30,
+                            FirstName = "Fahad",
+                            LastName = "Al-Muwallad",
+                            Position = "RightWinger",
+                            ShirtNumber = "9",
+                            TeamId = 29
+                        },
+                        new
+                        {
+                            Id = 715,
+                            Age = 28,
+                            FirstName = "Sami",
+                            LastName = "Al-Najei",
+                            Position = "AttackingMidfilder",
+                            ShirtNumber = "15",
+                            TeamId = 29
+                        },
+                        new
+                        {
+                            Id = 716,
+                            Age = 29,
+                            FirstName = "Abdulrahman",
+                            LastName = "Al-Aboud",
+                            Position = "LeftWinger",
+                            ShirtNumber = "19",
+                            TeamId = 29
+                        },
+                        new
+                        {
+                            Id = 717,
+                            Age = 31,
+                            FirstName = "Saleh",
+                            LastName = "Al-Shehri",
+                            Position = "CenterForward",
+                            ShirtNumber = "11",
+                            TeamId = 29
+                        },
+                        new
+                        {
+                            Id = 718,
+                            Age = 25,
+                            FirstName = "Firas",
+                            LastName = "Al-Buraikan",
+                            Position = "CenterForward",
+                            ShirtNumber = "10",
+                            TeamId = 29
+                        },
+                        new
+                        {
+                            Id = 719,
+                            Age = 28,
+                            FirstName = "Abdulaziz",
+                            LastName = "Al-Bishi",
+                            Position = "RightWinger",
+                            ShirtNumber = "20",
+                            TeamId = 29
+                        },
+                        new
+                        {
+                            Id = 720,
+                            Age = 27,
+                            FirstName = "Hussain",
+                            LastName = "Al-Qahtani",
+                            Position = "LeftWinger",
+                            ShirtNumber = "23",
+                            TeamId = 29
+                        },
+                        new
+                        {
+                            Id = 721,
+                            Age = 34,
+                            FirstName = "Saad",
+                            LastName = "Al-Sheeb",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "1",
+                            TeamId = 30
+                        },
+                        new
+                        {
+                            Id = 722,
+                            Age = 26,
+                            FirstName = "Meshaal",
+                            LastName = "Barsham",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "22",
+                            TeamId = 30
+                        },
+                        new
+                        {
+                            Id = 723,
+                            Age = 28,
+                            FirstName = "Yousef",
+                            LastName = "Hassan",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "21",
+                            TeamId = 30
+                        },
+                        new
+                        {
+                            Id = 724,
+                            Age = 33,
+                            FirstName = "Pedro",
+                            LastName = "Miguel",
+                            Position = "CenterBack",
+                            ShirtNumber = "2",
+                            TeamId = 30
+                        },
+                        new
+                        {
+                            Id = 725,
+                            Age = 35,
+                            FirstName = "Boualem",
+                            LastName = "Khoukhi",
+                            Position = "CenterBack",
+                            ShirtNumber = "3",
+                            TeamId = 30
+                        },
+                        new
+                        {
+                            Id = 726,
+                            Age = 27,
+                            FirstName = "Bassam",
+                            LastName = "Al-Rawi",
+                            Position = "CenterBack",
+                            ShirtNumber = "5",
+                            TeamId = 30
+                        },
+                        new
+                        {
+                            Id = 727,
+                            Age = 28,
+                            FirstName = "Tarek",
+                            LastName = "Salman",
+                            Position = "DefendCenterMidfilder",
+                            ShirtNumber = "6",
+                            TeamId = 30
+                        },
+                        new
+                        {
+                            Id = 728,
+                            Age = 31,
+                            FirstName = "Abdelkarim",
+                            LastName = "Hassan",
+                            Position = "LeftBack",
+                            ShirtNumber = "13",
+                            TeamId = 30
+                        },
+                        new
+                        {
+                            Id = 729,
+                            Age = 30,
+                            FirstName = "Hamid",
+                            LastName = "Ismaeil",
+                            Position = "RightBAck",
+                            ShirtNumber = "15",
+                            TeamId = 30
+                        },
+                        new
+                        {
+                            Id = 730,
+                            Age = 34,
+                            FirstName = "Hassan",
+                            LastName = "Al-Haydos",
+                            Position = "AttackingMidfilder",
+                            ShirtNumber = "10",
+                            TeamId = 30
+                        },
+                        new
+                        {
+                            Id = 731,
+                            Age = 33,
+                            FirstName = "Abdulaziz",
+                            LastName = "Hatem",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "8",
+                            TeamId = 30
+                        },
+                        new
+                        {
+                            Id = 732,
+                            Age = 33,
+                            FirstName = "Karim",
+                            LastName = "Boudiaf",
+                            Position = "DefendCenterMidfilder",
+                            ShirtNumber = "12",
+                            TeamId = 30
+                        },
+                        new
+                        {
+                            Id = 733,
+                            Age = 28,
+                            FirstName = "Assim",
+                            LastName = "Madibo",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "11",
+                            TeamId = 30
+                        },
+                        new
+                        {
+                            Id = 734,
+                            Age = 31,
+                            FirstName = "Ahmed",
+                            LastName = "Fathy",
+                            Position = "RightWinger",
+                            ShirtNumber = "16",
+                            TeamId = 30
+                        },
+                        new
+                        {
+                            Id = 735,
+                            Age = 26,
+                            FirstName = "Mohammed",
+                            LastName = "Waad",
+                            Position = "LeftWinger",
+                            ShirtNumber = "14",
+                            TeamId = 30
+                        },
+                        new
+                        {
+                            Id = 736,
+                            Age = 25,
+                            FirstName = "Yusuf",
+                            LastName = "Abdurisag",
+                            Position = "RightWinger",
+                            ShirtNumber = "17",
+                            TeamId = 30
+                        },
+                        new
+                        {
+                            Id = 737,
+                            Age = 28,
+                            FirstName = "Almoez",
+                            LastName = "Ali",
+                            Position = "CenterForward",
+                            ShirtNumber = "9",
+                            TeamId = 30
+                        },
+                        new
+                        {
+                            Id = 738,
+                            Age = 28,
+                            FirstName = "Akram",
+                            LastName = "Afif",
+                            Position = "LeftWinger",
+                            ShirtNumber = "7",
+                            TeamId = 30
+                        },
+                        new
+                        {
+                            Id = 739,
+                            Age = 30,
+                            FirstName = "Mohammed",
+                            LastName = "Muntari",
+                            Position = "CenterForward",
+                            ShirtNumber = "20",
+                            TeamId = 30
+                        },
+                        new
+                        {
+                            Id = 740,
+                            Age = 29,
+                            FirstName = "Ahmed",
+                            LastName = "Alaaeldin",
+                            Position = "RightWinger",
+                            ShirtNumber = "23",
+                            TeamId = 30
+                        },
+                        new
+                        {
+                            Id = 741,
+                            Age = 33,
+                            FirstName = "Utkir",
+                            LastName = "Yusupov",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "1",
+                            TeamId = 31
+                        },
+                        new
+                        {
+                            Id = 742,
+                            Age = 24,
+                            FirstName = "Abduvohid",
+                            LastName = "Nematov",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "12",
+                            TeamId = 31
+                        },
+                        new
+                        {
+                            Id = 743,
+                            Age = 27,
+                            FirstName = "Rustam",
+                            LastName = "Yatimov",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "23",
+                            TeamId = 31
+                        },
+                        new
+                        {
+                            Id = 744,
+                            Age = 29,
+                            FirstName = "Eldor",
+                            LastName = "Shomurodov",
+                            Position = "CenterForward",
+                            ShirtNumber = "9",
+                            TeamId = 31
+                        },
+                        new
+                        {
+                            Id = 745,
+                            Age = 20,
+                            FirstName = "Abdukodir",
+                            LastName = "Khusanov",
+                            Position = "CenterBack",
+                            ShirtNumber = "4",
+                            TeamId = 31
+                        },
+                        new
+                        {
+                            Id = 746,
+                            Age = 28,
+                            FirstName = "Rustamjon",
+                            LastName = "Ashurmatov",
+                            Position = "CenterBack",
+                            ShirtNumber = "5",
+                            TeamId = 31
+                        },
+                        new
+                        {
+                            Id = 747,
+                            Age = 27,
+                            FirstName = "Oybek",
+                            LastName = "Bozorov",
+                            Position = "RightBAck",
+                            ShirtNumber = "6",
+                            TeamId = 31
+                        },
+                        new
+                        {
+                            Id = 748,
+                            Age = 29,
+                            FirstName = "Dostonbek",
+                            LastName = "Tursunov",
+                            Position = "LeftBack",
+                            ShirtNumber = "3",
+                            TeamId = 31
+                        },
+                        new
+                        {
+                            Id = 749,
+                            Age = 23,
+                            FirstName = "Khojimat",
+                            LastName = "Erkinov",
+                            Position = "RightWinger",
+                            ShirtNumber = "2",
+                            TeamId = 31
+                        },
+                        new
+                        {
+                            Id = 750,
+                            Age = 28,
+                            FirstName = "Odiljon",
+                            LastName = "Xamrobekov",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "8",
+                            TeamId = 31
+                        },
+                        new
+                        {
+                            Id = 751,
+                            Age = 26,
+                            FirstName = "Ibrokhim",
+                            LastName = "Halilov",
+                            Position = "AttackingMidfilder",
+                            ShirtNumber = "10",
+                            TeamId = 31
+                        },
+                        new
+                        {
+                            Id = 752,
+                            Age = 30,
+                            FirstName = "Jaloliddin",
+                            LastName = "Masharipov",
+                            Position = "LeftWinger",
+                            ShirtNumber = "7",
+                            TeamId = 31
+                        },
+                        new
+                        {
+                            Id = 753,
+                            Age = 29,
+                            FirstName = "Otabek",
+                            LastName = "Shukurov",
+                            Position = "DefendCenterMidfilder",
+                            ShirtNumber = "11",
+                            TeamId = 31
+                        },
+                        new
+                        {
+                            Id = 754,
+                            Age = 27,
+                            FirstName = "Sardor",
+                            LastName = "Rakhmonov",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "14",
+                            TeamId = 31
+                        },
+                        new
+                        {
+                            Id = 755,
+                            Age = 28,
+                            FirstName = "Bobur",
+                            LastName = "Abdukholikov",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "15",
+                            TeamId = 31
+                        },
+                        new
+                        {
+                            Id = 756,
+                            Age = 25,
+                            FirstName = "Khoja",
+                            LastName = "Matyokubov",
+                            Position = "RightWinger",
+                            ShirtNumber = "16",
+                            TeamId = 31
+                        },
+                        new
+                        {
+                            Id = 757,
+                            Age = 29,
+                            FirstName = "Eldor",
+                            LastName = "Shomurodov",
+                            Position = "CenterForward",
+                            ShirtNumber = "9",
+                            TeamId = 31
+                        },
+                        new
+                        {
+                            Id = 758,
+                            Age = 31,
+                            FirstName = "Igor",
+                            LastName = "Sergeev",
+                            Position = "CenterForward",
+                            ShirtNumber = "18",
+                            TeamId = 31
+                        },
+                        new
+                        {
+                            Id = 759,
+                            Age = 27,
+                            FirstName = "Javokhir",
+                            LastName = "Siddikov",
+                            Position = "LeftWinger",
+                            ShirtNumber = "19",
+                            TeamId = 31
+                        },
+                        new
+                        {
+                            Id = 760,
+                            Age = 28,
+                            FirstName = "Azizbek",
+                            LastName = "Turgunboev",
+                            Position = "RightWinger",
+                            ShirtNumber = "20",
+                            TeamId = 31
+                        },
+                        new
+                        {
+                            Id = 761,
+                            Age = 32,
+                            FirstName = "Yazeed",
+                            LastName = "Abulaila",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "1",
+                            TeamId = 32
+                        },
+                        new
+                        {
+                            Id = 762,
+                            Age = 29,
+                            FirstName = "Malek",
+                            LastName = "Shaboul",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "12",
+                            TeamId = 32
+                        },
+                        new
+                        {
+                            Id = 763,
+                            Age = 27,
+                            FirstName = "Rami",
+                            LastName = "Hamadeh",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "23",
+                            TeamId = 32
+                        },
+                        new
+                        {
+                            Id = 764,
+                            Age = 30,
+                            FirstName = "Ahmad",
+                            LastName = "Erdem",
+                            Position = "RightBAck",
+                            ShirtNumber = "2",
+                            TeamId = 32
+                        },
+                        new
+                        {
+                            Id = 765,
+                            Age = 28,
+                            FirstName = "Yazan",
+                            LastName = "Al-Arab",
+                            Position = "CenterBack",
+                            ShirtNumber = "3",
+                            TeamId = 32
+                        },
+                        new
+                        {
+                            Id = 766,
+                            Age = 30,
+                            FirstName = "Abdallah",
+                            LastName = "Nasib",
+                            Position = "CenterBack",
+                            ShirtNumber = "4",
+                            TeamId = 32
+                        },
+                        new
+                        {
+                            Id = 767,
+                            Age = 27,
+                            FirstName = "Mohannad",
+                            LastName = "Abu Taha",
+                            Position = "LeftBack",
+                            ShirtNumber = "5",
+                            TeamId = 32
+                        },
+                        new
+                        {
+                            Id = 768,
+                            Age = 31,
+                            FirstName = "Salem",
+                            LastName = "Al-Ajalin",
+                            Position = "RightBAck",
+                            ShirtNumber = "6",
+                            TeamId = 32
+                        },
+                        new
+                        {
+                            Id = 769,
+                            Age = 29,
+                            FirstName = "Shadi",
+                            LastName = "Abu Hashish",
+                            Position = "CenterBack",
+                            ShirtNumber = "13",
+                            TeamId = 32
+                        },
+                        new
+                        {
+                            Id = 770,
+                            Age = 32,
+                            FirstName = "Baha",
+                            LastName = "Seif",
+                            Position = "AttackingMidfilder",
+                            ShirtNumber = "7",
+                            TeamId = 32
+                        },
+                        new
+                        {
+                            Id = 771,
+                            Age = 28,
+                            FirstName = "Nizar",
+                            LastName = "Al-Rashdan",
+                            Position = "DefendCenterMidfilder",
+                            ShirtNumber = "8",
+                            TeamId = 32
+                        },
+                        new
+                        {
+                            Id = 772,
+                            Age = 30,
+                            FirstName = "Ehsan",
+                            LastName = "Haddad",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "14",
+                            TeamId = 32
+                        },
+                        new
+                        {
+                            Id = 773,
+                            Age = 29,
+                            FirstName = "Yousef",
+                            LastName = "Rawshdeh",
+                            Position = "AttackingMidfilder",
+                            ShirtNumber = "10",
+                            TeamId = 32
+                        },
+                        new
+                        {
+                            Id = 774,
+                            Age = 28,
+                            FirstName = "Abdulrahman",
+                            LastName = "Al-Mardi",
+                            Position = "LeftWinger",
+                            ShirtNumber = "11",
+                            TeamId = 32
+                        },
+                        new
+                        {
+                            Id = 775,
+                            Age = 27,
+                            FirstName = "Musa",
+                            LastName = "Al-Taamari",
+                            Position = "RightWinger",
+                            ShirtNumber = "9",
+                            TeamId = 32
+                        },
+                        new
+                        {
+                            Id = 776,
+                            Age = 26,
+                            FirstName = "Ali",
+                            LastName = "Olwan",
+                            Position = "CenterForward",
+                            ShirtNumber = "15",
+                            TeamId = 32
+                        },
+                        new
+                        {
+                            Id = 777,
+                            Age = 25,
+                            FirstName = "Yazan",
+                            LastName = "Al-Naimat",
+                            Position = "CenterForward",
+                            ShirtNumber = "16",
+                            TeamId = 32
+                        },
+                        new
+                        {
+                            Id = 778,
+                            Age = 26,
+                            FirstName = "Omar",
+                            LastName = "Hani",
+                            Position = "LeftWinger",
+                            ShirtNumber = "17",
+                            TeamId = 32
+                        },
+                        new
+                        {
+                            Id = 779,
+                            Age = 27,
+                            FirstName = "Ibrahim",
+                            LastName = "Sadeh",
+                            Position = "RightWinger",
+                            ShirtNumber = "18",
+                            TeamId = 32
+                        },
+                        new
+                        {
+                            Id = 780,
+                            Age = 28,
+                            FirstName = "Mohammad",
+                            LastName = "Abu Zraiq",
+                            Position = "CenterForward",
+                            ShirtNumber = "20",
+                            TeamId = 32
+                        },
+                        new
+                        {
+                            Id = 781,
+                            Age = 33,
+                            FirstName = "Jalal",
+                            LastName = "Hassan",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "1",
+                            TeamId = 33
+                        },
+                        new
+                        {
+                            Id = 782,
+                            Age = 28,
+                            FirstName = "Faris",
+                            LastName = "Nadhim",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "12",
+                            TeamId = 33
+                        },
+                        new
+                        {
+                            Id = 783,
+                            Age = 31,
+                            FirstName = "Mohammed",
+                            LastName = "Hameed",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "23",
+                            TeamId = 33
+                        },
+                        new
+                        {
+                            Id = 784,
+                            Age = 31,
+                            FirstName = "Ali",
+                            LastName = "Adnan",
+                            Position = "LeftBack",
+                            ShirtNumber = "3",
+                            TeamId = 33
+                        },
+                        new
+                        {
+                            Id = 785,
+                            Age = 32,
+                            FirstName = "Rebin",
+                            LastName = "Sulaqa",
+                            Position = "CenterBack",
+                            ShirtNumber = "4",
+                            TeamId = 33
+                        },
+                        new
+                        {
+                            Id = 786,
+                            Age = 30,
+                            FirstName = "Ahmed",
+                            LastName = "Ibrahim",
+                            Position = "CenterBack",
+                            ShirtNumber = "5",
+                            TeamId = 33
+                        },
+                        new
+                        {
+                            Id = 787,
+                            Age = 27,
+                            FirstName = "Zaid",
+                            LastName = "Tahseen",
+                            Position = "RightBAck",
+                            ShirtNumber = "6",
+                            TeamId = 33
+                        },
+                        new
+                        {
+                            Id = 788,
+                            Age = 31,
+                            FirstName = "Frans",
+                            LastName = "Dhia Putros",
+                            Position = "CenterBack",
+                            ShirtNumber = "13",
+                            TeamId = 33
+                        },
+                        new
+                        {
+                            Id = 789,
+                            Age = 28,
+                            FirstName = "Ali",
+                            LastName = "Faez",
+                            Position = "RightBAck",
+                            ShirtNumber = "2",
+                            TeamId = 33
+                        },
+                        new
+                        {
+                            Id = 790,
+                            Age = 29,
+                            FirstName = "Aymen",
+                            LastName = "Hussein",
+                            Position = "AttackingMidfilder",
+                            ShirtNumber = "10",
+                            TeamId = 33
+                        },
+                        new
+                        {
+                            Id = 791,
+                            Age = 26,
+                            FirstName = "Mohannad",
+                            LastName = "Ali",
+                            Position = "CenterForward",
+                            ShirtNumber = "9",
+                            TeamId = 33
+                        },
+                        new
+                        {
+                            Id = 792,
+                            Age = 28,
+                            FirstName = "Amir",
+                            LastName = "Al-Ammari",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "8",
+                            TeamId = 33
+                        },
+                        new
+                        {
+                            Id = 793,
+                            Age = 31,
+                            FirstName = "Osama",
+                            LastName = "Rasheed",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "14",
+                            TeamId = 33
+                        },
+                        new
+                        {
+                            Id = 794,
+                            Age = 30,
+                            FirstName = "Mahmoud",
+                            LastName = "Al-Mawas",
+                            Position = "LeftWinger",
+                            ShirtNumber = "11",
+                            TeamId = 33
+                        },
+                        new
+                        {
+                            Id = 795,
+                            Age = 33,
+                            FirstName = "Justin",
+                            LastName = "Meram",
+                            Position = "RightWinger",
+                            ShirtNumber = "7",
+                            TeamId = 33
+                        },
+                        new
+                        {
+                            Id = 796,
+                            Age = 22,
+                            FirstName = "Zidane",
+                            LastName = "Iqbal",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "15",
+                            TeamId = 33
+                        },
+                        new
+                        {
+                            Id = 797,
+                            Age = 22,
+                            FirstName = "Youssef",
+                            LastName = "Amyn",
+                            Position = "LeftWinger",
+                            ShirtNumber = "16",
+                            TeamId = 33
+                        },
+                        new
+                        {
+                            Id = 798,
+                            Age = 28,
+                            FirstName = "Bashar",
+                            LastName = "Resan",
+                            Position = "AttackingMidfilder",
+                            ShirtNumber = "17",
+                            TeamId = 33
+                        },
+                        new
+                        {
+                            Id = 799,
+                            Age = 26,
+                            FirstName = "Mohammed",
+                            LastName = "Qasim",
+                            Position = "RightWinger",
+                            ShirtNumber = "18",
+                            TeamId = 33
+                        },
+                        new
+                        {
+                            Id = 800,
+                            Age = 23,
+                            FirstName = "Ali",
+                            LastName = "Al-Hamadi",
+                            Position = "CenterForward",
+                            ShirtNumber = "19",
+                            TeamId = 33
+                        },
+                        new
+                        {
+                            Id = 801,
+                            Age = 34,
+                            FirstName = "Yassine",
+                            LastName = "Bounou",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "1",
+                            TeamId = 34
+                        },
+                        new
+                        {
+                            Id = 802,
+                            Age = 36,
+                            FirstName = "Munir",
+                            LastName = "El Kajoui",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "12",
+                            TeamId = 34
+                        },
+                        new
+                        {
+                            Id = 803,
+                            Age = 35,
+                            FirstName = "Anas",
+                            LastName = "Zniti",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "23",
+                            TeamId = 34
+                        },
+                        new
+                        {
+                            Id = 804,
+                            Age = 27,
+                            FirstName = "Achraf",
+                            LastName = "Hakimi",
+                            Position = "RightBAck",
+                            ShirtNumber = "2",
+                            TeamId = 34
+                        },
+                        new
+                        {
+                            Id = 805,
+                            Age = 27,
+                            FirstName = "Noussair",
+                            LastName = "Mazraoui",
+                            Position = "RightBAck",
+                            ShirtNumber = "3",
+                            TeamId = 34
+                        },
+                        new
+                        {
+                            Id = 806,
+                            Age = 35,
+                            FirstName = "Romain",
+                            LastName = "Saïss",
+                            Position = "CenterBack",
+                            ShirtNumber = "4",
+                            TeamId = 34
+                        },
+                        new
+                        {
+                            Id = 807,
+                            Age = 29,
+                            FirstName = "Nayef",
+                            LastName = "Aguerd",
+                            Position = "CenterBack",
+                            ShirtNumber = "5",
+                            TeamId = 34
+                        },
+                        new
+                        {
+                            Id = 808,
+                            Age = 32,
+                            FirstName = "Jawad",
+                            LastName = "El Yamiq",
+                            Position = "CenterBack",
+                            ShirtNumber = "6",
+                            TeamId = 34
+                        },
+                        new
+                        {
+                            Id = 809,
+                            Age = 31,
+                            FirstName = "Adam",
+                            LastName = "Masina",
+                            Position = "LeftBack",
+                            ShirtNumber = "13",
+                            TeamId = 34
+                        },
+                        new
+                        {
+                            Id = 810,
+                            Age = 29,
+                            FirstName = "Sofyan",
+                            LastName = "Amrabat",
+                            Position = "DefendCenterMidfilder",
+                            ShirtNumber = "8",
+                            TeamId = 34
+                        },
+                        new
+                        {
+                            Id = 811,
+                            Age = 25,
+                            FirstName = "Azzedine",
+                            LastName = "Ounahi",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "10",
+                            TeamId = 34
+                        },
+                        new
+                        {
+                            Id = 812,
+                            Age = 21,
+                            FirstName = "Bilal",
+                            LastName = "El Khannouss",
+                            Position = "AttackingMidfilder",
+                            ShirtNumber = "11",
+                            TeamId = 34
+                        },
+                        new
+                        {
+                            Id = 813,
+                            Age = 28,
+                            FirstName = "Selim",
+                            LastName = "Amallah",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "14",
+                            TeamId = 34
+                        },
+                        new
+                        {
+                            Id = 814,
+                            Age = 27,
+                            FirstName = "Amine",
+                            LastName = "Harit",
+                            Position = "LeftWinger",
+                            ShirtNumber = "7",
+                            TeamId = 34
+                        },
+                        new
+                        {
+                            Id = 815,
+                            Age = 25,
+                            FirstName = "Zakaria",
+                            LastName = "Aboukhlal",
+                            Position = "RightWinger",
+                            ShirtNumber = "15",
+                            TeamId = 34
+                        },
+                        new
+                        {
+                            Id = 816,
+                            Age = 23,
+                            FirstName = "Abde",
+                            LastName = "Ezzalzouli",
+                            Position = "LeftWinger",
+                            ShirtNumber = "16",
+                            TeamId = 34
+                        },
+                        new
+                        {
+                            Id = 817,
+                            Age = 28,
+                            FirstName = "Youssef",
+                            LastName = "En-Nesyri",
+                            Position = "CenterForward",
+                            ShirtNumber = "9",
+                            TeamId = 34
+                        },
+                        new
+                        {
+                            Id = 818,
+                            Age = 30,
+                            FirstName = "Sofiane",
+                            LastName = "Boufal",
+                            Position = "RightWinger",
+                            ShirtNumber = "17",
+                            TeamId = 34
+                        },
+                        new
+                        {
+                            Id = 819,
+                            Age = 27,
+                            FirstName = "Walid",
+                            LastName = "Cheddira",
+                            Position = "CenterForward",
+                            ShirtNumber = "18",
+                            TeamId = 34
+                        },
+                        new
+                        {
+                            Id = 820,
+                            Age = 21,
+                            FirstName = "Ilias",
+                            LastName = "Akhomach",
+                            Position = "LeftWinger",
+                            ShirtNumber = "20",
+                            TeamId = 34
+                        },
+                        new
+                        {
+                            Id = 821,
+                            Age = 33,
+                            FirstName = "Edouard",
+                            LastName = "Mendy",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "1",
+                            TeamId = 35
+                        },
+                        new
+                        {
+                            Id = 822,
+                            Age = 30,
+                            FirstName = "Alfred",
+                            LastName = "Gomis",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "16",
+                            TeamId = 35
+                        },
+                        new
+                        {
+                            Id = 823,
+                            Age = 29,
+                            FirstName = "Seny",
+                            LastName = "Dieng",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "23",
+                            TeamId = 35
+                        },
+                        new
+                        {
+                            Id = 824,
+                            Age = 34,
+                            FirstName = "Kalidou",
+                            LastName = "Koulibaly",
+                            Position = "CenterBack",
+                            ShirtNumber = "3",
+                            TeamId = 35
+                        },
+                        new
+                        {
+                            Id = 825,
+                            Age = 29,
+                            FirstName = "Abdou",
+                            LastName = "Diallo",
+                            Position = "CenterBack",
+                            ShirtNumber = "4",
+                            TeamId = 35
+                        },
+                        new
+                        {
+                            Id = 826,
+                            Age = 23,
+                            FirstName = "Moussa",
+                            LastName = "Ndiaye",
+                            Position = "LeftBack",
+                            ShirtNumber = "5",
+                            TeamId = 35
+                        },
+                        new
+                        {
+                            Id = 827,
+                            Age = 31,
+                            FirstName = "Youssouf",
+                            LastName = "Sabaly",
+                            Position = "RightBAck",
+                            ShirtNumber = "2",
+                            TeamId = 35
+                        },
+                        new
+                        {
+                            Id = 828,
+                            Age = 30,
+                            FirstName = "Pape",
+                            LastName = "Abou Cisse",
+                            Position = "CenterBack",
+                            ShirtNumber = "6",
+                            TeamId = 35
+                        },
+                        new
+                        {
+                            Id = 829,
+                            Age = 24,
+                            FirstName = "Formose",
+                            LastName = "Mendy",
+                            Position = "CenterBack",
+                            ShirtNumber = "13",
+                            TeamId = 35
+                        },
+                        new
+                        {
+                            Id = 830,
+                            Age = 35,
+                            FirstName = "Idrissa",
+                            LastName = "Gueye",
+                            Position = "DefendCenterMidfilder",
+                            ShirtNumber = "8",
+                            TeamId = 35
+                        },
+                        new
+                        {
+                            Id = 831,
+                            Age = 32,
+                            FirstName = "Nampalys",
+                            LastName = "Mendy",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "14",
+                            TeamId = 35
+                        },
+                        new
+                        {
+                            Id = 832,
+                            Age = 26,
+                            FirstName = "Pape",
+                            LastName = "Gueye",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "17",
+                            TeamId = 35
+                        },
+                        new
+                        {
+                            Id = 833,
+                            Age = 26,
+                            FirstName = "Krepin",
+                            LastName = "Diatta",
+                            Position = "RightWinger",
+                            ShirtNumber = "11",
+                            TeamId = 35
+                        },
+                        new
+                        {
+                            Id = 834,
+                            Age = 27,
+                            FirstName = "Ismaila",
+                            LastName = "Sarr",
+                            Position = "LeftWinger",
+                            ShirtNumber = "10",
+                            TeamId = 35
+                        },
+                        new
+                        {
+                            Id = 835,
+                            Age = 29,
+                            FirstName = "Habib",
+                            LastName = "Diallo",
+                            Position = "CenterForward",
+                            ShirtNumber = "15",
+                            TeamId = 35
+                        },
+                        new
+                        {
+                            Id = 836,
+                            Age = 22,
+                            FirstName = "Pape Matar",
+                            LastName = "Sarr",
+                            Position = "AttackingMidfilder",
+                            ShirtNumber = "7",
+                            TeamId = 35
+                        },
+                        new
+                        {
+                            Id = 837,
+                            Age = 33,
+                            FirstName = "Sadio",
+                            LastName = "Mane",
+                            Position = "LeftWinger",
+                            ShirtNumber = "9",
+                            TeamId = 35
+                        },
+                        new
+                        {
+                            Id = 838,
+                            Age = 28,
+                            FirstName = "Boulaye",
+                            LastName = "Dia",
+                            Position = "CenterForward",
+                            ShirtNumber = "18",
+                            TeamId = 35
+                        },
+                        new
+                        {
+                            Id = 839,
+                            Age = 25,
+                            FirstName = "Iliman",
+                            LastName = "Ndiaye",
+                            Position = "RightWinger",
+                            ShirtNumber = "19",
+                            TeamId = 35
+                        },
+                        new
+                        {
+                            Id = 840,
+                            Age = 27,
+                            FirstName = "Cheikh",
+                            LastName = "Sabaly",
+                            Position = "LeftWinger",
+                            ShirtNumber = "20",
+                            TeamId = 35
+                        },
+                        new
+                        {
+                            Id = 841,
+                            Age = 36,
+                            FirstName = "Mohamed",
+                            LastName = "El-Shenawy",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "1",
+                            TeamId = 36
+                        },
+                        new
+                        {
+                            Id = 842,
+                            Age = 25,
+                            FirstName = "Mohamed",
+                            LastName = "Sobhi",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "16",
+                            TeamId = 36
+                        },
+                        new
+                        {
+                            Id = 843,
+                            Age = 25,
+                            FirstName = "Mostafa",
+                            LastName = "Shobeir",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "23",
+                            TeamId = 36
+                        },
+                        new
+                        {
+                            Id = 844,
+                            Age = 34,
+                            FirstName = "Ahmed",
+                            LastName = "Hegazi",
+                            Position = "CenterBack",
+                            ShirtNumber = "5",
+                            TeamId = 36
+                        },
+                        new
+                        {
+                            Id = 845,
+                            Age = 26,
+                            FirstName = "Mohamed",
+                            LastName = "Abdelmonem",
+                            Position = "CenterBack",
+                            ShirtNumber = "4",
+                            TeamId = 36
+                        },
+                        new
+                        {
+                            Id = 846,
+                            Age = 28,
+                            FirstName = "Omar",
+                            LastName = "Kamal",
+                            Position = "RightBAck",
+                            ShirtNumber = "2",
+                            TeamId = 36
+                        },
+                        new
+                        {
+                            Id = 847,
+                            Age = 27,
+                            FirstName = "Ahmed",
+                            LastName = "Fatouh",
+                            Position = "LeftBack",
+                            ShirtNumber = "3",
+                            TeamId = 36
+                        },
+                        new
+                        {
+                            Id = 848,
+                            Age = 32,
+                            FirstName = "Rami",
+                            LastName = "Rabia",
+                            Position = "CenterBack",
+                            ShirtNumber = "6",
+                            TeamId = 36
+                        },
+                        new
+                        {
+                            Id = 849,
+                            Age = 29,
+                            FirstName = "Mohamed",
+                            LastName = "Hany",
+                            Position = "RightBAck",
+                            ShirtNumber = "13",
+                            TeamId = 36
+                        },
+                        new
+                        {
+                            Id = 850,
+                            Age = 33,
+                            FirstName = "Mohamed",
+                            LastName = "Elneny",
+                            Position = "DefendCenterMidfilder",
+                            ShirtNumber = "17",
+                            TeamId = 36
+                        },
+                        new
+                        {
+                            Id = 851,
+                            Age = 34,
+                            FirstName = "Tarek",
+                            LastName = "Hamed",
+                            Position = "DefendCenterMidfilder",
+                            ShirtNumber = "8",
+                            TeamId = 36
+                        },
+                        new
+                        {
+                            Id = 852,
+                            Age = 30,
+                            FirstName = "Hamdy",
+                            LastName = "Fathi",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "14",
+                            TeamId = 36
+                        },
+                        new
+                        {
+                            Id = 853,
+                            Age = 26,
+                            FirstName = "Emam",
+                            LastName = "Ashour",
+                            Position = "AttackingMidfilder",
+                            ShirtNumber = "10",
+                            TeamId = 36
+                        },
+                        new
+                        {
+                            Id = 854,
+                            Age = 26,
+                            FirstName = "Marwan",
+                            LastName = "Attia",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "11",
+                            TeamId = 36
+                        },
+                        new
+                        {
+                            Id = 855,
+                            Age = 29,
+                            FirstName = "Ahmed",
+                            LastName = "Sayed Zizo",
+                            Position = "RightWinger",
+                            ShirtNumber = "7",
+                            TeamId = 36
+                        },
+                        new
+                        {
+                            Id = 856,
+                            Age = 30,
+                            FirstName = "Mahmoud",
+                            LastName = "Hassan Trezeguet",
+                            Position = "LeftWinger",
+                            ShirtNumber = "9",
+                            TeamId = 36
+                        },
+                        new
+                        {
+                            Id = 857,
+                            Age = 33,
+                            FirstName = "Mohamed",
+                            LastName = "Salah",
+                            Position = "RightWinger",
+                            ShirtNumber = "10",
+                            TeamId = 36
+                        },
+                        new
+                        {
+                            Id = 858,
+                            Age = 27,
+                            FirstName = "Mostafa",
+                            LastName = "Mohamed",
+                            Position = "CenterForward",
+                            ShirtNumber = "18",
+                            TeamId = 36
+                        },
+                        new
+                        {
+                            Id = 859,
+                            Age = 32,
+                            FirstName = "Ahmed",
+                            LastName = "Kouka",
+                            Position = "CenterForward",
+                            ShirtNumber = "19",
+                            TeamId = 36
+                        },
+                        new
+                        {
+                            Id = 860,
+                            Age = 25,
+                            FirstName = "Osama",
+                            LastName = "Faisal",
+                            Position = "LeftWinger",
+                            ShirtNumber = "20",
+                            TeamId = 36
+                        },
+                        new
+                        {
+                            Id = 861,
+                            Age = 28,
+                            FirstName = "Anthony",
+                            LastName = "Mandrea",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "16",
+                            TeamId = 37
+                        },
+                        new
+                        {
+                            Id = 862,
+                            Age = 29,
+                            FirstName = "Alexis",
+                            LastName = "Guendouz",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "23",
+                            TeamId = 37
+                        },
+                        new
+                        {
+                            Id = 863,
+                            Age = 30,
+                            FirstName = "Oussama",
+                            LastName = "Benbot",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "1",
+                            TeamId = 37
+                        },
+                        new
+                        {
+                            Id = 864,
+                            Age = 27,
+                            FirstName = "Luca",
+                            LastName = "Zidane",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "12",
+                            TeamId = 37
+                        },
+                        new
+                        {
+                            Id = 865,
+                            Age = 30,
+                            FirstName = "Ramy",
+                            LastName = "Bensebaini",
+                            Position = "LeftBack",
+                            ShirtNumber = "2",
+                            TeamId = 37
+                        },
+                        new
+                        {
+                            Id = 866,
+                            Age = 33,
+                            FirstName = "Aïssa",
+                            LastName = "Mandi",
+                            Position = "CenterBack",
+                            ShirtNumber = "3",
+                            TeamId = 37
+                        },
+                        new
+                        {
+                            Id = 867,
+                            Age = 25,
+                            FirstName = "Mohamed",
+                            LastName = "Tougaï",
+                            Position = "CenterBack",
+                            ShirtNumber = "4",
+                            TeamId = 37
+                        },
+                        new
+                        {
+                            Id = 868,
+                            Age = 29,
+                            FirstName = "Kevin",
+                            LastName = "Guitoun",
+                            Position = "RightBAck",
+                            ShirtNumber = "6",
+                            TeamId = 37
+                        },
+                        new
+                        {
+                            Id = 869,
+                            Age = 21,
+                            FirstName = "Farès",
+                            LastName = "Chaïbi",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "13",
+                            TeamId = 37
+                        },
+                        new
+                        {
+                            Id = 870,
+                            Age = 27,
+                            FirstName = "Ismaël",
+                            LastName = "Bennacer",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "8",
+                            TeamId = 37
+                        },
+                        new
+                        {
+                            Id = 871,
+                            Age = 35,
+                            FirstName = "Sofiane",
+                            LastName = "Feghouli",
+                            Position = "AttackingMidfilder",
+                            ShirtNumber = "10",
+                            TeamId = 37
+                        },
+                        new
+                        {
+                            Id = 872,
+                            Age = 27,
+                            FirstName = "Ramiz",
+                            LastName = "Zerrouki",
+                            Position = "DefendCenterMidfilder",
+                            ShirtNumber = "14",
+                            TeamId = 37
+                        },
+                        new
+                        {
+                            Id = 873,
+                            Age = 27,
+                            FirstName = "Houssem",
+                            LastName = "Aouar",
+                            Position = "AttackingMidfilder",
+                            ShirtNumber = "11",
+                            TeamId = 37
+                        },
+                        new
+                        {
+                            Id = 874,
+                            Age = 28,
+                            FirstName = "Adam",
+                            LastName = "Ounas",
+                            Position = "RightWinger",
+                            ShirtNumber = "17",
+                            TeamId = 37
+                        },
+                        new
+                        {
+                            Id = 875,
+                            Age = 32,
+                            FirstName = "Youcef",
+                            LastName = "Belaili",
+                            Position = "LeftWinger",
+                            ShirtNumber = "15",
+                            TeamId = 37
+                        },
+                        new
+                        {
+                            Id = 876,
+                            Age = 34,
+                            FirstName = "Riyad",
+                            LastName = "Mahrez",
+                            Position = "RightWinger",
+                            ShirtNumber = "7",
+                            TeamId = 37
+                        },
+                        new
+                        {
+                            Id = 877,
+                            Age = 37,
+                            FirstName = "Islam",
+                            LastName = "Slimani",
+                            Position = "CenterForward",
+                            ShirtNumber = "9",
+                            TeamId = 37
+                        },
+                        new
+                        {
+                            Id = 878,
+                            Age = 25,
+                            FirstName = "Mohamed",
+                            LastName = "Amoura",
+                            Position = "CenterForward",
+                            ShirtNumber = "18",
+                            TeamId = 37
+                        },
+                        new
+                        {
+                            Id = 879,
+                            Age = 30,
+                            FirstName = "Said",
+                            LastName = "Benrahma",
+                            Position = "LeftWinger",
+                            ShirtNumber = "19",
+                            TeamId = 37
+                        },
+                        new
+                        {
+                            Id = 881,
+                            Age = 33,
+                            FirstName = "Ronwen",
+                            LastName = "Williams",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "1",
+                            TeamId = 38
+                        },
+                        new
+                        {
+                            Id = 882,
+                            Age = 32,
+                            FirstName = "Veli",
+                            LastName = "Mothwa",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "16",
+                            TeamId = 38
+                        },
+                        new
+                        {
+                            Id = 883,
+                            Age = 30,
+                            FirstName = "Ricardo",
+                            LastName = "Goss",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "23",
+                            TeamId = 38
+                        },
+                        new
+                        {
+                            Id = 884,
+                            Age = 29,
+                            FirstName = "Thapelo",
+                            LastName = "Xoki",
+                            Position = "CenterBack",
+                            ShirtNumber = "2",
+                            TeamId = 38
+                        },
+                        new
+                        {
+                            Id = 885,
+                            Age = 35,
+                            FirstName = "Ramahlwe",
+                            LastName = "Mphahlele",
+                            Position = "RightBAck",
+                            ShirtNumber = "3",
+                            TeamId = 38
+                        },
+                        new
+                        {
+                            Id = 886,
+                            Age = 29,
+                            FirstName = "Nkosinathi",
+                            LastName = "Sibisi",
+                            Position = "CenterBack",
+                            ShirtNumber = "4",
+                            TeamId = 38
+                        },
+                        new
+                        {
+                            Id = 887,
+                            Age = 29,
+                            FirstName = "Aubrey",
+                            LastName = "Modiba",
+                            Position = "LeftBack",
+                            ShirtNumber = "5",
+                            TeamId = 38
+                        },
+                        new
+                        {
+                            Id = 888,
+                            Age = 33,
+                            FirstName = "Siyanda",
+                            LastName = "Xulu",
+                            Position = "CenterBack",
+                            ShirtNumber = "6",
+                            TeamId = 38
+                        },
+                        new
+                        {
+                            Id = 889,
+                            Age = 31,
+                            FirstName = "Thibang",
+                            LastName = "Phete",
+                            Position = "DefendCenterMidfilder",
+                            ShirtNumber = "13",
+                            TeamId = 38
+                        },
+                        new
+                        {
+                            Id = 890,
+                            Age = 34,
+                            FirstName = "Andile",
+                            LastName = "Jali",
+                            Position = "DefendCenterMidfilder",
+                            ShirtNumber = "8",
+                            TeamId = 38
+                        },
+                        new
+                        {
+                            Id = 891,
+                            Age = 28,
+                            FirstName = "Teboho",
+                            LastName = "Mokoena",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "4",
+                            TeamId = 38
+                        },
+                        new
+                        {
+                            Id = 892,
+                            Age = 26,
+                            FirstName = "Mahlobo",
+                            LastName = "Sibiya",
+                            Position = "AttackingMidfilder",
+                            ShirtNumber = "11",
+                            TeamId = 38
+                        },
+                        new
+                        {
+                            Id = 893,
+                            Age = 27,
+                            FirstName = "Sipho",
+                            LastName = "Mbule",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "10",
+                            TeamId = 38
+                        },
+                        new
+                        {
+                            Id = 894,
+                            Age = 25,
+                            FirstName = "Sphephelo",
+                            LastName = "Sithole",
+                            Position = "DefendCenterMidfilder",
+                            ShirtNumber = "14",
+                            TeamId = 38
+                        },
+                        new
+                        {
+                            Id = 895,
+                            Age = 31,
+                            FirstName = "Percy",
+                            LastName = "Tau",
+                            Position = "RightWinger",
+                            ShirtNumber = "7",
+                            TeamId = 38
+                        },
+                        new
+                        {
+                            Id = 896,
+                            Age = 35,
+                            FirstName = "Themba",
+                            LastName = "Zwane",
+                            Position = "AttackingMidfilder",
+                            ShirtNumber = "9",
+                            TeamId = 38
+                        },
+                        new
+                        {
+                            Id = 897,
+                            Age = 25,
+                            FirstName = "Lyle",
+                            LastName = "Foster",
+                            Position = "CenterForward",
+                            ShirtNumber = "10",
+                            TeamId = 38
+                        },
+                        new
+                        {
+                            Id = 898,
+                            Age = 29,
+                            FirstName = "Iqraam",
+                            LastName = "Rayners",
+                            Position = "CenterForward",
+                            ShirtNumber = "18",
+                            TeamId = 38
+                        },
+                        new
+                        {
+                            Id = 899,
+                            Age = 28,
+                            FirstName = "Zakhele",
+                            LastName = "Lepasa",
+                            Position = "CenterForward",
+                            ShirtNumber = "19",
+                            TeamId = 38
+                        },
+                        new
+                        {
+                            Id = 900,
+                            Age = 24,
+                            FirstName = "Cassius",
+                            LastName = "Mailula",
+                            Position = "LeftWinger",
+                            ShirtNumber = "20",
+                            TeamId = 38
+                        },
+                        new
+                        {
+                            Id = 901,
+                            Age = 29,
+                            FirstName = "André",
+                            LastName = "Onana",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "1",
+                            TeamId = 39
+                        },
+                        new
+                        {
+                            Id = 902,
+                            Age = 28,
+                            FirstName = "Lawrence",
+                            LastName = "Ati-Zigi",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "16",
+                            TeamId = 39
+                        },
+                        new
+                        {
+                            Id = 903,
+                            Age = 32,
+                            FirstName = "Richard",
+                            LastName = "Ofori",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "23",
+                            TeamId = 39
+                        },
+                        new
+                        {
+                            Id = 904,
+                            Age = 30,
+                            FirstName = "Daniel",
+                            LastName = "Amartey",
+                            Position = "CenterBack",
+                            ShirtNumber = "4",
+                            TeamId = 39
+                        },
+                        new
+                        {
+                            Id = 905,
+                            Age = 30,
+                            FirstName = "Alexander",
+                            LastName = "Djiku",
+                            Position = "CenterBack",
+                            ShirtNumber = "5",
+                            TeamId = 39
+                        },
+                        new
+                        {
+                            Id = 906,
+                            Age = 26,
+                            FirstName = "Mohammed",
+                            LastName = "Salisu",
+                            Position = "CenterBack",
+                            ShirtNumber = "3",
+                            TeamId = 39
+                        },
+                        new
+                        {
+                            Id = 907,
+                            Age = 25,
+                            FirstName = "Alidu",
+                            LastName = "Seidu",
+                            Position = "RightBAck",
+                            ShirtNumber = "2",
+                            TeamId = 39
+                        },
+                        new
+                        {
+                            Id = 908,
+                            Age = 31,
+                            FirstName = "Baba",
+                            LastName = "Rahman",
+                            Position = "LeftBack",
+                            ShirtNumber = "6",
+                            TeamId = 39
+                        },
+                        new
+                        {
+                            Id = 909,
+                            Age = 24,
+                            FirstName = "Tariq",
+                            LastName = "Lamptey",
+                            Position = "RightBAck",
+                            ShirtNumber = "13",
+                            TeamId = 39
+                        },
+                        new
+                        {
+                            Id = 910,
+                            Age = 32,
+                            FirstName = "Thomas",
+                            LastName = "Partey",
+                            Position = "DefendCenterMidfilder",
+                            ShirtNumber = "8",
+                            TeamId = 39
+                        },
+                        new
+                        {
+                            Id = 911,
+                            Age = 34,
+                            FirstName = "Mubarak",
+                            LastName = "Wakaso",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "10",
+                            TeamId = 39
+                        },
+                        new
+                        {
+                            Id = 912,
+                            Age = 27,
+                            FirstName = "Elisha",
+                            LastName = "Owusu",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "14",
+                            TeamId = 39
+                        },
+                        new
+                        {
+                            Id = 913,
+                            Age = 29,
+                            FirstName = "Iddrisu",
+                            LastName = "Baba",
+                            Position = "DefendCenterMidfilder",
+                            ShirtNumber = "15",
+                            TeamId = 39
+                        },
+                        new
+                        {
+                            Id = 914,
+                            Age = 26,
+                            FirstName = "Kamal",
+                            LastName = "Sowah",
+                            Position = "RightWinger",
+                            ShirtNumber = "11",
+                            TeamId = 39
+                        },
+                        new
+                        {
+                            Id = 915,
+                            Age = 25,
+                            FirstName = "Mohammed",
+                            LastName = "Kudus",
+                            Position = "AttackingMidfilder",
+                            ShirtNumber = "7",
+                            TeamId = 39
+                        },
+                        new
+                        {
+                            Id = 916,
+                            Age = 26,
+                            FirstName = "Antoine",
+                            LastName = "Semenyo",
+                            Position = "LeftWinger",
+                            ShirtNumber = "17",
+                            TeamId = 39
+                        },
+                        new
+                        {
+                            Id = 917,
+                            Age = 31,
+                            FirstName = "Inaki",
+                            LastName = "Williams",
+                            Position = "CenterForward",
+                            ShirtNumber = "9",
+                            TeamId = 39
+                        },
+                        new
+                        {
+                            Id = 918,
+                            Age = 33,
+                            FirstName = "Jordan",
+                            LastName = "Ayew",
+                            Position = "RightWinger",
+                            ShirtNumber = "18",
+                            TeamId = 39
+                        },
+                        new
+                        {
+                            Id = 919,
+                            Age = 35,
+                            FirstName = "Andre",
+                            LastName = "Ayew",
+                            Position = "LeftWinger",
+                            ShirtNumber = "19",
+                            TeamId = 39
+                        },
+                        new
+                        {
+                            Id = 920,
+                            Age = 21,
+                            FirstName = "Ernest",
+                            LastName = "Nuamah",
+                            Position = "LeftWinger",
+                            ShirtNumber = "20",
+                            TeamId = 39
+                        },
+                        new
+                        {
+                            Id = 921,
+                            Age = 28,
+                            FirstName = "Aymen",
+                            LastName = "Dahmen",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "16",
+                            TeamId = 40
+                        },
+                        new
+                        {
+                            Id = 922,
+                            Age = 30,
+                            FirstName = "Béchir",
+                            LastName = "Ben Said",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "1",
+                            TeamId = 40
+                        },
+                        new
+                        {
+                            Id = 923,
+                            Age = 35,
+                            FirstName = "Farouk",
+                            LastName = "Ben Mustapha",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "23",
+                            TeamId = 40
+                        },
+                        new
+                        {
+                            Id = 924,
+                            Age = 29,
+                            FirstName = "Dylan",
+                            LastName = "Bronn",
+                            Position = "CenterBack",
+                            ShirtNumber = "2",
+                            TeamId = 40
+                        },
+                        new
+                        {
+                            Id = 925,
+                            Age = 30,
+                            FirstName = "Nader",
+                            LastName = "Ghandri",
+                            Position = "CenterBack",
+                            ShirtNumber = "3",
+                            TeamId = 40
+                        },
+                        new
+                        {
+                            Id = 926,
+                            Age = 26,
+                            FirstName = "Montassar",
+                            LastName = "Talbi",
+                            Position = "CenterBack",
+                            ShirtNumber = "4",
+                            TeamId = 40
+                        },
+                        new
+                        {
+                            Id = 927,
+                            Age = 31,
+                            FirstName = "Ali",
+                            LastName = "Abdi",
+                            Position = "LeftBack",
+                            ShirtNumber = "5",
+                            TeamId = 40
+                        },
+                        new
+                        {
+                            Id = 928,
+                            Age = 32,
+                            FirstName = "Hamza",
+                            LastName = "Mathlouthi",
+                            Position = "RightBAck",
+                            ShirtNumber = "6",
+                            TeamId = 40
+                        },
+                        new
+                        {
+                            Id = 929,
+                            Age = 28,
+                            FirstName = "Mortadha",
+                            LastName = "Ben Ouanes",
+                            Position = "LeftBack",
+                            ShirtNumber = "13",
+                            TeamId = 40
+                        },
+                        new
+                        {
+                            Id = 930,
+                            Age = 28,
+                            FirstName = "Aïssa",
+                            LastName = "Laïdouni",
+                            Position = "DefendCenterMidfilder",
+                            ShirtNumber = "8",
+                            TeamId = 40
+                        },
+                        new
+                        {
+                            Id = 931,
+                            Age = 30,
+                            FirstName = "Ellyes",
+                            LastName = "Skhiri",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "10",
+                            TeamId = 40
+                        },
+                        new
+                        {
+                            Id = 932,
+                            Age = 26,
+                            FirstName = "Mohamed",
+                            LastName = "Ali Ben Romdhane",
+                            Position = "AttackingMidfilder",
+                            ShirtNumber = "14",
+                            TeamId = 40
+                        },
+                        new
+                        {
+                            Id = 933,
+                            Age = 32,
+                            FirstName = "Ferjani",
+                            LastName = "Sassi",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "7",
+                            TeamId = 40
+                        },
+                        new
+                        {
+                            Id = 934,
+                            Age = 32,
+                            FirstName = "Issam",
+                            LastName = "Jebali",
+                            Position = "RightWinger",
+                            ShirtNumber = "11",
+                            TeamId = 40
+                        },
+                        new
+                        {
+                            Id = 935,
+                            Age = 24,
+                            FirstName = "Anis",
+                            LastName = "Ben Slimane",
+                            Position = "LeftWinger",
+                            ShirtNumber = "15",
+                            TeamId = 40
+                        },
+                        new
+                        {
+                            Id = 936,
+                            Age = 33,
+                            FirstName = "Oussama",
+                            LastName = "Haddadi",
+                            Position = "DefendCenterMidfilder",
+                            ShirtNumber = "17",
+                            TeamId = 40
+                        },
+                        new
+                        {
+                            Id = 937,
+                            Age = 33,
+                            FirstName = "Wahbi",
+                            LastName = "Khazri",
+                            Position = "CenterForward",
+                            ShirtNumber = "9",
+                            TeamId = 40
+                        },
+                        new
+                        {
+                            Id = 938,
+                            Age = 30,
+                            FirstName = "Seifeddine",
+                            LastName = "Jaziri",
+                            Position = "CenterForward",
+                            ShirtNumber = "18",
+                            TeamId = 40
+                        },
+                        new
+                        {
+                            Id = 939,
+                            Age = 34,
+                            FirstName = "Youssef",
+                            LastName = "Msakni",
+                            Position = "RightWinger",
+                            ShirtNumber = "19",
+                            TeamId = 40
+                        },
+                        new
+                        {
+                            Id = 940,
+                            Age = 32,
+                            FirstName = "Naim",
+                            LastName = "Sliti",
+                            Position = "LeftWinger",
+                            ShirtNumber = "20",
+                            TeamId = 40
+                        },
+                        new
+                        {
+                            Id = 941,
+                            Age = 24,
+                            FirstName = "Yahia",
+                            LastName = "Fofana",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "1",
+                            TeamId = 41
+                        },
+                        new
+                        {
+                            Id = 942,
+                            Age = 36,
+                            FirstName = "Sylvain",
+                            LastName = "Gbohouo",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "16",
+                            TeamId = 41
+                        },
+                        new
+                        {
+                            Id = 943,
+                            Age = 32,
+                            FirstName = "Badra",
+                            LastName = "Ali Sangaré",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "23",
+                            TeamId = 41
+                        },
+                        new
+                        {
+                            Id = 944,
+                            Age = 32,
+                            FirstName = "Serges",
+                            LastName = "Aurier",
+                            Position = "RightBAck",
+                            ShirtNumber = "2",
+                            TeamId = 41
+                        },
+                        new
+                        {
+                            Id = 945,
+                            Age = 29,
+                            FirstName = "Ghislain",
+                            LastName = "Konan",
+                            Position = "LeftBack",
+                            ShirtNumber = "3",
+                            TeamId = 41
+                        },
+                        new
+                        {
+                            Id = 946,
+                            Age = 31,
+                            FirstName = "Eric",
+                            LastName = "Bailly",
+                            Position = "CenterBack",
+                            ShirtNumber = "4",
+                            TeamId = 41
+                        },
+                        new
+                        {
+                            Id = 947,
+                            Age = 30,
+                            FirstName = "Wilfried",
+                            LastName = "Kanon",
+                            Position = "CenterBack",
+                            ShirtNumber = "5",
+                            TeamId = 41
+                        },
+                        new
+                        {
+                            Id = 948,
+                            Age = 24,
+                            FirstName = "Odilon",
+                            LastName = "Kossounou",
+                            Position = "CenterBack",
+                            ShirtNumber = "6",
+                            TeamId = 41
+                        },
+                        new
+                        {
+                            Id = 949,
+                            Age = 29,
+                            FirstName = "Jean-Philippe",
+                            LastName = "Gbamin",
+                            Position = "DefendCenterMidfilder",
+                            ShirtNumber = "13",
+                            TeamId = 41
+                        },
+                        new
+                        {
+                            Id = 950,
+                            Age = 29,
+                            FirstName = "Franck",
+                            LastName = "Kessié",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "8",
+                            TeamId = 41
+                        },
+                        new
+                        {
+                            Id = 951,
+                            Age = 30,
+                            FirstName = "Seko",
+                            LastName = "Fofana",
+                            Position = "AttackingMidfilder",
+                            ShirtNumber = "10",
+                            TeamId = 41
+                        },
+                        new
+                        {
+                            Id = 952,
+                            Age = 26,
+                            FirstName = "Cheick",
+                            LastName = "Doucouré",
+                            Position = "DefendCenterMidfilder",
+                            ShirtNumber = "14",
+                            TeamId = 41
+                        },
+                        new
+                        {
+                            Id = 953,
+                            Age = 25,
+                            FirstName = "Hamed",
+                            LastName = "Traoré",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "11",
+                            TeamId = 41
+                        },
+                        new
+                        {
+                            Id = 954,
+                            Age = 28,
+                            FirstName = "Maxwel",
+                            LastName = "Cornet",
+                            Position = "LeftWinger",
+                            ShirtNumber = "7",
+                            TeamId = 41
+                        },
+                        new
+                        {
+                            Id = 955,
+                            Age = 29,
+                            FirstName = "Nicolas",
+                            LastName = "Pépé",
+                            Position = "RightWinger",
+                            ShirtNumber = "17",
+                            TeamId = 41
+                        },
+                        new
+                        {
+                            Id = 956,
+                            Age = 23,
+                            FirstName = "Simon",
+                            LastName = "Adingra",
+                            Position = "LeftWinger",
+                            ShirtNumber = "15",
+                            TeamId = 41
+                        },
+                        new
+                        {
+                            Id = 957,
+                            Age = 31,
+                            FirstName = "Sebastien",
+                            LastName = "Haller",
+                            Position = "CenterForward",
+                            ShirtNumber = "9",
+                            TeamId = 41
+                        },
+                        new
+                        {
+                            Id = 958,
+                            Age = 27,
+                            FirstName = "Jean-Philippe",
+                            LastName = "Krasso",
+                            Position = "CenterForward",
+                            ShirtNumber = "18",
+                            TeamId = 41
+                        },
+                        new
+                        {
+                            Id = 959,
+                            Age = 23,
+                            FirstName = "Arnaud",
+                            LastName = "Kalimuendo",
+                            Position = "CenterForward",
+                            ShirtNumber = "19",
+                            TeamId = 41
+                        },
+                        new
+                        {
+                            Id = 960,
+                            Age = 23,
+                            FirstName = "Amad",
+                            LastName = "Diallo",
+                            Position = "RightWinger",
+                            ShirtNumber = "20",
+                            TeamId = 41
+                        },
+                        new
+                        {
+                            Id = 961,
+                            Age = 29,
+                            FirstName = "Lionel",
+                            LastName = "Mpasi",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "16",
+                            TeamId = 42
+                        },
+                        new
+                        {
+                            Id = 962,
+                            Age = 28,
+                            FirstName = "Hervé",
+                            LastName = "Koffi",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "1",
+                            TeamId = 42
+                        },
+                        new
+                        {
+                            Id = 963,
+                            Age = 20,
+                            FirstName = "Matthieu",
+                            LastName = "Epolo",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "23",
+                            TeamId = 42
+                        },
+                        new
+                        {
+                            Id = 964,
+                            Age = 30,
+                            FirstName = "Chancel",
+                            LastName = "Mbemba",
+                            Position = "CenterBack",
+                            ShirtNumber = "4",
+                            TeamId = 42
+                        },
+                        new
+                        {
+                            Id = 965,
+                            Age = 31,
+                            FirstName = "Arthur",
+                            LastName = "Masuaku",
+                            Position = "LeftBack",
+                            ShirtNumber = "3",
+                            TeamId = 42
+                        },
+                        new
+                        {
+                            Id = 966,
+                            Age = 33,
+                            FirstName = "Gédéon",
+                            LastName = "Kakuta",
+                            Position = "CenterBack",
+                            ShirtNumber = "5",
+                            TeamId = 42
+                        },
+                        new
+                        {
+                            Id = 967,
+                            Age = 23,
+                            FirstName = "Ilaix",
+                            LastName = "Moriba",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "6",
+                            TeamId = 42
+                        },
+                        new
+                        {
+                            Id = 968,
+                            Age = 30,
+                            FirstName = "Glody",
+                            LastName = "Ngonda",
+                            Position = "RightBAck",
+                            ShirtNumber = "2",
+                            TeamId = 42
+                        },
+                        new
+                        {
+                            Id = 969,
+                            Age = 31,
+                            FirstName = "Jordan",
+                            LastName = "Ikoko",
+                            Position = "RightBAck",
+                            ShirtNumber = "13",
+                            TeamId = 42
+                        },
+                        new
+                        {
+                            Id = 970,
+                            Age = 28,
+                            FirstName = "Samuel",
+                            LastName = "Moutoussamy",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "8",
+                            TeamId = 42
+                        },
+                        new
+                        {
+                            Id = 971,
+                            Age = 27,
+                            FirstName = "Charles",
+                            LastName = "Pickel",
+                            Position = "DefendCenterMidfilder",
+                            ShirtNumber = "10",
+                            TeamId = 42
+                        },
+                        new
+                        {
+                            Id = 972,
+                            Age = 28,
+                            FirstName = "Yoane",
+                            LastName = "Wissa",
+                            Position = "LeftWinger",
+                            ShirtNumber = "11",
+                            TeamId = 42
+                        },
+                        new
+                        {
+                            Id = 973,
+                            Age = 28,
+                            FirstName = "Théo",
+                            LastName = "Bongonda",
+                            Position = "RightWinger",
+                            ShirtNumber = "14",
+                            TeamId = 42
+                        },
+                        new
+                        {
+                            Id = 974,
+                            Age = 27,
+                            FirstName = "Meschack",
+                            LastName = "Elia",
+                            Position = "LeftWinger",
+                            ShirtNumber = "7",
+                            TeamId = 42
+                        },
+                        new
+                        {
+                            Id = 975,
+                            Age = 28,
+                            FirstName = "Dylan",
+                            LastName = "Batubinsika",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "15",
+                            TeamId = 42
+                        },
+                        new
+                        {
+                            Id = 976,
+                            Age = 34,
+                            FirstName = "Cédric",
+                            LastName = "Bakambu",
+                            Position = "CenterForward",
+                            ShirtNumber = "9",
+                            TeamId = 42
+                        },
+                        new
+                        {
+                            Id = 977,
+                            Age = 28,
+                            FirstName = "Simon",
+                            LastName = "Banza",
+                            Position = "CenterForward",
+                            ShirtNumber = "18",
+                            TeamId = 42
+                        },
+                        new
+                        {
+                            Id = 978,
+                            Age = 25,
+                            FirstName = "Jackson",
+                            LastName = "Muleka",
+                            Position = "CenterForward",
+                            ShirtNumber = "19",
+                            TeamId = 42
+                        },
+                        new
+                        {
+                            Id = 979,
+                            Age = 28,
+                            FirstName = "Theo",
+                            LastName = "Bongonda",
+                            Position = "AttackingMidfilder",
+                            ShirtNumber = "20",
+                            TeamId = 42
+                        },
+                        new
+                        {
+                            Id = 980,
+                            Age = 25,
+                            FirstName = "Afimico",
+                            LastName = "Pululu",
+                            Position = "CenterForward",
+                            ShirtNumber = "21",
+                            TeamId = 42
+                        },
+                        new
+                        {
+                            Id = 981,
+                            Age = 38,
+                            FirstName = "Vozinha",
+                            LastName = "da Luz",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "1",
+                            TeamId = 43
+                        },
+                        new
+                        {
+                            Id = 982,
+                            Age = 30,
+                            FirstName = "Marcos",
+                            LastName = "Roberto",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "16",
+                            TeamId = 43
+                        },
+                        new
+                        {
+                            Id = 983,
+                            Age = 28,
+                            FirstName = "Jandrei",
+                            LastName = "Oliveira",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "23",
+                            TeamId = 43
+                        },
+                        new
+                        {
+                            Id = 984,
+                            Age = 36,
+                            FirstName = "Stopira",
+                            LastName = "Gonçalves",
+                            Position = "LeftBack",
+                            ShirtNumber = "2",
+                            TeamId = 43
+                        },
+                        new
+                        {
+                            Id = 985,
+                            Age = 30,
+                            FirstName = "Steven",
+                            LastName = "Fortes",
+                            Position = "CenterBack",
+                            ShirtNumber = "3",
+                            TeamId = 43
+                        },
+                        new
+                        {
+                            Id = 986,
+                            Age = 25,
+                            FirstName = "Logan",
+                            LastName = "Costa",
+                            Position = "CenterBack",
+                            ShirtNumber = "4",
+                            TeamId = 43
+                        },
+                        new
+                        {
+                            Id = 987,
+                            Age = 29,
+                            FirstName = "Diney",
+                            LastName = "Pinto",
+                            Position = "RightBAck",
+                            ShirtNumber = "5",
+                            TeamId = 43
+                        },
+                        new
+                        {
+                            Id = 988,
+                            Age = 25,
+                            FirstName = "Nuno",
+                            LastName = "Tavares",
+                            Position = "LeftBack",
+                            ShirtNumber = "6",
+                            TeamId = 43
+                        },
+                        new
+                        {
+                            Id = 989,
+                            Age = 31,
+                            FirstName = "João",
+                            LastName = "Paulo",
+                            Position = "CenterBack",
+                            ShirtNumber = "13",
+                            TeamId = 43
+                        },
+                        new
+                        {
+                            Id = 990,
+                            Age = 31,
+                            FirstName = "Rúben",
+                            LastName = "Semedo",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "8",
+                            TeamId = 43
+                        },
+                        new
+                        {
+                            Id = 991,
+                            Age = 28,
+                            FirstName = "Kevin",
+                            LastName = "Pina",
+                            Position = "DefendCenterMidfilder",
+                            ShirtNumber = "10",
+                            TeamId = 43
+                        },
+                        new
+                        {
+                            Id = 992,
+                            Age = 33,
+                            FirstName = "Ryan",
+                            LastName = "Mendes",
+                            Position = "LeftWinger",
+                            ShirtNumber = "11",
+                            TeamId = 43
+                        },
+                        new
+                        {
+                            Id = 993,
+                            Age = 30,
+                            FirstName = "Jamiro",
+                            LastName = "Monteiro",
+                            Position = "AttackingMidfilder",
+                            ShirtNumber = "14",
+                            TeamId = 43
+                        },
+                        new
+                        {
+                            Id = 994,
+                            Age = 33,
+                            FirstName = "Garry",
+                            LastName = "Rodrigues",
+                            Position = "RightWinger",
+                            ShirtNumber = "7",
+                            TeamId = 43
+                        },
+                        new
+                        {
+                            Id = 995,
+                            Age = 32,
+                            FirstName = "Patrick",
+                            LastName = "Andrade",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "15",
+                            TeamId = 43
+                        },
+                        new
+                        {
+                            Id = 996,
+                            Age = 27,
+                            FirstName = "Lisandro",
+                            LastName = "Semedo",
+                            Position = "LeftWinger",
+                            ShirtNumber = "17",
+                            TeamId = 43
+                        },
+                        new
+                        {
+                            Id = 997,
+                            Age = 34,
+                            FirstName = "Bebé",
+                            LastName = "Ramos",
+                            Position = "CenterForward",
+                            ShirtNumber = "9",
+                            TeamId = 43
+                        },
+                        new
+                        {
+                            Id = 998,
+                            Age = 28,
+                            FirstName = "Henrique",
+                            LastName = "Tavares",
+                            Position = "CenterForward",
+                            ShirtNumber = "18",
+                            TeamId = 43
+                        },
+                        new
+                        {
+                            Id = 999,
+                            Age = 29,
+                            FirstName = "Elton",
+                            LastName = "Monteiro",
+                            Position = "RightWinger",
+                            ShirtNumber = "19",
+                            TeamId = 43
+                        },
+                        new
+                        {
+                            Id = 1000,
+                            Age = 26,
+                            FirstName = "Jovane",
+                            LastName = "Cabral",
+                            Position = "LeftWinger",
+                            ShirtNumber = "20",
+                            TeamId = 43
+                        },
+                        new
+                        {
+                            Id = 1001,
+                            Age = 32,
+                            FirstName = "Sergio",
+                            LastName = "Rochet",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "1",
+                            TeamId = 45
+                        },
+                        new
+                        {
+                            Id = 1002,
+                            Age = 27,
+                            FirstName = "Santiago",
+                            LastName = "Mele",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "16",
+                            TeamId = 45
+                        },
+                        new
+                        {
+                            Id = 1003,
+                            Age = 24,
+                            FirstName = "Franco",
+                            LastName = "Israel",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "23",
+                            TeamId = 45
+                        },
+                        new
+                        {
+                            Id = 1004,
+                            Age = 30,
+                            FirstName = "José",
+                            LastName = "Giménez",
+                            Position = "CenterBack",
+                            ShirtNumber = "2",
+                            TeamId = 45
+                        },
+                        new
+                        {
+                            Id = 1005,
+                            Age = 26,
+                            FirstName = "Ronald",
+                            LastName = "Araújo",
+                            Position = "CenterBack",
+                            ShirtNumber = "4",
+                            TeamId = 45
+                        },
+                        new
+                        {
+                            Id = 1006,
+                            Age = 27,
+                            FirstName = "Matías",
+                            LastName = "Viña",
+                            Position = "LeftBack",
+                            ShirtNumber = "3",
+                            TeamId = 45
+                        },
+                        new
+                        {
+                            Id = 1007,
+                            Age = 29,
+                            FirstName = "Nahitan",
+                            LastName = "Nández",
+                            Position = "RightBAck",
+                            ShirtNumber = "8",
+                            TeamId = 45
+                        },
+                        new
+                        {
+                            Id = 1008,
+                            Age = 34,
+                            FirstName = "Sebastián",
+                            LastName = "Coates",
+                            Position = "CenterBack",
+                            ShirtNumber = "6",
+                            TeamId = 45
+                        },
+                        new
+                        {
+                            Id = 1009,
+                            Age = 32,
+                            FirstName = "Guillermo",
+                            LastName = "Varela",
+                            Position = "RightBAck",
+                            ShirtNumber = "13",
+                            TeamId = 45
+                        },
+                        new
+                        {
+                            Id = 1010,
+                            Age = 27,
+                            FirstName = "Federico",
+                            LastName = "Valverde",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "10",
+                            TeamId = 45
+                        },
+                        new
+                        {
+                            Id = 1011,
+                            Age = 28,
+                            FirstName = "Rodrigo",
+                            LastName = "Bentancur",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "14",
+                            TeamId = 45
+                        },
+                        new
+                        {
+                            Id = 1012,
+                            Age = 24,
+                            FirstName = "Manuel",
+                            LastName = "Ugarte",
+                            Position = "DefendCenterMidfilder",
+                            ShirtNumber = "5",
+                            TeamId = 45
+                        },
+                        new
+                        {
+                            Id = 1013,
+                            Age = 28,
+                            FirstName = "Nicolás",
+                            LastName = "De la Cruz",
+                            Position = "AttackingMidfilder",
+                            ShirtNumber = "7",
+                            TeamId = 45
+                        },
+                        new
+                        {
+                            Id = 1014,
+                            Age = 31,
+                            FirstName = "Giorgian",
+                            LastName = "De Arrascaeta",
+                            Position = "AttackingMidfilder",
+                            ShirtNumber = "11",
+                            TeamId = 45
+                        },
+                        new
+                        {
+                            Id = 1015,
+                            Age = 29,
+                            FirstName = "Lucas",
+                            LastName = "Torreira",
+                            Position = "DefendCenterMidfilder",
+                            ShirtNumber = "15",
+                            TeamId = 45
+                        },
+                        new
+                        {
+                            Id = 1016,
+                            Age = 24,
+                            FirstName = "Facundo",
+                            LastName = "Pellistri",
+                            Position = "RightWinger",
+                            ShirtNumber = "17",
+                            TeamId = 45
+                        },
+                        new
+                        {
+                            Id = 1017,
+                            Age = 26,
+                            FirstName = "Darwin",
+                            LastName = "Núñez",
+                            Position = "CenterForward",
+                            ShirtNumber = "9",
+                            TeamId = 45
+                        },
+                        new
+                        {
+                            Id = 1018,
+                            Age = 39,
+                            FirstName = "Luis",
+                            LastName = "Suárez",
+                            Position = "CenterForward",
+                            ShirtNumber = "18",
+                            TeamId = 45
+                        },
+                        new
+                        {
+                            Id = 1019,
+                            Age = 29,
+                            FirstName = "Maximiliano",
+                            LastName = "Gómez",
+                            Position = "CenterForward",
+                            ShirtNumber = "19",
+                            TeamId = 45
+                        },
+                        new
+                        {
+                            Id = 1020,
+                            Age = 25,
+                            FirstName = "Brian",
+                            LastName = "Rodríguez",
+                            Position = "LeftWinger",
+                            ShirtNumber = "20",
+                            TeamId = 45
+                        },
+                        new
+                        {
+                            Id = 1021,
+                            Age = 37,
+                            FirstName = "David",
+                            LastName = "Ospina",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "1",
+                            TeamId = 46
+                        },
+                        new
+                        {
+                            Id = 1022,
+                            Age = 36,
+                            FirstName = "Camilo",
+                            LastName = "Vargas",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "12",
+                            TeamId = 46
+                        },
+                        new
+                        {
+                            Id = 1023,
+                            Age = 25,
+                            FirstName = "Kevin",
+                            LastName = "Mier",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "23",
+                            TeamId = 46
+                        },
+                        new
+                        {
+                            Id = 1024,
+                            Age = 29,
+                            FirstName = "Davinson",
+                            LastName = "Sánchez",
+                            Position = "CenterBack",
+                            ShirtNumber = "4",
+                            TeamId = 46
+                        },
+                        new
+                        {
+                            Id = 1025,
+                            Age = 31,
+                            FirstName = "Yerry",
+                            LastName = "Mina",
+                            Position = "CenterBack",
+                            ShirtNumber = "13",
+                            TeamId = 46
+                        },
+                        new
+                        {
+                            Id = 1026,
+                            Age = 27,
+                            FirstName = "Jhon",
+                            LastName = "Lucumí",
+                            Position = "CenterBack",
+                            ShirtNumber = "3",
+                            TeamId = 46
+                        },
+                        new
+                        {
+                            Id = 1027,
+                            Age = 29,
+                            FirstName = "Daniel",
+                            LastName = "Muñoz",
+                            Position = "RightBAck",
+                            ShirtNumber = "2",
+                            TeamId = 46
+                        },
+                        new
+                        {
+                            Id = 1028,
+                            Age = 33,
+                            FirstName = "Santiago",
+                            LastName = "Arias",
+                            Position = "RightBAck",
+                            ShirtNumber = "6",
+                            TeamId = 46
+                        },
+                        new
+                        {
+                            Id = 1029,
+                            Age = 34,
+                            FirstName = "Frank",
+                            LastName = "Fabra",
+                            Position = "LeftBack",
+                            ShirtNumber = "17",
+                            TeamId = 46
+                        },
+                        new
+                        {
+                            Id = 1030,
+                            Age = 30,
+                            FirstName = "Jefferson",
+                            LastName = "Lerma",
+                            Position = "DefendCenterMidfilder",
+                            ShirtNumber = "8",
+                            TeamId = 46
+                        },
+                        new
+                        {
+                            Id = 1031,
+                            Age = 34,
+                            FirstName = "Mateus",
+                            LastName = "Uribe",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "15",
+                            TeamId = 46
+                        },
+                        new
+                        {
+                            Id = 1032,
+                            Age = 31,
+                            FirstName = "Wilmar",
+                            LastName = "Barrios",
+                            Position = "DefendCenterMidfilder",
+                            ShirtNumber = "5",
+                            TeamId = 46
+                        },
+                        new
+                        {
+                            Id = 1033,
+                            Age = 34,
+                            FirstName = "James",
+                            LastName = "Rodríguez",
+                            Position = "AttackingMidfilder",
+                            ShirtNumber = "10",
+                            TeamId = 46
+                        },
+                        new
+                        {
+                            Id = 1034,
+                            Age = 28,
+                            FirstName = "Jhon",
+                            LastName = "Arias",
+                            Position = "RightWinger",
+                            ShirtNumber = "11",
+                            TeamId = 46
+                        },
+                        new
+                        {
+                            Id = 1035,
+                            Age = 28,
+                            FirstName = "Luis",
+                            LastName = "Díaz",
+                            Position = "LeftWinger",
+                            ShirtNumber = "7",
+                            TeamId = 46
+                        },
+                        new
+                        {
+                            Id = 1036,
+                            Age = 25,
+                            FirstName = "Richard",
+                            LastName = "Ríos",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "16",
+                            TeamId = 46
+                        },
+                        new
+                        {
+                            Id = 1037,
+                            Age = 30,
+                            FirstName = "Rafael",
+                            LastName = "Borré",
+                            Position = "CenterForward",
+                            ShirtNumber = "9",
+                            TeamId = 46
+                        },
+                        new
+                        {
+                            Id = 1038,
+                            Age = 31,
+                            FirstName = "Jhon",
+                            LastName = "Córdoba",
+                            Position = "CenterForward",
+                            ShirtNumber = "19",
+                            TeamId = 46
+                        },
+                        new
+                        {
+                            Id = 1039,
+                            Age = 28,
+                            FirstName = "Julián",
+                            LastName = "Quiñones",
+                            Position = "LeftWinger",
+                            ShirtNumber = "20",
+                            TeamId = 46
+                        },
+                        new
+                        {
+                            Id = 1040,
+                            Age = 34,
+                            FirstName = "Duván",
+                            LastName = "Zapata",
+                            Position = "CenterForward",
+                            ShirtNumber = "18",
+                            TeamId = 46
+                        },
+                        new
+                        {
+                            Id = 1041,
+                            Age = 38,
+                            FirstName = "Hernán",
+                            LastName = "Galíndez",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "1",
+                            TeamId = 47
+                        },
+                        new
+                        {
+                            Id = 1042,
+                            Age = 38,
+                            FirstName = "Alexander",
+                            LastName = "Domínguez",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "12",
+                            TeamId = 47
+                        },
+                        new
+                        {
+                            Id = 1043,
+                            Age = 25,
+                            FirstName = "Moises",
+                            LastName = "Ramírez",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "23",
+                            TeamId = 47
+                        },
+                        new
+                        {
+                            Id = 1044,
+                            Age = 23,
+                            FirstName = "Piero",
+                            LastName = "Hincapié",
+                            Position = "CenterBack",
+                            ShirtNumber = "3",
+                            TeamId = 47
+                        },
+                        new
+                        {
+                            Id = 1045,
+                            Age = 28,
+                            FirstName = "Félix",
+                            LastName = "Torres",
+                            Position = "CenterBack",
+                            ShirtNumber = "2",
+                            TeamId = 47
+                        },
+                        new
+                        {
+                            Id = 1046,
+                            Age = 33,
+                            FirstName = "Robert",
+                            LastName = "Arboleda",
+                            Position = "CenterBack",
+                            ShirtNumber = "4",
+                            TeamId = 47
+                        },
+                        new
+                        {
+                            Id = 1047,
+                            Age = 27,
+                            FirstName = "Pervis",
+                            LastName = "Estupiñán",
+                            Position = "LeftBack",
+                            ShirtNumber = "7",
+                            TeamId = 47
+                        },
+                        new
+                        {
+                            Id = 1048,
+                            Age = 27,
+                            FirstName = "Ángelo",
+                            LastName = "Preciado",
+                            Position = "RightBAck",
+                            ShirtNumber = "17",
+                            TeamId = 47
+                        },
+                        new
+                        {
+                            Id = 1049,
+                            Age = 24,
+                            FirstName = "Moisés",
+                            LastName = "Caicedo",
+                            Position = "DefendCenterMidfilder",
+                            ShirtNumber = "8",
+                            TeamId = 47
+                        },
+                        new
+                        {
+                            Id = 1050,
+                            Age = 30,
+                            FirstName = "Carlos",
+                            LastName = "Gruezo",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "14",
+                            TeamId = 47
+                        },
+                        new
+                        {
+                            Id = 1051,
+                            Age = 26,
+                            FirstName = "José",
+                            LastName = "Cifuentes",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "16",
+                            TeamId = 47
+                        },
+                        new
+                        {
+                            Id = 1052,
+                            Age = 27,
+                            FirstName = "Alan",
+                            LastName = "Franco",
+                            Position = "AttackingMidfilder",
+                            ShirtNumber = "15",
+                            TeamId = 47
+                        },
+                        new
+                        {
+                            Id = 1053,
+                            Age = 23,
+                            FirstName = "Jeremy",
+                            LastName = "Sarmiento",
+                            Position = "LeftWinger",
+                            ShirtNumber = "11",
+                            TeamId = 47
+                        },
+                        new
+                        {
+                            Id = 1054,
+                            Age = 25,
+                            FirstName = "Gonzalo",
+                            LastName = "Plata",
+                            Position = "RightWinger",
+                            ShirtNumber = "19",
+                            TeamId = 47
+                        },
+                        new
+                        {
+                            Id = 1055,
+                            Age = 22,
+                            FirstName = "Nilson",
+                            LastName = "Angulo",
+                            Position = "LeftWinger",
+                            ShirtNumber = "20",
+                            TeamId = 47
+                        },
+                        new
+                        {
+                            Id = 1056,
+                            Age = 36,
+                            FirstName = "Enner",
+                            LastName = "Valencia",
+                            Position = "CenterForward",
+                            ShirtNumber = "9",
+                            TeamId = 47
+                        },
+                        new
+                        {
+                            Id = 1057,
+                            Age = 29,
+                            FirstName = "Michael",
+                            LastName = "Estrada",
+                            Position = "CenterForward",
+                            ShirtNumber = "18",
+                            TeamId = 47
+                        },
+                        new
+                        {
+                            Id = 1058,
+                            Age = 24,
+                            FirstName = "Kevin",
+                            LastName = "Rodríguez",
+                            Position = "CenterForward",
+                            ShirtNumber = "21",
+                            TeamId = 47
+                        },
+                        new
+                        {
+                            Id = 1059,
+                            Age = 37,
+                            FirstName = "Carlos",
+                            LastName = "Gorosoito",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "1",
+                            TeamId = 48
+                        },
+                        new
+                        {
+                            Id = 1060,
+                            Age = 31,
+                            FirstName = "Juan",
+                            LastName = "Espínola",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "12",
+                            TeamId = 48
+                        },
+                        new
+                        {
+                            Id = 1061,
+                            Age = 26,
+                            FirstName = "Santiago",
+                            LastName = "Rojas",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "23",
+                            TeamId = 48
+                        },
+                        new
+                        {
+                            Id = 1062,
+                            Age = 32,
+                            FirstName = "Gustavo",
+                            LastName = "Gómez",
+                            Position = "CenterBack",
+                            ShirtNumber = "4",
+                            TeamId = 48
+                        },
+                        new
+                        {
+                            Id = 1063,
+                            Age = 34,
+                            FirstName = "Fabián",
+                            LastName = "Balbuena",
+                            Position = "CenterBack",
+                            ShirtNumber = "2",
+                            TeamId = 48
+                        },
+                        new
+                        {
+                            Id = 1064,
+                            Age = 32,
+                            FirstName = "Junior",
+                            LastName = "Alonso",
+                            Position = "CenterBack",
+                            ShirtNumber = "3",
+                            TeamId = 48
+                        },
+                        new
+                        {
+                            Id = 1065,
+                            Age = 30,
+                            FirstName = "Iván",
+                            LastName = "Ramírez",
+                            Position = "RightBAck",
+                            ShirtNumber = "13",
+                            TeamId = 48
+                        },
+                        new
+                        {
+                            Id = 1066,
+                            Age = 27,
+                            FirstName = "Júnior",
+                            LastName = "Rojas",
+                            Position = "LeftBack",
+                            ShirtNumber = "6",
+                            TeamId = 48
+                        },
+                        new
+                        {
+                            Id = 1067,
+                            Age = 28,
+                            FirstName = "Andrés",
+                            LastName = "Cubas",
+                            Position = "DefendCenterMidfilder",
+                            ShirtNumber = "14",
+                            TeamId = 48
+                        },
+                        new
+                        {
+                            Id = 1068,
+                            Age = 28,
+                            FirstName = "Mathías",
+                            LastName = "Villasanti",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "8",
+                            TeamId = 48
+                        },
+                        new
+                        {
+                            Id = 1069,
+                            Age = 34,
+                            FirstName = "Richard",
+                            LastName = "Ortiz",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "15",
+                            TeamId = 48
+                        },
+                        new
+                        {
+                            Id = 1070,
+                            Age = 22,
+                            FirstName = "Diego",
+                            LastName = "Gómez",
+                            Position = "AttackingMidfilder",
+                            ShirtNumber = "16",
+                            TeamId = 48
+                        },
+                        new
+                        {
+                            Id = 1071,
+                            Age = 31,
+                            FirstName = "Miguel",
+                            LastName = "Almirón",
+                            Position = "AttackingMidfilder",
+                            ShirtNumber = "10",
+                            TeamId = 48
+                        },
+                        new
+                        {
+                            Id = 1072,
+                            Age = 25,
+                            FirstName = "Ramón",
+                            LastName = "Sosa",
+                            Position = "LeftWinger",
+                            ShirtNumber = "11",
+                            TeamId = 48
+                        },
+                        new
+                        {
+                            Id = 1073,
+                            Age = 29,
+                            FirstName = "Matías",
+                            LastName = "Rojas",
+                            Position = "RightWinger",
+                            ShirtNumber = "17",
+                            TeamId = 48
+                        },
+                        new
+                        {
+                            Id = 1074,
+                            Age = 29,
+                            FirstName = "Antonio",
+                            LastName = "Sanabria",
+                            Position = "CenterForward",
+                            ShirtNumber = "9",
+                            TeamId = 48
+                        },
+                        new
+                        {
+                            Id = 1075,
+                            Age = 28,
+                            FirstName = "Adam",
+                            LastName = "Bareiro",
+                            Position = "CenterForward",
+                            ShirtNumber = "18",
+                            TeamId = 48
+                        },
+                        new
+                        {
+                            Id = 1076,
+                            Age = 34,
+                            FirstName = "Gabriel",
+                            LastName = "Ávalos",
+                            Position = "CenterForward",
+                            ShirtNumber = "19",
+                            TeamId = 48
+                        },
+                        new
+                        {
+                            Id = 1077,
+                            Age = 32,
+                            FirstName = "Max",
+                            LastName = "Crocombe",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "1",
+                            TeamId = 44
+                        },
+                        new
+                        {
+                            Id = 1078,
+                            Age = 29,
+                            FirstName = "Oliver",
+                            LastName = "Sail",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "12",
+                            TeamId = 44
+                        },
+                        new
+                        {
+                            Id = 1079,
+                            Age = 22,
+                            FirstName = "Alex",
+                            LastName = "Paulsen",
+                            Position = "GoalKeeper",
+                            ShirtNumber = "23",
+                            TeamId = 44
+                        },
+                        new
+                        {
+                            Id = 1080,
+                            Age = 37,
+                            FirstName = "Winston",
+                            LastName = "Reid",
+                            Position = "CenterBack",
+                            ShirtNumber = "4",
+                            TeamId = 44
+                        },
+                        new
+                        {
+                            Id = 1081,
+                            Age = 36,
+                            FirstName = "Michael",
+                            LastName = "Boxall",
+                            Position = "CenterBack",
+                            ShirtNumber = "5",
+                            TeamId = 44
+                        },
+                        new
+                        {
+                            Id = 1082,
+                            Age = 33,
+                            FirstName = "Tommy",
+                            LastName = "Smith",
+                            Position = "CenterBack",
+                            ShirtNumber = "3",
+                            TeamId = 44
+                        },
+                        new
+                        {
+                            Id = 1083,
+                            Age = 24,
+                            FirstName = "Liberato",
+                            LastName = "Cacace",
+                            Position = "LeftBack",
+                            ShirtNumber = "2",
+                            TeamId = 44
+                        },
+                        new
+                        {
+                            Id = 1084,
+                            Age = 31,
+                            FirstName = "Tim",
+                            LastName = "Payne",
+                            Position = "RightBAck",
+                            ShirtNumber = "13",
+                            TeamId = 44
+                        },
+                        new
+                        {
+                            Id = 1085,
+                            Age = 25,
+                            FirstName = "Joe",
+                            LastName = "Bell",
+                            Position = "DefendCenterMidfilder",
+                            ShirtNumber = "6",
+                            TeamId = 44
+                        },
+                        new
+                        {
+                            Id = 1086,
+                            Age = 23,
+                            FirstName = "Marko",
+                            LastName = "Stamenic",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "8",
+                            TeamId = 44
+                        },
+                        new
+                        {
+                            Id = 1087,
+                            Age = 29,
+                            FirstName = "Alex",
+                            LastName = "Rufer",
+                            Position = "AttackingMidfilder",
+                            ShirtNumber = "10",
+                            TeamId = 44
+                        },
+                        new
+                        {
+                            Id = 1088,
+                            Age = 23,
+                            FirstName = "Matthew",
+                            LastName = "Garbett",
+                            Position = "RightWinger",
+                            ShirtNumber = "11",
+                            TeamId = 44
+                        },
+                        new
+                        {
+                            Id = 1089,
+                            Age = 26,
+                            FirstName = "Callum",
+                            LastName = "McCowatt",
+                            Position = "LeftWinger",
+                            ShirtNumber = "7",
+                            TeamId = 44
+                        },
+                        new
+                        {
+                            Id = 1090,
+                            Age = 27,
+                            FirstName = "Clayton",
+                            LastName = "Lewis",
+                            Position = "CenterMidfilder",
+                            ShirtNumber = "14",
+                            TeamId = 44
+                        },
+                        new
+                        {
+                            Id = 1091,
+                            Age = 28,
+                            FirstName = "Joe",
+                            LastName = "Champness",
+                            Position = "AttackingMidfilder",
+                            ShirtNumber = "15",
+                            TeamId = 44
+                        },
+                        new
+                        {
+                            Id = 1092,
+                            Age = 34,
+                            FirstName = "Chris",
+                            LastName = "Wood",
+                            Position = "CenterForward",
+                            ShirtNumber = "9",
+                            TeamId = 44
+                        },
+                        new
+                        {
+                            Id = 1093,
+                            Age = 24,
+                            FirstName = "Ben",
+                            LastName = "Waine",
+                            Position = "CenterForward",
+                            ShirtNumber = "18",
+                            TeamId = 44
+                        },
+                        new
+                        {
+                            Id = 1094,
+                            Age = 35,
+                            FirstName = "Kosta",
+                            LastName = "Barbarouses",
+                            Position = "RightWinger",
+                            ShirtNumber = "19",
+                            TeamId = 44
+                        },
+                        new
+                        {
+                            Id = 1095,
+                            Age = 26,
+                            FirstName = "Logan",
+                            LastName = "Rogerson",
+                            Position = "LeftWinger",
+                            ShirtNumber = "20",
+                            TeamId = 44
                         });
+                });
+
+            modelBuilder.Entity("Footbally_Domain.Entities.PlayerPerformanceEntity.Entity.PlayerPerformance", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("AssistPlayerId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("GoalPlayerId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.Property<int>("MatchId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AssistPlayerId");
+
+                    b.HasIndex("CreatedAt");
+
+                    b.HasIndex("GoalPlayerId");
+
+                    b.HasIndex("MatchId");
+
+                    b.ToTable("PlayerPerformances");
                 });
 
             modelBuilder.Entity("Footbally_Domain.Entities.StandingEntity.Entity.Standing", b =>
@@ -8686,9 +11528,9 @@ namespace Footbally_Infrastructure.Migrations
                         new
                         {
                             Id = 44,
-                            CoachName = "Lionel Scaloni",
-                            Country = "Argentina",
-                            GroupNumber = 10
+                            CoachName = "Darren Bazeley",
+                            Country = "New Zealand",
+                            GroupNumber = 7
                         },
                         new
                         {
@@ -8720,18 +11562,65 @@ namespace Footbally_Infrastructure.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Footbally_Domain.Entities.UserEntity.Entity.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<bool>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasMaxLength(11)
+                        .HasColumnType("nvarchar(11)");
+
+                    b.Property<int>("Role")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CreatedAt");
+
+                    b.HasIndex("PhoneNumber")
+                        .IsUnique();
+
+                    b.ToTable("Users");
+                });
+
             modelBuilder.Entity("Footbally_Domain.Entities.MatchEntity.Entity.Match", b =>
                 {
                     b.HasOne("Footbally_Domain.Entities.TeamEntity.Entity.Team", "AwayTeam")
                         .WithMany("AwayMatches")
                         .HasForeignKey("AwayTeamId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("Footbally_Domain.Entities.TeamEntity.Entity.Team", "HomeTeam")
                         .WithMany("HomeMatches")
                         .HasForeignKey("HomeTeamId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("AwayTeam");
@@ -8744,10 +11633,37 @@ namespace Footbally_Infrastructure.Migrations
                     b.HasOne("Footbally_Domain.Entities.TeamEntity.Entity.Team", "Team")
                         .WithMany("Players")
                         .HasForeignKey("TeamId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Team");
+                });
+
+            modelBuilder.Entity("Footbally_Domain.Entities.PlayerPerformanceEntity.Entity.PlayerPerformance", b =>
+                {
+                    b.HasOne("Footbally_Domain.Entities.PlayerEntity.Entity.Player", "AssistPlayer")
+                        .WithMany("Assists")
+                        .HasForeignKey("AssistPlayerId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("Footbally_Domain.Entities.PlayerEntity.Entity.Player", "GoalPlayer")
+                        .WithMany("Goals")
+                        .HasForeignKey("GoalPlayerId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("Footbally_Domain.Entities.MatchEntity.Entity.Match", "Match")
+                        .WithMany("PlayerPerformances")
+                        .HasForeignKey("MatchId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("AssistPlayer");
+
+                    b.Navigation("GoalPlayer");
+
+                    b.Navigation("Match");
                 });
 
             modelBuilder.Entity("Footbally_Domain.Entities.StandingEntity.Entity.Standing", b =>
@@ -8755,8 +11671,20 @@ namespace Footbally_Infrastructure.Migrations
                     b.HasOne("Footbally_Domain.Entities.TeamEntity.Entity.Team", null)
                         .WithOne("Standing")
                         .HasForeignKey("Footbally_Domain.Entities.StandingEntity.Entity.Standing", "TeamId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Footbally_Domain.Entities.MatchEntity.Entity.Match", b =>
+                {
+                    b.Navigation("PlayerPerformances");
+                });
+
+            modelBuilder.Entity("Footbally_Domain.Entities.PlayerEntity.Entity.Player", b =>
+                {
+                    b.Navigation("Assists");
+
+                    b.Navigation("Goals");
                 });
 
             modelBuilder.Entity("Footbally_Domain.Entities.TeamEntity.Entity.Team", b =>

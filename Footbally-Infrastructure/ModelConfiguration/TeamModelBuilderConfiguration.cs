@@ -1,5 +1,6 @@
 ﻿using Footbally_Domain.Entities.StandingEntity.Entity;
 using Footbally_Domain.Entities.TeamEntity.Entity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Footbally_Infrastructure.ModelConfiguration;
@@ -10,19 +11,23 @@ public class TeamModelBuilderConfiguration : BaseModelConfiguration<Team>
     {
         builder.HasMany(x => x.HomeMatches)
             .WithOne(x => x.HomeTeam)
-            .HasForeignKey(x => x.HomeTeamId);
+            .HasForeignKey(x => x.HomeTeamId)
+            .OnDelete(DeleteBehavior.NoAction);
 
         builder.HasMany(x => x.AwayMatches)
             .WithOne(x => x.AwayTeam)
-            .HasForeignKey(x => x.AwayTeamId);
+            .HasForeignKey(x => x.AwayTeamId)
+            .OnDelete(DeleteBehavior.NoAction);
 
         builder.HasMany(x => x.Players)
             .WithOne(x => x.Team)
-            .HasForeignKey(x => x.TeamId);
+            .HasForeignKey(x => x.TeamId)
+            .OnDelete(DeleteBehavior.NoAction);
 
         builder.HasOne(x => x.Standing)
             .WithOne()
-            .HasForeignKey<Standing>(x => x.TeamId);
+            .HasForeignKey<Standing>(x => x.TeamId)
+            .OnDelete(DeleteBehavior.NoAction);
 
 
         builder.Property(x => x.CoachName)
