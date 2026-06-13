@@ -8,8 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Entities\PlayerPerformanceEntity\Enum\**" />
+    <EmbeddedResource Remove="Entities\PlayerPerformanceEntity\Enum\**" />
+    <None Remove="Entities\PlayerPerformanceEntity\Enum\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Entities\PlayerPerformanceEntity\Data\" />
-    <Folder Include="Entities\PlayerPerformanceEntity\Enum\" />
     <Folder Include="Entities\UserEntity\Service\" />
   </ItemGroup>
 
