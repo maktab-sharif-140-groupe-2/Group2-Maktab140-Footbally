@@ -14,11 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Entities\PlayerPerformanceEntity\Data\" />
-    <Folder Include="Entities\UserEntity\Service\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Footbally-Common\Footbally-Common.csproj" />
   </ItemGroup>
 

@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace Footbally_Common.Dto.Response.Game
 {
-    public class GameResponseDto
+    public class PastGameResponseDto
     {
         public string HomeTeam { get; set; }
         public string AwayTeam { get; set; }
 
-        public string Status { get; set; }
         public string Stage { get; set; }
 
         public int HomeGoals { get; set; }

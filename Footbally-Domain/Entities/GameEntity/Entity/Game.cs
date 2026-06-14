@@ -49,6 +49,14 @@ public class Game : BaseEntity
 
     public List<PlayerPerformance> PlayerPerformances { get; private set; }
     #endregion
+
+    public void UpdateInfo(Status status, int homeGoals, int awayGoals)
+    {
+        Status= status;
+        HomeGoals= homeGoals;
+        AwayGoals= awayGoals;
+        Update();
+    }
     protected override void Validate()
     {
         if (MatchDate < DateTime.UtcNow)

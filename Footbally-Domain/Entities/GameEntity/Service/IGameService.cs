@@ -8,14 +8,17 @@ public interface IGameService
 {
     Task<bool> Create(GameRequestDto gameRequestDto);
 
-    Task<List<GameResponseDto>> GamesOfTeam(int  teamId);
+    Task<List<FutureGameResponseDto>> FutureGamesOfTeam(int  teamId,int page,int pageSize);
+    Task<List<PastGameResponseDto>> PastGamesOfTeam(int  teamId,int page,int pageSize);
 
-    Task<List<GameResponseDto>> GamesPerDay(DateTime date);
+    Task<List<FutureGameResponseDto>> GamesPerDay(DateTime date);
 
-    Task<List<GameResponseDto>> ShowGamesGroupInformation(int groupNumber);
+    Task<List<FutureGameResponseDto>> ShowGamesGroupInformation(int groupNumber);
+    Task<List<PastGameResponseDto>> ShowGamesGroupResult(int groupNumber);
 
-    Task<List<GameResponseDto>> ShowGamesStageInformation(Stage stage);
+    Task<List<FutureGameResponseDto>> ShowGamesStageInformation(Stage stage,int page,int pageSize);
+    Task<List<PastGameResponseDto>> ShowGamesStageResult(Stage stage,int page,int pageSize);
 
-    Task<bool> UpdateGameStatus(Status status);
+    Task<bool> UpdateGameStatus(int gameId,Status status,int homeGoal=0,int awayGoal=0);
 
 }
