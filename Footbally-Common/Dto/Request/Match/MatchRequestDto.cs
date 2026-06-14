@@ -1,7 +1,7 @@
 ﻿using Footbally_Domain.Entities.MatchEntity.Enums;
 using System.Net.NetworkInformation;
 
-namespace Footbally_Common.Dto.Request;
+namespace Footbally_Common.Dto.Request.Match;
 
 public class MatchRequestDto
 {

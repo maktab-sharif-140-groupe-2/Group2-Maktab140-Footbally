@@ -8,7 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Dto\Response\" />
     <Folder Include="Exceptions\ApplicationExceptions\" />
     <Folder Include="Exceptions\DomainExceptions\" />
     <Folder Include="Exceptions\Unity\" />
