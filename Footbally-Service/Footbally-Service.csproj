@@ -8,13 +8,41 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Matchs\Implementation\" />
-    <Folder Include="Players\Implementation\" />
-    <Folder Include="Players\Interface\" />
-    <Folder Include="Standings\Implementation\" />
-    <Folder Include="Standings\Interface\" />
-    <Folder Include="Teams\Implementation\" />
-    <Folder Include="Teams\Interface\" />
+    <Compile Remove="Match\Implementation\**" />
+    <Compile Remove="Match\Interface\**" />
+    <Compile Remove="Player\Implementation\**" />
+    <Compile Remove="Player\Interface\**" />
+    <Compile Remove="Standing\Implementation\**" />
+    <Compile Remove="Standing\Interface\**" />
+    <Compile Remove="Team\Implementation\**" />
+    <Compile Remove="Team\Interface\**" />
+    <EmbeddedResource Remove="Match\Implementation\**" />
+    <EmbeddedResource Remove="Match\Interface\**" />
+    <EmbeddedResource Remove="Player\Implementation\**" />
+    <EmbeddedResource Remove="Player\Interface\**" />
+    <EmbeddedResource Remove="Standing\Implementation\**" />
+    <EmbeddedResource Remove="Standing\Interface\**" />
+    <EmbeddedResource Remove="Team\Implementation\**" />
+    <EmbeddedResource Remove="Team\Interface\**" />
+    <None Remove="Match\Implementation\**" />
+    <None Remove="Match\Interface\**" />
+    <None Remove="Player\Implementation\**" />
+    <None Remove="Player\Interface\**" />
+    <None Remove="Standing\Implementation\**" />
+    <None Remove="Standing\Interface\**" />
+    <None Remove="Team\Implementation\**" />
+    <None Remove="Team\Interface\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Match\" />
+    <Folder Include="Player\" />
+    <Folder Include="Standing\" />
+    <Folder Include="Team\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Footbally-Domain\Footbally-Domain.csproj" />
   </ItemGroup>
 
 </Project>
