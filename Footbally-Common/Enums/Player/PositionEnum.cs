@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Footbally_Domain.Entities.PlayerEntity.Enums
+namespace Footbally_Common.Enums.Player
 {
     public enum PositionEnum
     {

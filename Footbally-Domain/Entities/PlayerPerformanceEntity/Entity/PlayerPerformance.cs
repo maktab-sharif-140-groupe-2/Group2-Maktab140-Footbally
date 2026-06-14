@@ -1,6 +1,6 @@
 ﻿
 using Footbally_Domain.Entities.CommonEntity.Entity;
-using Footbally_Domain.Entities.MatchEntity.Entity;
+using Footbally_Domain.Entities.GameEntity.Entity;
 using Footbally_Domain.Entities.PlayerEntity.Entity;
 
 namespace Footbally_Domain.Entities.PlayerPerformanceEntity.Entity;
@@ -20,7 +20,7 @@ public class PlayerPerformance : BaseEntity
 
     public Player GoalPlayer { get; private set; }
     public Player AssistPlayer { get; private set; }
-    public Match Match { get; private set; }
+    public Game Match { get; private set; }
 
     protected override void Validate()
     {

@@ -1,16 +1,16 @@
-﻿using Footbally_Domain.Entities.CommonEntity.Entity;
-using Footbally_Domain.Entities.MatchEntity.Enums;
+﻿using Footbally_Common.Enums.Game;
+using Footbally_Domain.Entities.CommonEntity.Entity;
 using Footbally_Domain.Entities.PlayerPerformanceEntity.Entity;
 using Footbally_Domain.Entities.TeamEntity.Entity;
 
-namespace Footbally_Domain.Entities.MatchEntity.Entity;
+namespace Footbally_Domain.Entities.GameEntity.Entity;
 
-public class Match : BaseEntity
+public class Game : BaseEntity
 {
-    private Match()
+    private Game()
     {
     }
-    public Match(DateTime matchDate, int homeTeamId, int awayTeamId, int homeGoals, int awayGoals,Status status,Stage stage)
+    public Game(DateTime matchDate, int homeTeamId, int awayTeamId, int homeGoals, int awayGoals,Status status,Stage stage)
     {
         MatchDate = matchDate;
         HomeGoals = homeGoals;
@@ -49,6 +49,14 @@ public class Match : BaseEntity
 
     public List<PlayerPerformance> PlayerPerformances { get; private set; }
     #endregion
+
+    public void UpdateInfo(Status status, int homeGoals, int awayGoals)
+    {
+        Status= status;
+        HomeGoals= homeGoals;
+        AwayGoals= awayGoals;
+        Update();
+    }
     protected override void Validate()
     {
         if (MatchDate < DateTime.UtcNow)
@@ -65,5 +73,9 @@ public class Match : BaseEntity
 
         if (AwayTeamId < 1)
             throw new InvalidOperationException("the away team id goals cannot be negative or 0");
+
+        if(MatchDate<new DateTime(2026,6,11)||MatchDate> new DateTime(2026, 7, 19))
+            throw new InvalidTimeZoneException("the Date is't in Correct time frame");
+
     }
 }

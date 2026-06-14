@@ -1,5 +1,5 @@
-﻿using Footbally_Domain.Entities.CommonEntity.Entity;
-using Footbally_Domain.Entities.UserEntity.Enums;
+﻿using Footbally_Common.Enums.User;
+using Footbally_Domain.Entities.CommonEntity.Entity;
 
 namespace Footbally_Domain.Entities.UserEntity.Entity;
 

@@ -8,24 +8,24 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Match\Implementation\**" />
-    <Compile Remove="Match\Interface\**" />
+    <Compile Remove="Game\Implementation\**" />
+    <Compile Remove="Game\Interface\**" />
     <Compile Remove="Player\Implementation\**" />
     <Compile Remove="Player\Interface\**" />
     <Compile Remove="Standing\Implementation\**" />
     <Compile Remove="Standing\Interface\**" />
     <Compile Remove="Team\Implementation\**" />
     <Compile Remove="Team\Interface\**" />
-    <EmbeddedResource Remove="Match\Implementation\**" />
-    <EmbeddedResource Remove="Match\Interface\**" />
+    <EmbeddedResource Remove="Game\Implementation\**" />
+    <EmbeddedResource Remove="Game\Interface\**" />
     <EmbeddedResource Remove="Player\Implementation\**" />
     <EmbeddedResource Remove="Player\Interface\**" />
     <EmbeddedResource Remove="Standing\Implementation\**" />
     <EmbeddedResource Remove="Standing\Interface\**" />
     <EmbeddedResource Remove="Team\Implementation\**" />
     <EmbeddedResource Remove="Team\Interface\**" />
-    <None Remove="Match\Implementation\**" />
-    <None Remove="Match\Interface\**" />
+    <None Remove="Game\Implementation\**" />
+    <None Remove="Game\Interface\**" />
     <None Remove="Player\Implementation\**" />
     <None Remove="Player\Interface\**" />
     <None Remove="Standing\Implementation\**" />
@@ -35,10 +35,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Match\" />
     <Folder Include="Player\" />
-    <Folder Include="Standing\" />
-    <Folder Include="Team\" />
   </ItemGroup>
 
   <ItemGroup>

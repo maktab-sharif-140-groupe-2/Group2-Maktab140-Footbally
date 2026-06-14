@@ -1,5 +1,5 @@
 ﻿using Footbally_Domain.Entities.CommonEntity.Entity;
-using Footbally_Domain.Entities.MatchEntity.Entity;
+using Footbally_Domain.Entities.GameEntity.Entity;
 using Footbally_Domain.Entities.PlayerEntity.Entity;
 using Footbally_Domain.Entities.StandingEntity.Entity;
 
@@ -27,8 +27,8 @@ public class Team : BaseEntity
 
     public List<Player> Players { get; private set; } = new();
     public Standing Standing { get; private set; }
-    public List<Match> HomeMatches { get; private set; } = new();
-    public List<Match> AwayMatches { get; private set; } = new();
+    public List<Game> HomeMatches { get; private set; } = new();
+    public List<Game> AwayMatches { get; private set; } = new();
 
     protected override void Validate()
     {

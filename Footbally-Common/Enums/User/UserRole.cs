@@ -1,4 +1,4 @@
-﻿namespace Footbally_Domain.Entities.UserEntity.Enums;
+﻿namespace Footbally_Common.Enums.User;
 
 public enum UserRole
 {

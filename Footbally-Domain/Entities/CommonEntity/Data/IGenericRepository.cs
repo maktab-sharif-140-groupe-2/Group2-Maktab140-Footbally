@@ -3,8 +3,6 @@ using System.Linq.Expressions;
 
 namespace Footbally_Domain.Entities.CommonEntity.Data;
 
-public interface IGenericRepository<T>
-{
     public interface IGenericRepository<T> where T : BaseEntity
     {
         /// <summary>
@@ -70,4 +68,3 @@ public interface IGenericRepository<T>
         /// <returns></returns>
         Task<bool> SoftDeleteAsync(int id);
     }
-}
