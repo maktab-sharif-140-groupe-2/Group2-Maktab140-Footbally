@@ -65,5 +65,9 @@ public class Match : BaseEntity
 
         if (AwayTeamId < 1)
             throw new InvalidOperationException("the away team id goals cannot be negative or 0");
+
+        if(MatchDate<new DateTime(2026,6,11)||MatchDate> new DateTime(2026, 7, 19))
+            throw new InvalidOperationException("the Date is't in Correct time frame");
+
     }
 }

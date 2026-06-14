@@ -27,6 +27,6 @@ public class MatchModelBuilderConfiguration : BaseModelConfiguration<Footbally_D
             .WithOne(x => x.Match)
             .HasForeignKey(x => x.MatchId)
             .OnDelete(DeleteBehavior.NoAction);
-        
+
     }
 }
