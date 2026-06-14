@@ -16,7 +16,14 @@ namespace Footbally_Repository.GameImplementation
         public GameRepository(AppDbContext dbContext) : base(dbContext)
         {
         }
-
+        /// <summary>
+        /// بروزرسانی مشخصات یک بازی ثبت شده
+        /// </summary>
+        /// <param name="gameId"></param>
+        /// <param name="status"></param>
+        /// <param name="homeGoal"></param>
+        /// <param name="awayGoal"></param>
+        /// <returns></returns>
         public async Task<bool> UpdateGameInfo(int gameId, Status status, int homeGoal, int awayGoal)
         {
             var game=await GetByIdAsync(gameId);
