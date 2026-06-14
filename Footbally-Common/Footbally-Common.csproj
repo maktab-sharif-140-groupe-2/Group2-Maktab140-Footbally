@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <RootNamespace>Footbally_Common</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Dto\Response\" />
+    <Folder Include="Dto\Request\" />
+    <Folder Include="Exceptions\ApplicationExceptions\" />
+    <Folder Include="Exceptions\DomainExceptions\" />
+    <Folder Include="Exceptions\Unity\" />
+    <Folder Include="ResultPattern\" />
+  </ItemGroup>
+
+</Project>

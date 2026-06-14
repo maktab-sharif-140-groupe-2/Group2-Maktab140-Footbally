@@ -7,4 +7,15 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Matchs\Implementation\" />
+    <Folder Include="Matchs\Interface\" />
+    <Folder Include="Players\Implementation\" />
+    <Folder Include="Players\Interface\" />
+    <Folder Include="Standings\Implementation\" />
+    <Folder Include="Standings\Interface\" />
+    <Folder Include="Teams\Implementation\" />
+    <Folder Include="Teams\Interface\" />
+  </ItemGroup>
+
 </Project>

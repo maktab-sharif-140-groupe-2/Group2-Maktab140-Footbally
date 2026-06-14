@@ -1,15 +1,18 @@
 <Solution>
-  <Folder Name="/1-Domain/">
-    <Project Path="Footbally-Domain/Footbally-Domain.csproj" />
+  <Folder Name="/1-Common/">
+    <Project Path="Footbally-Common/Footbally-Common.csproj" Id="7b7d5c06-6357-4e1a-a70b-82f9d1144090" />
   </Folder>
-  <Folder Name="/2-DataAccess/">
-    <Project Path="Footbally-Infrastructure/Footbally-Infrastructure.csproj" />
-    <Project Path="Footbally-Repository/Footbally-Repository.csproj" />
+  <Folder Name="/2-Domain/">
+    <Project Path="D:/NewProgramming/Group2-Maktab140-Footbally/Footbally-Domain/Footbally-Domain.csproj" />
   </Folder>
-  <Folder Name="/3-Service/">
-    <Project Path="Footbally-Service/Footbally-Service.csproj" />
+  <Folder Name="/3-DataAccess/">
+    <Project Path="D:/NewProgramming/Group2-Maktab140-Footbally/Footbally-Infrastructure/Footbally-Infrastructure.csproj" />
+    <Project Path="D:/NewProgramming/Group2-Maktab140-Footbally/Footbally-Repository/Footbally-Repository.csproj" />
   </Folder>
-  <Folder Name="/4-Presentation/">
-    <Project Path="Footbally-WebApp/Footbally-WebApp.csproj" />
+  <Folder Name="/4-Application/">
+    <Project Path="D:/NewProgramming/Group2-Maktab140-Footbally/Footbally-Service/Footbally-Service.csproj" />
+  </Folder>
+  <Folder Name="/5-Presentation/">
+    <Project Path="D:/NewProgramming/Group2-Maktab140-Footbally/Footbally-WebApp/Footbally-WebApp.csproj" />
   </Folder>
 </Solution>
