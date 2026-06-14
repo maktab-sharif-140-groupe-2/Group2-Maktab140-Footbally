@@ -11,7 +11,6 @@
     <Folder Include="Exceptions\ApplicationExceptions\" />
     <Folder Include="Exceptions\DomainExceptions\" />
     <Folder Include="Exceptions\Unity\" />
-    <Folder Include="Enums\" />
     <Folder Include="ResultPattern\" />
   </ItemGroup>
 

@@ -1,10 +1,10 @@
-﻿using Footbally_Domain.Entities.MatchEntity.Enums;
+﻿using Footbally_Common.Enums.Game;
 using System.ComponentModel.DataAnnotations;
 using System.Net.NetworkInformation;
 
-namespace Footbally_Common.Dto.Request.Match;
+namespace Footbally_Common.Dto.Request.Game;
 
-public class MatchRequestDto
+public class GameRequestDto
 {
     [Required(ErrorMessage = "HomeTeamId Is Required")]
     [Range(1, int.MaxValue,ErrorMessage = "HomeTeamId Can't Be Negative Or Zero")]

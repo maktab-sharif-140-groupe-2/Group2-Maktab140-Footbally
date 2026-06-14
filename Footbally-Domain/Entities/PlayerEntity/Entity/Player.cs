@@ -1,6 +1,6 @@
 
+using Footbally_Common.Enums.Player;
 using Footbally_Domain.Entities.CommonEntity.Entity;
-using Footbally_Domain.Entities.PlayerEntity.Enums;
 using Footbally_Domain.Entities.PlayerPerformanceEntity.Entity;
 using Footbally_Domain.Entities.TeamEntity.Entity;
 

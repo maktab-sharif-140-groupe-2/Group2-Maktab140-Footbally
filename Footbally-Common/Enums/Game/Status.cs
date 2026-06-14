@@ -1,5 +1,4 @@
-﻿
-namespace Footbally_Domain.Entities.MatchEntity.Enums;
+﻿namespace Footbally_Common.Enums.Game;
 
 public enum Status
 {

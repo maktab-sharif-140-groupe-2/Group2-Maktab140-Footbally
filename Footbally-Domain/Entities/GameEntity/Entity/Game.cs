@@ -1,16 +1,16 @@
-﻿using Footbally_Domain.Entities.CommonEntity.Entity;
-using Footbally_Domain.Entities.MatchEntity.Enums;
+﻿using Footbally_Common.Enums.Game;
+using Footbally_Domain.Entities.CommonEntity.Entity;
 using Footbally_Domain.Entities.PlayerPerformanceEntity.Entity;
 using Footbally_Domain.Entities.TeamEntity.Entity;
 
-namespace Footbally_Domain.Entities.MatchEntity.Entity;
+namespace Footbally_Domain.Entities.GameEntity.Entity;
 
-public class Match : BaseEntity
+public class Game : BaseEntity
 {
-    private Match()
+    private Game()
     {
     }
-    public Match(DateTime matchDate, int homeTeamId, int awayTeamId, int homeGoals, int awayGoals,Status status,Stage stage)
+    public Game(DateTime matchDate, int homeTeamId, int awayTeamId, int homeGoals, int awayGoals,Status status,Stage stage)
     {
         MatchDate = matchDate;
         HomeGoals = homeGoals;
@@ -67,7 +67,7 @@ public class Match : BaseEntity
             throw new InvalidOperationException("the away team id goals cannot be negative or 0");
 
         if(MatchDate<new DateTime(2026,6,11)||MatchDate> new DateTime(2026, 7, 19))
-            throw new InvalidOperationException("the Date is't in Correct time frame");
+            throw new InvalidTimeZoneException("the Date is't in Correct time frame");
 
     }
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Footbally_Domain.Entities.GameEntity.Entity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 
@@ -6,9 +7,9 @@ using System.Text.RegularExpressions;
 
 namespace Footbally_Infrastructure.ModelConfiguration;
 
-public class MatchModelBuilderConfiguration : BaseModelConfiguration<Footbally_Domain.Entities.MatchEntity.Entity.Match>
+public class MatchModelBuilderConfiguration : BaseModelConfiguration<Game>
 {
-    protected override void ApplyEntityConfiguration(EntityTypeBuilder<Footbally_Domain.Entities.MatchEntity.Entity.Match> builder)
+    protected override void ApplyEntityConfiguration(EntityTypeBuilder<Game> builder)
     {
         builder.Property(m => m.MatchDate)
             .IsRequired();

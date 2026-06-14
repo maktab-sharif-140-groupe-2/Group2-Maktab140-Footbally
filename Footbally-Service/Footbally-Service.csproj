@@ -35,7 +35,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Match\" />
     <Folder Include="Player\" />
     <Folder Include="Standing\" />
     <Folder Include="Team\" />
